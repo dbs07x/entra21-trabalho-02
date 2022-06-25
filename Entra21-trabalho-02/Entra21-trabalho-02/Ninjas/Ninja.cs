@@ -10,7 +10,7 @@ namespace Entra21_trabalho_02.Ninjas
         public DateTime DataNascimento;
         public Genero Genero;
         public Status Status;
-        // public Nivel Nivel;
+        public Nivel Nivel;
         public Cla Cla;
         // public Aldeia Aldeia
         public bool KekkeiGenkai;
