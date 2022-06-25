@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Cla
+﻿namespace Entra21_trabalho_02.Clas
 {
     internal class Cla
     {

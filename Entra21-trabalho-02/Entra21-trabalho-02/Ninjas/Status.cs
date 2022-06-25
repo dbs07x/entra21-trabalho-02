@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Ninja
+﻿namespace Entra21_trabalho_02.Ninjas
 {
     internal class Status
     {

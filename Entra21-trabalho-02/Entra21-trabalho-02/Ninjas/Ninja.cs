@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entra21_trabalho_02.Clas;
 
-namespace Entra21_trabalho_02.Ninja
+namespace Entra21_trabalho_02.Ninjas
 {
     internal class Ninja
     {
@@ -15,7 +11,7 @@ namespace Entra21_trabalho_02.Ninja
         public Genero Genero;
         public Status Status;
         // public Nivel Nivel;
-        // public Cla Cla;
+        public Cla Cla;
         // public Aldeia Aldeia
         public bool KekkeiGenkai;
 
