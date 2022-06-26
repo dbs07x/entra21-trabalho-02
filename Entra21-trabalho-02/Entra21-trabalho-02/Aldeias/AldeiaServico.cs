@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Aldeia
+﻿namespace Entra21_trabalho_02.Aldeias
 {
     internal class AldeiaServico
     {

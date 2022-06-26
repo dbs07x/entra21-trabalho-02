@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Entra21_trabalho_02.Aldeia
+﻿namespace Entra21_trabalho_02.Aldeias
 {
     public partial class AldeiaForm : Form
     {
