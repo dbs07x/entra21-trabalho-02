@@ -1,4 +1,6 @@
-﻿namespace Entra21_trabalho_02.Lider
+﻿using Newtonsoft.Json;
+
+namespace Entra21_trabalho_02.Lider
 {
     internal class LiderServico
     {
