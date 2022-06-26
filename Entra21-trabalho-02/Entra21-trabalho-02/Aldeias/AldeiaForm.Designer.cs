@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Aldeia
+﻿namespace Entra21_trabalho_02.Aldeias
 {
     partial class AldeiaForm
     {
@@ -145,7 +145,7 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonSalvar);
             this.Name = "AldeiaForm";
-            this.Text = "AldeiaForm";
+            this.Text = "Cadastro de Aldeia";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

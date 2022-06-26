@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Lider
+﻿namespace Entra21_trabalho_02.Lideres
 {
     internal class Lider
     {

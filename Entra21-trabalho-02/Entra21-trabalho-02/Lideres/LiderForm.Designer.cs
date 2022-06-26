@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Lider
+﻿namespace Entra21_trabalho_02.Lideres
 {
     partial class LiderForm
     {
@@ -227,7 +227,7 @@
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "LiderForm";
-            this.Text = "LiderForm";
+            this.Text = "Cadastro do Lider";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
