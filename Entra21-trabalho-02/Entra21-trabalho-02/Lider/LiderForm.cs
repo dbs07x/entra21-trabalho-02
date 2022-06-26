@@ -14,7 +14,7 @@
             PreencherComboBoxComGenero();
         }
 
-        private void AdicionarLider(string nome, TituloNinja titulo, GeneroNinja genero, int idade, DateTime inicioLideranca, DateTime fimLideranca)
+        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca)
         {
             var lider = new Lider
             {
@@ -60,8 +60,8 @@
             comboBoxTitulo.SelectedIndex = -1;
             textBoxIdade.Clear();
             comboBoxGenero.SelectedIndex = -1;
-            maskedTextBoxInicioLideranca.Clear();
-            maskedTextBoxFimLideranca.Clear();
+            dateTimePickerInicioLideranca.CustomFormat = "yyyy-MM-dd";
+            dateTimePickerFimLideranca.CustomFormat = "yyyy-MM-dd";
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -70,8 +70,8 @@
             var titulo = Convert.ToString(comboBoxTitulo.SelectedItem);
             var idade = Convert.ToInt32(textBoxIdade.Text.Trim().ToLower());
             var genero = Convert.ToString(comboBoxGenero.SelectedItem);
-            var inicioLideranca = Convert.ToDateTime(maskedTextBoxInicioLideranca.Text);
-            var fimLideranca = Convert.ToDateTime(maskedTextBoxFimLideranca.Text);
+            var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
+            var fimLideranca = Convert.ToDateTime(dateTimePickerFimLideranca.Text);
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
