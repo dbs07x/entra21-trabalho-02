@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Chakra
+﻿namespace Entra21_trabalho_02.Chakras
 {
     partial class ChakraForm
     {

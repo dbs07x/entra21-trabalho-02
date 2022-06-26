@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Entra21_trabalho_02.Chakra
+namespace Entra21_trabalho_02.Chakras
 {
     public partial class ChakraForm : Form
     {
