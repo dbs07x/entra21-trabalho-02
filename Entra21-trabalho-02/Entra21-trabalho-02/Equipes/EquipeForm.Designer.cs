@@ -1,4 +1,4 @@
-﻿namespace Entra21_trabalho_02.Equipe
+﻿namespace Entra21_trabalho_02.Equipes
 {
     partial class EquipeForm
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Entra21_trabalho_02.Equipe
+namespace Entra21_trabalho_02.Equipes
 {
     public partial class EquipeForm : Form
     {
