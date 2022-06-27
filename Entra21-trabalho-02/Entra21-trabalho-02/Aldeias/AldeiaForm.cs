@@ -11,6 +11,25 @@ namespace Entra21_trabalho_02.Aldeias
         public AldeiaForm()
         {
             InitializeComponent();
+
+            aldeiaServico = new AldeiaServico();
+
+            liderServico = new LiderServico();
+
+            PreencherDataGridViewComAldeias();
+
+            PreencherComboBoxComNomeDosLideres();
+        }
+
+        private void PreencherComboBoxComNomeDosLideres()
+        {
+            var lideres = liderServico.ListarTodos();
+
+            for(int i = 0; i < lideres.Count; i++)
+            {
+                var lider = lideres[i];
+                comboBoxLider.Items.Add(lider.Nome);
+            }
         }
 
         private void LimparCampos()
