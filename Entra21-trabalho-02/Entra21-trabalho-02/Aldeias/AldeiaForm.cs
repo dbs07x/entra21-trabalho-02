@@ -13,7 +13,7 @@ namespace Entra21_trabalho_02.Aldeias
             InitializeComponent();
         }
 
-        public void LimparCampos()
+        private void LimparCampos()
         {
             textBoxNome.Text = string.Empty;
             textBoxPais.Text = string.Empty;
@@ -52,7 +52,7 @@ namespace Entra21_trabalho_02.Aldeias
             comboBoxLider.SelectedItem = aldeia.LiderAldeia.Nome;
         }
 
-        public void PreencherDataGridViewComAldeias()
+        private void PreencherDataGridViewComAldeias()
         {
             var aldeias = aldeiaServico.ListarTodas();
 
@@ -73,7 +73,7 @@ namespace Entra21_trabalho_02.Aldeias
             dataGridView1.ClearSelection();
         }
         
-        public bool ValidarDados(string nome, string pais, string nomeLider)
+        private bool ValidarDados(string nome, string pais, string nomeLider)
         {
             if(nome.Trim().Length < 3)
             {
@@ -105,7 +105,7 @@ namespace Entra21_trabalho_02.Aldeias
             return true;
         }
 
-        public void CadastrarAldeia(string nome, string pais, string nomeLider)
+        private void CadastrarAldeia(string nome, string pais, string nomeLider)
         {
             var aldeia = new Aldeia();
             aldeia.Codigo = aldeiaServico.ObterUltimoCodigo() + 1;
@@ -116,7 +116,7 @@ namespace Entra21_trabalho_02.Aldeias
             aldeiaServico.Adicionar(aldeia);
         }
 
-        public void EditarAldeia(string nome, string pais, string nomeLider)
+        private void EditarAldeia(string nome, string pais, string nomeLider)
         {
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
