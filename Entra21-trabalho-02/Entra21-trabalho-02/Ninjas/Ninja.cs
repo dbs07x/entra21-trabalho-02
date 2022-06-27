@@ -1,4 +1,6 @@
-﻿using Entra21_trabalho_02.Clas;
+﻿using Entra21_trabalho_02.Aldeias;
+using Entra21_trabalho_02.Chakras;
+using Entra21_trabalho_02.Clas;
 
 namespace Entra21_trabalho_02.Ninjas
 {
@@ -6,13 +8,13 @@ namespace Entra21_trabalho_02.Ninjas
     {
         public int Id;
         public string Nome;
-        // public Chakra ElementoChakra;
+        public Chakra ElementoChakra;
         public DateTime DataNascimento;
         public Genero Genero;
         public Status Status;
         public Nivel Nivel;
         public Cla Cla;
-        // public Aldeia Aldeia
+        public Aldeia Aldeia;
         public bool KekkeiGenkai;
 
         /*
