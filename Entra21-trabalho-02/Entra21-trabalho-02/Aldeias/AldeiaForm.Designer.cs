@@ -38,6 +38,9 @@
             this.textBoxPais = new System.Windows.Forms.TextBox();
             this.comboBoxLider = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,12 +125,34 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNome,
+            this.ColumnPais,
+            this.ColumnLider});
             this.dataGridView1.Location = new System.Drawing.Point(12, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(701, 578);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnPais
+            // 
+            this.ColumnPais.HeaderText = "País";
+            this.ColumnPais.Name = "ColumnPais";
+            this.ColumnPais.ReadOnly = true;
+            // 
+            // ColumnLider
+            // 
+            this.ColumnLider.HeaderText = "Lider";
+            this.ColumnLider.Name = "ColumnLider";
+            this.ColumnLider.ReadOnly = true;
             // 
             // AldeiaForm
             // 
@@ -164,5 +189,8 @@
         private TextBox textBoxPais;
         private ComboBox comboBoxLider;
         private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnPais;
+        private DataGridViewTextBoxColumn ColumnLider;
     }
 }

@@ -1,6 +1,94 @@
-﻿namespace Entra21_trabalho_02.Aldeias
+﻿using Newtonsoft.Json;
+
+namespace Entra21_trabalho_02.Aldeias
 {
     internal class AldeiaServico
     {
+        private List<Aldeia> aldeias;
+
+        public AldeiaServico()
+        {
+            aldeias = new List<Aldeia>();
+
+            LerArquivo();
+        }
+
+        public void Adicionar(Aldeia aldeia)
+        {
+            aldeias.Add(aldeia);
+
+            SalvarArquivo();
+        }
+
+        public void Editar(Aldeia aldeiaEditar)
+        {
+            for(int i = 0; i < aldeias.Count; i++)
+            {
+                var aldeia = aldeias[i];
+
+                if(aldeia.Codigo == aldeiaEditar.Codigo)
+                {
+                    aldeia.Nome = aldeiaEditar.Nome;
+                    aldeia.Pais = aldeiaEditar.Pais;
+                    aldeia.LiderAldeia = aldeiaEditar.LiderAldeia;
+
+                    SalvarArquivo();
+
+                    return;
+                }
+            }
+        }
+
+        public void Apagar(Aldeia aldeiaApagar)
+        {
+            for(int i = 0; i < aldeias.Count; i++)
+            {
+                var aldeia = aldeias[i];
+
+                if(aldeia.Codigo == aldeiaApagar.Codigo)
+                {
+                    aldeias.Remove(aldeia);
+
+                    SalvarArquivo();
+
+                    return;
+                }
+            }
+        }
+
+        public List<Aldeia> ListarTodos()
+        {
+            return aldeias;
+        }
+
+        public Aldeia ApresentarPorCodigo(int codigo)
+        {
+            for(int i = 0; i < aldeias.Count; i++)
+            {
+                var aldeia = aldeias[i];
+
+                if(aldeia.Codigo == codigo)
+                {
+                    return aldeia;
+                }
+            }
+
+            return null;
+        }
+
+        public void SalvarArquivo()
+        {
+            var aldeiaJson = JsonConvert.SerializeObject(aldeias);
+            File.WriteAllText("aldeias.json", aldeiaJson);
+        }
+
+        public void LerArquivo()
+        {
+            if (File.Exists("aldeias.json") == false)
+                return;
+
+            var aldeiaJson = File.ReadAllText("aldeias.json");
+            aldeias = JsonConvert.DeserializeObject<List<Aldeia>>(aldeiaJson);
+        }
     }
 }
