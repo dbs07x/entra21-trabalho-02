@@ -41,6 +41,7 @@
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,22 @@
             this.ColumnLider.Name = "ColumnLider";
             this.ColumnLider.ReadOnly = true;
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(773, 560);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(136, 64);
+            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // AldeiaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 636);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxLider);
             this.Controls.Add(this.textBoxPais);
@@ -192,5 +204,6 @@
         private DataGridViewTextBoxColumn ColumnNome;
         private DataGridViewTextBoxColumn ColumnPais;
         private DataGridViewTextBoxColumn ColumnLider;
+        private Button buttonCancelar;
     }
 }

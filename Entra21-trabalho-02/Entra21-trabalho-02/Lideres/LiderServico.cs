@@ -76,5 +76,20 @@ namespace Entra21_trabalho_02.Lideres
             }
             return null;
         }
+
+        public Lider ObterPorNomeLider(string nomeLider)
+        {
+            for(int i = 0; i < lideres.Count; i++)
+            {
+                var lider = lideres[i];
+
+                if(lider.Nome == nomeLider)
+                {
+                    return lider;
+                }
+            }
+
+            return null;
+        }
     }
 }
