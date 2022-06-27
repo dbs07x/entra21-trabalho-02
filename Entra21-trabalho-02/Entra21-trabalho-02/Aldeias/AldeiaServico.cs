@@ -56,7 +56,7 @@ namespace Entra21_trabalho_02.Aldeias
             }
         }
 
-        public List<Aldeia> ListarTodos()
+        public List<Aldeia> ListarTodas()
         {
             return aldeias;
         }
@@ -89,6 +89,20 @@ namespace Entra21_trabalho_02.Aldeias
 
             var aldeiaJson = File.ReadAllText("aldeias.json");
             aldeias = JsonConvert.DeserializeObject<List<Aldeia>>(aldeiaJson);
+        }
+
+        public int ObterUltimoCodigo()
+        {
+            var ultimoCodigo = 0;
+
+            for(int i = 0; i < aldeias.Count; i++)
+            {
+                var aldeia = aldeias[i];
+
+                ultimoCodigo = aldeia.Codigo;
+            }
+
+            return ultimoCodigo;
         }
     }
 }
