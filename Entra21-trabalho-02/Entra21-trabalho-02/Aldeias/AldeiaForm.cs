@@ -18,6 +18,8 @@ namespace Entra21_trabalho_02.Aldeias
             textBoxNome.Text = string.Empty;
             textBoxPais.Text = string.Empty;
             comboBoxLider.SelectedIndex = -1;
+
+            dataGridView1.ClearSelection();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
