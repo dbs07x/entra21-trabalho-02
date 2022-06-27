@@ -1,8 +1,8 @@
 ﻿namespace Entra21_trabalho_02.Ninjas
 {
-    internal class Status
+    internal enum Status
     {
-        public string Vivo;
-        public string Morto;
+        Vivo,
+        Morto
     }
 }
