@@ -1,3 +1,5 @@
+using Entra21_trabalho_02.Equipes;
+
 namespace Entra21_trabalho_02
 {
     internal static class Program
