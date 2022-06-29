@@ -3,6 +3,7 @@
     public partial class LiderForm : Form
     {
         private LiderServico liderServico;
+
         public LiderForm()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@
             for (var i = 0; i < lideres.Count; i++)
             {
                 var lider = lideres[i];
-                comboBoxGenero.Items.Add(lider.Genero);
+                comboBoxChakra.Items.Add(lider.Genero);
             }
         }
 
@@ -59,7 +60,7 @@
             textBoxNome.Clear();
             comboBoxTitulo.SelectedIndex = -1;
             textBoxIdade.Clear();
-            comboBoxGenero.SelectedIndex = -1;
+            comboBoxChakra.SelectedIndex = -1;
             dateTimePickerInicioLideranca.CustomFormat = "yyyy-MM-dd";
             dateTimePickerFimLideranca.CustomFormat = "yyyy-MM-dd";
         }
@@ -69,7 +70,7 @@
             var nome = textBoxNome.Text.Trim().ToLower();
             var titulo = Convert.ToString(comboBoxTitulo.SelectedItem);
             var idade = Convert.ToInt32(textBoxIdade.Text.Trim().ToLower());
-            var genero = Convert.ToString(comboBoxGenero.SelectedItem);
+            var genero = Convert.ToString(comboBoxChakra.SelectedItem);
             var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
             var fimLideranca = Convert.ToDateTime(dateTimePickerFimLideranca.Text);
 

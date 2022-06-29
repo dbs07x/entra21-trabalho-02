@@ -43,9 +43,16 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.comboBoxTitulo = new System.Windows.Forms.ComboBox();
             this.textBoxIdade = new System.Windows.Forms.TextBox();
-            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
+            this.comboBoxChakra = new System.Windows.Forms.ComboBox();
             this.dateTimePickerInicioLideranca = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFimLideranca = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonVivo = new System.Windows.Forms.RadioButton();
+            this.radioButtonMorto = new System.Windows.Forms.RadioButton();
+            this.checkBoxMasculino = new System.Windows.Forms.CheckBox();
+            this.checkBoxCisgenero = new System.Windows.Forms.CheckBox();
+            this.checkBoxFeminino = new System.Windows.Forms.CheckBox();
+            this.checkBoxTransgenero = new System.Windows.Forms.CheckBox();
+            this.checkBoxNaoBinario = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +124,7 @@
             // labelGenero
             // 
             this.labelGenero.AutoSize = true;
-            this.labelGenero.Location = new System.Drawing.Point(639, 179);
+            this.labelGenero.Location = new System.Drawing.Point(639, 192);
             this.labelGenero.Name = "labelGenero";
             this.labelGenero.Size = new System.Drawing.Size(45, 15);
             this.labelGenero.TabIndex = 7;
@@ -126,7 +133,7 @@
             // labelInicioLideranca
             // 
             this.labelInicioLideranca.AutoSize = true;
-            this.labelInicioLideranca.Location = new System.Drawing.Point(639, 223);
+            this.labelInicioLideranca.Location = new System.Drawing.Point(639, 294);
             this.labelInicioLideranca.Name = "labelInicioLideranca";
             this.labelInicioLideranca.Size = new System.Drawing.Size(106, 15);
             this.labelInicioLideranca.TabIndex = 8;
@@ -135,7 +142,7 @@
             // labelFimLideranca
             // 
             this.labelFimLideranca.AutoSize = true;
-            this.labelFimLideranca.Location = new System.Drawing.Point(639, 267);
+            this.labelFimLideranca.Location = new System.Drawing.Point(639, 338);
             this.labelFimLideranca.Name = "labelFimLideranca";
             this.labelFimLideranca.Size = new System.Drawing.Size(97, 15);
             this.labelFimLideranca.TabIndex = 9;
@@ -144,7 +151,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(640, 311);
+            this.labelStatus.Location = new System.Drawing.Point(639, 393);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(39, 15);
             this.labelStatus.TabIndex = 10;
@@ -153,7 +160,7 @@
             // labelElementoChakra
             // 
             this.labelElementoChakra.AutoSize = true;
-            this.labelElementoChakra.Location = new System.Drawing.Point(639, 363);
+            this.labelElementoChakra.Location = new System.Drawing.Point(639, 452);
             this.labelElementoChakra.Name = "labelElementoChakra";
             this.labelElementoChakra.Size = new System.Drawing.Size(97, 15);
             this.labelElementoChakra.TabIndex = 11;
@@ -169,6 +176,13 @@
             // comboBoxTitulo
             // 
             this.comboBoxTitulo.FormattingEnabled = true;
+            this.comboBoxTitulo.Items.AddRange(new object[] {
+            "Hokage",
+            "Kazekage",
+            "Raikage",
+            "Tsuchikage",
+            "Mizukage",
+            "Líder"});
             this.comboBoxTitulo.Location = new System.Drawing.Point(640, 110);
             this.comboBoxTitulo.Name = "comboBoxTitulo";
             this.comboBoxTitulo.Size = new System.Drawing.Size(302, 23);
@@ -181,36 +195,121 @@
             this.textBoxIdade.Size = new System.Drawing.Size(301, 23);
             this.textBoxIdade.TabIndex = 14;
             // 
-            // comboBoxGenero
+            // comboBoxChakra
             // 
-            this.comboBoxGenero.FormattingEnabled = true;
-            this.comboBoxGenero.Location = new System.Drawing.Point(640, 198);
-            this.comboBoxGenero.Name = "comboBoxGenero";
-            this.comboBoxGenero.Size = new System.Drawing.Size(302, 23);
-            this.comboBoxGenero.TabIndex = 15;
+            this.comboBoxChakra.FormattingEnabled = true;
+            this.comboBoxChakra.Items.AddRange(new object[] {
+            "Fogo",
+            "Vento",
+            "Relâmpago",
+            "Terra",
+            "Água"});
+            this.comboBoxChakra.Location = new System.Drawing.Point(639, 470);
+            this.comboBoxChakra.Name = "comboBoxChakra";
+            this.comboBoxChakra.Size = new System.Drawing.Size(302, 23);
+            this.comboBoxChakra.TabIndex = 15;
             // 
             // dateTimePickerInicioLideranca
             // 
-            this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(640, 242);
+            this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(639, 312);
             this.dateTimePickerInicioLideranca.Name = "dateTimePickerInicioLideranca";
             this.dateTimePickerInicioLideranca.Size = new System.Drawing.Size(302, 23);
             this.dateTimePickerInicioLideranca.TabIndex = 16;
             // 
             // dateTimePickerFimLideranca
             // 
-            this.dateTimePickerFimLideranca.Location = new System.Drawing.Point(640, 286);
+            this.dateTimePickerFimLideranca.Location = new System.Drawing.Point(639, 356);
             this.dateTimePickerFimLideranca.Name = "dateTimePickerFimLideranca";
             this.dateTimePickerFimLideranca.Size = new System.Drawing.Size(302, 23);
             this.dateTimePickerFimLideranca.TabIndex = 17;
+            // 
+            // radioButtonVivo
+            // 
+            this.radioButtonVivo.AutoSize = true;
+            this.radioButtonVivo.Location = new System.Drawing.Point(639, 420);
+            this.radioButtonVivo.Name = "radioButtonVivo";
+            this.radioButtonVivo.Size = new System.Drawing.Size(48, 19);
+            this.radioButtonVivo.TabIndex = 18;
+            this.radioButtonVivo.TabStop = true;
+            this.radioButtonVivo.Text = "Vivo";
+            this.radioButtonVivo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMorto
+            // 
+            this.radioButtonMorto.AutoSize = true;
+            this.radioButtonMorto.Location = new System.Drawing.Point(821, 420);
+            this.radioButtonMorto.Name = "radioButtonMorto";
+            this.radioButtonMorto.Size = new System.Drawing.Size(58, 19);
+            this.radioButtonMorto.TabIndex = 19;
+            this.radioButtonMorto.TabStop = true;
+            this.radioButtonMorto.Text = "Morto";
+            this.radioButtonMorto.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMasculino
+            // 
+            this.checkBoxMasculino.AutoSize = true;
+            this.checkBoxMasculino.Location = new System.Drawing.Point(639, 219);
+            this.checkBoxMasculino.Name = "checkBoxMasculino";
+            this.checkBoxMasculino.Size = new System.Drawing.Size(81, 19);
+            this.checkBoxMasculino.TabIndex = 20;
+            this.checkBoxMasculino.Text = "Masculino";
+            this.checkBoxMasculino.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCisgenero
+            // 
+            this.checkBoxCisgenero.AutoSize = true;
+            this.checkBoxCisgenero.Location = new System.Drawing.Point(640, 253);
+            this.checkBoxCisgenero.Name = "checkBoxCisgenero";
+            this.checkBoxCisgenero.Size = new System.Drawing.Size(79, 19);
+            this.checkBoxCisgenero.TabIndex = 21;
+            this.checkBoxCisgenero.Text = "Cisgênero";
+            this.checkBoxCisgenero.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFeminino
+            // 
+            this.checkBoxFeminino.AutoSize = true;
+            this.checkBoxFeminino.Location = new System.Drawing.Point(753, 219);
+            this.checkBoxFeminino.Name = "checkBoxFeminino";
+            this.checkBoxFeminino.Size = new System.Drawing.Size(76, 19);
+            this.checkBoxFeminino.TabIndex = 22;
+            this.checkBoxFeminino.Text = "Feminino";
+            this.checkBoxFeminino.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTransgenero
+            // 
+            this.checkBoxTransgenero.AutoSize = true;
+            this.checkBoxTransgenero.Location = new System.Drawing.Point(753, 253);
+            this.checkBoxTransgenero.Name = "checkBoxTransgenero";
+            this.checkBoxTransgenero.Size = new System.Drawing.Size(90, 19);
+            this.checkBoxTransgenero.TabIndex = 23;
+            this.checkBoxTransgenero.Text = "Transgênero";
+            this.checkBoxTransgenero.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNaoBinario
+            // 
+            this.checkBoxNaoBinario.AutoSize = true;
+            this.checkBoxNaoBinario.Location = new System.Drawing.Point(859, 219);
+            this.checkBoxNaoBinario.Name = "checkBoxNaoBinario";
+            this.checkBoxNaoBinario.Size = new System.Drawing.Size(90, 19);
+            this.checkBoxNaoBinario.TabIndex = 24;
+            this.checkBoxNaoBinario.Text = "Não-Binario";
+            this.checkBoxNaoBinario.UseVisualStyleBackColor = true;
             // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 637);
+            this.Controls.Add(this.checkBoxNaoBinario);
+            this.Controls.Add(this.checkBoxTransgenero);
+            this.Controls.Add(this.checkBoxFeminino);
+            this.Controls.Add(this.checkBoxCisgenero);
+            this.Controls.Add(this.checkBoxMasculino);
+            this.Controls.Add(this.radioButtonMorto);
+            this.Controls.Add(this.radioButtonVivo);
             this.Controls.Add(this.dateTimePickerFimLideranca);
             this.Controls.Add(this.dateTimePickerInicioLideranca);
-            this.Controls.Add(this.comboBoxGenero);
+            this.Controls.Add(this.comboBoxChakra);
             this.Controls.Add(this.textBoxIdade);
             this.Controls.Add(this.comboBoxTitulo);
             this.Controls.Add(this.textBoxNome);
@@ -251,8 +350,15 @@
         private TextBox textBoxNome;
         private ComboBox comboBoxTitulo;
         private TextBox textBoxIdade;
-        private ComboBox comboBoxGenero;
+        private ComboBox comboBoxChakra;
         private DateTimePicker dateTimePickerInicioLideranca;
         private DateTimePicker dateTimePickerFimLideranca;
+        private RadioButton radioButtonVivo;
+        private RadioButton radioButtonMorto;
+        private CheckBox checkBoxMasculino;
+        private CheckBox checkBoxCisgenero;
+        private CheckBox checkBoxFeminino;
+        private CheckBox checkBoxTransgenero;
+        private CheckBox checkBoxNaoBinario;
     }
 }
