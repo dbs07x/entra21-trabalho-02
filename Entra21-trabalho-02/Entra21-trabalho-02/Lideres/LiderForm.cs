@@ -221,6 +221,7 @@ namespace Entra21_trabalho_02.Lideres
             textBoxNome.Text = lider.Nome;
             comboBoxTitulo.SelectedItem = lider.Titulo;
             textBoxIdade.Text = lider.Idade.ToString();
+
         }
 
         private string ValidarStatus()
