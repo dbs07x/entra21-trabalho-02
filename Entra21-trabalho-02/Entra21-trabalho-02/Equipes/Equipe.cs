@@ -12,6 +12,6 @@ namespace Entra21_trabalho_02.Equipes
         public Ninja Membro3;
         public DateTime Formacao;
         public DateTime InicioProximaMissao;
-        public Situacao Situacao;
+        public string Situacao;
     }
 }
