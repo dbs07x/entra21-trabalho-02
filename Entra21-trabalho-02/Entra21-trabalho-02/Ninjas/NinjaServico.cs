@@ -96,6 +96,23 @@ namespace Entra21_trabalho_02.Ninjas
             return ultimoCodigo;
         }
 
+        public Ninja ObterPorNomeNinja(string nomeNinja)
+        {
+            for (int i = 0; i < ninjas.Count; i++)
+            {
+                var ninja = ninjas[i];
+
+                if (ninja.Nome == nomeNinja)
+                {
+                    return ninja;
+                }
+            }
+
+            return null;
+        }
+
+
+
         public void SalvarArquivo()
         {
             var ninjasJson = JsonConvert.SerializeObject(ninjas);
