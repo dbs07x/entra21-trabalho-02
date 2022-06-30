@@ -42,15 +42,17 @@ namespace Entra21_trabalho_02.Lideres
             }
         }
 
-        public void Excluir(int codigo)
+        public void Excluir(Lider liderParaApagar)
         {
             for (int i = 0; i < lideres.Count; i++)
             {
                 var lider = lideres[i];
 
-                if (lider.Codigo == codigo)
+                if (lider.Codigo == liderParaApagar.Codigo)
                 {
                     lideres.Remove(lider);
+
+                    SalvarArquivo();
 
                     return;
                 }
