@@ -100,10 +100,20 @@ namespace Entra21_trabalho_02.Lideres
             var genero = string.Empty;
             var identidadeGenero = string.Empty;
 
-            if(checkBoxMasculino.Checked == true)
+            if (checkBoxMasculino.Checked == true)
             {
                 genero = "Masculino";
             }
+            else if (checkBoxFeminino.Checked == true)
+                genero = "Feminino";
+            else
+                genero = "Não-Binario";
+
+            if (checkBoxCisgenero.Checked == true)
+                identidadeGenero = "Cisgênero";
+            else
+                identidadeGenero = "Transgênero";
+
             var generoCompleto = genero + " / " + identidadeGenero;
 
             return generoCompleto;

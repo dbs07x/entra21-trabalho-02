@@ -54,6 +54,9 @@
             this.checkBoxNaoBinario = new System.Windows.Forms.CheckBox();
             this.maskedTextBoxFimLideranca = new System.Windows.Forms.MaskedTextBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.labelKekkeiGenkai = new System.Windows.Forms.Label();
+            this.radioButtonSim = new System.Windows.Forms.RadioButton();
+            this.radioButtonNao = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,10 +75,10 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(938, 739);
+            this.buttonSalvar.Location = new System.Drawing.Point(938, 754);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(137, 95);
+            this.buttonSalvar.Size = new System.Drawing.Size(137, 80);
             this.buttonSalvar.TabIndex = 1;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -215,6 +218,7 @@
             // 
             // dateTimePickerInicioLideranca
             // 
+            this.dateTimePickerInicioLideranca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(730, 416);
             this.dateTimePickerInicioLideranca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePickerInicioLideranca.Name = "dateTimePickerInicioLideranca";
@@ -310,19 +314,53 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(761, 739);
+            this.buttonCancelar.Location = new System.Drawing.Point(761, 754);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(138, 95);
+            this.buttonCancelar.Size = new System.Drawing.Size(138, 80);
             this.buttonCancelar.TabIndex = 26;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // labelKekkeiGenkai
+            // 
+            this.labelKekkeiGenkai.AutoSize = true;
+            this.labelKekkeiGenkai.Location = new System.Drawing.Point(731, 668);
+            this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
+            this.labelKekkeiGenkai.Size = new System.Drawing.Size(101, 20);
+            this.labelKekkeiGenkai.TabIndex = 27;
+            this.labelKekkeiGenkai.Text = "Kekkei Genkai";
+            // 
+            // radioButtonSim
+            // 
+            this.radioButtonSim.AutoSize = true;
+            this.radioButtonSim.Location = new System.Drawing.Point(731, 702);
+            this.radioButtonSim.Name = "radioButtonSim";
+            this.radioButtonSim.Size = new System.Drawing.Size(55, 24);
+            this.radioButtonSim.TabIndex = 28;
+            this.radioButtonSim.TabStop = true;
+            this.radioButtonSim.Text = "Sim";
+            this.radioButtonSim.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNao
+            // 
+            this.radioButtonNao.AutoSize = true;
+            this.radioButtonNao.Location = new System.Drawing.Point(938, 702);
+            this.radioButtonNao.Name = "radioButtonNao";
+            this.radioButtonNao.Size = new System.Drawing.Size(58, 24);
+            this.radioButtonNao.TabIndex = 29;
+            this.radioButtonNao.TabStop = true;
+            this.radioButtonNao.Text = "Não";
+            this.radioButtonNao.UseVisualStyleBackColor = true;
             // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 849);
+            this.Controls.Add(this.radioButtonNao);
+            this.Controls.Add(this.radioButtonSim);
+            this.Controls.Add(this.labelKekkeiGenkai);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.maskedTextBoxFimLideranca);
             this.Controls.Add(this.checkBoxNaoBinario);
@@ -386,5 +424,8 @@
         private CheckBox checkBoxNaoBinario;
         private MaskedTextBox maskedTextBoxFimLideranca;
         private Button buttonCancelar;
+        private Label labelKekkeiGenkai;
+        private RadioButton radioButtonSim;
+        private RadioButton radioButtonNao;
     }
 }
