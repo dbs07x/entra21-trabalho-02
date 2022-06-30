@@ -111,7 +111,10 @@ namespace Entra21_trabalho_02.Ninjas
             return null;
         }
 
-
+        public List<Ninja> ListarTodos()
+        {
+            return ninjas;
+        }
 
         public void SalvarArquivo()
         {
