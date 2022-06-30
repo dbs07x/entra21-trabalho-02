@@ -6,6 +6,7 @@ namespace Entra21_trabalho_02.Lideres
     {
         private LiderServico liderServico;
         private ChakraServico chakraServico;
+
         public LiderForm()
         {
             InitializeComponent();
@@ -28,17 +29,19 @@ namespace Entra21_trabalho_02.Lideres
             }
         }
 
-        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca, string? chakra)
+        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca, string status, string? chakra)
         {
             var lider = new Lider
             {
-                //Codigo = codigo,
+                Codigo = liderServico.ObterUltimoCodigo() + 1,
                 Nome = nome,
                 Titulo = ObterTituloLider(titulo),
                 Idade = idade,
                 Genero = genero,
                 InicioLideranca = inicioLideranca,
                 FimLideranca = fimLideranca,
+                Status = status,
+                //Chakra = chakra
             };
 
             liderServico.Cadastrar(lider);
@@ -49,9 +52,7 @@ namespace Entra21_trabalho_02.Lideres
         private Titulo ObterTituloLider(string titulo)
         {
             if (titulo == "Hokage")
-            {
                 return Titulo.Hokage;
-            }
             else if (titulo == "Kazekage")
                 return Titulo.Hokage;
             else if (titulo == "Raikage")
@@ -69,9 +70,11 @@ namespace Entra21_trabalho_02.Lideres
             textBoxNome.Clear();
             comboBoxTitulo.SelectedIndex = -1;
             textBoxIdade.Clear();
-            comboBoxChakra.SelectedIndex = -1;
             dateTimePickerInicioLideranca.CustomFormat = "yyyy-MM-dd";
             maskedTextBoxFimLideranca.Text = string.Empty;
+            comboBoxChakra.SelectedIndex = -1;
+
+            dataGridView1.ClearSelection();
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -82,16 +85,17 @@ namespace Entra21_trabalho_02.Lideres
             string genero = ValidarGenero();
             var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
             var fimLideranca = Convert.ToDateTime(maskedTextBoxFimLideranca.Text);
+            var status = Convert.ToString(radioButtonVivo.Checked);
             var chakra = Convert.ToString(comboBoxChakra.SelectedItem);
 
             if (dataGridView1.SelectedRows.Count == 0)
-            {
-                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
-            }
+                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, status, chakra);
             else
-            {
                 EditarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
-            }
+
+            PreencherDataGridViewComLider();
+
+            LimparCampos();
         }
 
         private  string ValidarGenero()
@@ -100,9 +104,7 @@ namespace Entra21_trabalho_02.Lideres
             var identidadeGenero = string.Empty;
 
             if (checkBoxMasculino.Checked == true)
-            {
                 genero = "Masculino";
-            }
             else if (checkBoxFeminino.Checked == true)
                 genero = "Feminino";
             else
@@ -162,13 +164,14 @@ namespace Entra21_trabalho_02.Lideres
                 dataGridView1.Rows.Add(new object[]
                 {
                     lider.Codigo,
-                    lider.Idade,
                     lider.Nome,
                     lider.Titulo,
+                    lider.Idade,
                     lider.Genero,
                     lider.InicioLideranca,
                     lider.FimLideranca,
                     lider.Status,
+                    lider.Chakra,
                     lider.KekkeiGenkai
                 }) ;
             }
@@ -198,6 +201,43 @@ namespace Entra21_trabalho_02.Lideres
             lider.Chakra = chakraServico.ObterPorNatureza(chakra);
 
             liderServico.Editar(lider);
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um lider para editar!");
+
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var lider = liderServico.ObterPorCodigo(codigo);
+
+            textBoxNome.Text = lider.Nome;
+            comboBoxTitulo.SelectedItem = lider.Titulo;
+            textBoxIdade.Text = lider.Idade.ToString();
+
+        }
+
+        private string ValidarStatus()
+        {
+            var statusLider = string.Empty;
+
+            if (radioButtonVivo.Checked == true)
+            {
+                statusLider = "Vivo";
+            }
+            else
+            {
+                statusLider = "Morto";
+            }
+
+            return statusLider;
         }
     }
 }

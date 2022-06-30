@@ -9,6 +9,8 @@ namespace Entra21_trabalho_02.Lideres
         public LiderServico()
         {
             lideres = new List<Lider>();
+
+            LerArquivo();
         }
 
         public List<Lider> ListarTodos()
@@ -19,6 +21,8 @@ namespace Entra21_trabalho_02.Lideres
         public void Cadastrar(Lider lider)
         {
             lideres.Add(lider);
+
+            SalvarArquivo();
         }
 
         public void Editar(Lider liderParaAlterar)
@@ -36,6 +40,9 @@ namespace Entra21_trabalho_02.Lideres
                     lider.InicioLideranca = liderParaAlterar.InicioLideranca;
                     lider.FimLideranca = liderParaAlterar.FimLideranca;
                     lider.Status = liderParaAlterar.Status;
+                    lider.Chakra = liderParaAlterar.Chakra;
+
+                    SalvarArquivo();
 
                     return;
                 }
@@ -92,6 +99,29 @@ namespace Entra21_trabalho_02.Lideres
             }
 
             return null;
+        }
+
+        public void LerArquivo()
+        {
+            if (File.Exists("lideres.json") == false)
+                return;
+
+            var lideresEmJson = File.ReadAllText("lideres.json");
+            lideres = JsonConvert.DeserializeObject<List<Lider>>(lideresEmJson);
+        }
+
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+
+            for(int i = 0; i < lideres.Count; i++)
+            {
+                var lider = lideres[i];
+
+                ultimoCodigo = lider.Codigo;
+            }
+
+            return ultimoCodigo;
         }
     }
 }
