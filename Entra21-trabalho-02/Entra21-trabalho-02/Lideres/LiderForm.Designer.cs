@@ -53,10 +53,6 @@
             this.checkBoxFeminino = new System.Windows.Forms.CheckBox();
             this.checkBoxTransgenero = new System.Windows.Forms.CheckBox();
             this.checkBoxNaoBinario = new System.Windows.Forms.CheckBox();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.labelKekkeiGenkai = new System.Windows.Forms.Label();
-            this.radioButtonSim = new System.Windows.Forms.RadioButton();
-            this.radioButtonNao = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,7 +151,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(640, 391);
+            this.labelStatus.Location = new System.Drawing.Point(639, 393);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(39, 15);
             this.labelStatus.TabIndex = 10;
@@ -164,7 +160,7 @@
             // labelElementoChakra
             // 
             this.labelElementoChakra.AutoSize = true;
-            this.labelElementoChakra.Location = new System.Drawing.Point(639, 440);
+            this.labelElementoChakra.Location = new System.Drawing.Point(639, 452);
             this.labelElementoChakra.Name = "labelElementoChakra";
             this.labelElementoChakra.Size = new System.Drawing.Size(97, 15);
             this.labelElementoChakra.TabIndex = 11;
@@ -208,7 +204,7 @@
             "Relâmpago",
             "Terra",
             "Água"});
-            this.comboBoxChakra.Location = new System.Drawing.Point(639, 458);
+            this.comboBoxChakra.Location = new System.Drawing.Point(639, 470);
             this.comboBoxChakra.Name = "comboBoxChakra";
             this.comboBoxChakra.Size = new System.Drawing.Size(302, 23);
             this.comboBoxChakra.TabIndex = 15;
@@ -230,7 +226,7 @@
             // radioButtonVivo
             // 
             this.radioButtonVivo.AutoSize = true;
-            this.radioButtonVivo.Location = new System.Drawing.Point(639, 409);
+            this.radioButtonVivo.Location = new System.Drawing.Point(639, 420);
             this.radioButtonVivo.Name = "radioButtonVivo";
             this.radioButtonVivo.Size = new System.Drawing.Size(48, 19);
             this.radioButtonVivo.TabIndex = 18;
@@ -241,7 +237,7 @@
             // radioButtonMorto
             // 
             this.radioButtonMorto.AutoSize = true;
-            this.radioButtonMorto.Location = new System.Drawing.Point(821, 409);
+            this.radioButtonMorto.Location = new System.Drawing.Point(821, 420);
             this.radioButtonMorto.Name = "radioButtonMorto";
             this.radioButtonMorto.Size = new System.Drawing.Size(58, 19);
             this.radioButtonMorto.TabIndex = 19;
@@ -299,55 +295,11 @@
             this.checkBoxNaoBinario.Text = "Não-Binario";
             this.checkBoxNaoBinario.UseVisualStyleBackColor = true;
             // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(689, 554);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(126, 71);
-            this.buttonCancelar.TabIndex = 25;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // labelKekkeiGenkai
-            // 
-            this.labelKekkeiGenkai.AutoSize = true;
-            this.labelKekkeiGenkai.Location = new System.Drawing.Point(639, 493);
-            this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
-            this.labelKekkeiGenkai.Size = new System.Drawing.Size(80, 15);
-            this.labelKekkeiGenkai.TabIndex = 26;
-            this.labelKekkeiGenkai.Text = "Kekkei Genkai";
-            // 
-            // radioButtonSim
-            // 
-            this.radioButtonSim.AutoSize = true;
-            this.radioButtonSim.Location = new System.Drawing.Point(640, 511);
-            this.radioButtonSim.Name = "radioButtonSim";
-            this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
-            this.radioButtonSim.TabIndex = 27;
-            this.radioButtonSim.TabStop = true;
-            this.radioButtonSim.Text = "Sim";
-            this.radioButtonSim.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNao
-            // 
-            this.radioButtonNao.AutoSize = true;
-            this.radioButtonNao.Location = new System.Drawing.Point(821, 511);
-            this.radioButtonNao.Name = "radioButtonNao";
-            this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
-            this.radioButtonNao.TabIndex = 28;
-            this.radioButtonNao.TabStop = true;
-            this.radioButtonNao.Text = "Não";
-            this.radioButtonNao.UseVisualStyleBackColor = true;
-            // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 637);
-            this.Controls.Add(this.radioButtonNao);
-            this.Controls.Add(this.radioButtonSim);
-            this.Controls.Add(this.labelKekkeiGenkai);
-            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.checkBoxNaoBinario);
             this.Controls.Add(this.checkBoxTransgenero);
             this.Controls.Add(this.checkBoxFeminino);
@@ -408,14 +360,10 @@
         private CheckBox checkBoxTransgenero;
         private CheckBox checkBoxNaoBinario;
         private MaskedTextBox maskedTextBoxFimLideranca;
-        private Button buttonCancelar;
-        private Label labelKekkeiGenkai;
-        private RadioButton radioButtonSim;
-        private RadioButton radioButtonNao;
+        private RadioButton radioButton1;
         private DateTimePicker dateTimePickerFimLideranca;
-        private Button buttonCancelar;
+        private Button button1;
         private Label labelKekkeiGenkai;
-        private RadioButton radioButtonSim;
-        private RadioButton radioButtonNao;
+        private RadioButton radioButton2;
     }
 }
