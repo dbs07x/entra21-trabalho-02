@@ -222,5 +222,21 @@ namespace Entra21_trabalho_02.Lideres
             comboBoxTitulo.SelectedItem = lider.Titulo;
             textBoxIdade.Text = lider.Idade.ToString();
         }
+
+        private string ValidarStatus()
+        {
+            var statusLider = string.Empty;
+
+            if (radioButtonVivo.Checked == true)
+            {
+                statusLider = "Vivo";
+            }
+            else
+            {
+                statusLider = "Morto";
+            }
+
+            return statusLider;
+        }
     }
 }
