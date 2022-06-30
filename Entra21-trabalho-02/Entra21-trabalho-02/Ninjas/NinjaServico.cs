@@ -13,7 +13,7 @@ namespace Entra21_trabalho_02.Ninjas
             LerArquivo();
         }
 
-        public void Cadastrar(Ninja ninja)
+        public void Salvar(Ninja ninja)
         {
             ninjas.Add(ninja);
 
@@ -65,6 +65,35 @@ namespace Entra21_trabalho_02.Ninjas
         public List<Ninja> ListarTodos()
         {
             return ninjas;
+        }
+
+        public Ninja ObterPorCodigo(int codigo)
+        {
+            for (int i = 0; i < ninjas.Count; i++)
+            {
+                var endereco = ninjas[i];
+
+                if (endereco.Id == codigo)
+                {
+                    return endereco;
+                }
+            }
+
+            return null;
+        }
+
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+
+            for (int i = 0; i < ninjas.Count; i++)
+            {
+                var endereco = ninjas[i];
+
+                ultimoCodigo = endereco.Id;
+            }
+
+            return ultimoCodigo;
         }
 
         public void SalvarArquivo()
