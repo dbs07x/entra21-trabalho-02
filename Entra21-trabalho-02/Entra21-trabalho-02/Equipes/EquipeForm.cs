@@ -35,7 +35,7 @@ namespace Entra21_trabalho_02.Equipes
             var membro1 = Convert.ToString(comboBoxMembro1.SelectedItem);
             var membro2 = Convert.ToString(comboBoxMembro2.SelectedItem);
             var membro3 = Convert.ToString(comboBoxMembro3.SelectedItem);
-            var dataFormacao = Convert.ToDateTime(dateTimePickerDataFormacao.Text);
+            var dataFormacao = Convert.ToDateTime(dateTimePickerDataFormacao.Value);
             var dataProximaMissao = Convert.ToDateTime(maskedTextBoxDataProximaMissao.Text);
             string situacao;
 
@@ -347,7 +347,7 @@ namespace Entra21_trabalho_02.Equipes
             var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
             var equipe = new Equipe();
-            equipe.Id = equipeServico.ObterUltimoId() + 1;
+            equipe.Id = codigoSelecionado;
             equipe.Nome = nomeEquipe;
             equipe.Lider = ninjaServico.ObterPorNomeNinja(lider);
             equipe.Membro1 = ninjaServico.ObterPorNomeNinja(membro1);

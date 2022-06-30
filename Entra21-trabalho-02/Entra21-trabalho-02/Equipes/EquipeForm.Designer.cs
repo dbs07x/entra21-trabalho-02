@@ -190,6 +190,11 @@
             // comboBoxLider
             // 
             this.comboBoxLider.FormattingEnabled = true;
+            this.comboBoxLider.Items.AddRange(new object[] {
+            "Claudio",
+            "Douglas",
+            "Francisco",
+            "Gregory"});
             this.comboBoxLider.Location = new System.Drawing.Point(14, 120);
             this.comboBoxLider.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxLider.Name = "comboBoxLider";
@@ -199,6 +204,11 @@
             // comboBoxMembro1
             // 
             this.comboBoxMembro1.FormattingEnabled = true;
+            this.comboBoxMembro1.Items.AddRange(new object[] {
+            "Claudio",
+            "Douglas",
+            "Francisco",
+            "Gregory"});
             this.comboBoxMembro1.Location = new System.Drawing.Point(203, 120);
             this.comboBoxMembro1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMembro1.Name = "comboBoxMembro1";
@@ -217,6 +227,11 @@
             // comboBoxMembro3
             // 
             this.comboBoxMembro3.FormattingEnabled = true;
+            this.comboBoxMembro3.Items.AddRange(new object[] {
+            "Claudio",
+            "Douglas",
+            "Francisco",
+            "Gregory"});
             this.comboBoxMembro3.Location = new System.Drawing.Point(203, 191);
             this.comboBoxMembro3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMembro3.Name = "comboBoxMembro3";
@@ -235,6 +250,11 @@
             // comboBoxMembro2
             // 
             this.comboBoxMembro2.FormattingEnabled = true;
+            this.comboBoxMembro2.Items.AddRange(new object[] {
+            "Claudio",
+            "Douglas",
+            "Francisco",
+            "Gregory"});
             this.comboBoxMembro2.Location = new System.Drawing.Point(14, 191);
             this.comboBoxMembro2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMembro2.Name = "comboBoxMembro2";
@@ -283,7 +303,7 @@
             this.maskedTextBoxDataProximaMissao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.maskedTextBoxDataProximaMissao.Mask = "00/00/0000";
             this.maskedTextBoxDataProximaMissao.Name = "maskedTextBoxDataProximaMissao";
-            this.maskedTextBoxDataProximaMissao.Size = new System.Drawing.Size(70, 27);
+            this.maskedTextBoxDataProximaMissao.Size = new System.Drawing.Size(92, 27);
             this.maskedTextBoxDataProximaMissao.TabIndex = 14;
             this.maskedTextBoxDataProximaMissao.ValidatingType = typeof(System.DateTime);
             // 

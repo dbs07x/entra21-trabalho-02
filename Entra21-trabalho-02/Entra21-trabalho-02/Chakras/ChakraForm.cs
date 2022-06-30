@@ -206,7 +206,7 @@
             var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
             var chakra = new Chakra();
-            chakra.Id = chakraServico.ObterUltimoId() + 1;
+            chakra.Id = codigoSelecionado;
             chakra.Natureza = chakraServico.ObterNaturezaChakra(natureza);
             chakra.Tipo = chakraServico.ObterTipoChakra(tipo);
             chakra.Primario = ehPrimario;
