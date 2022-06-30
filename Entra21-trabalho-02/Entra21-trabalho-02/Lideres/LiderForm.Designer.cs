@@ -53,6 +53,15 @@
             this.checkBoxFeminino = new System.Windows.Forms.CheckBox();
             this.checkBoxTransgenero = new System.Windows.Forms.CheckBox();
             this.checkBoxNaoBinario = new System.Windows.Forms.CheckBox();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIdade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInicioLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFimLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +70,15 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNome,
+            this.ColumnTitulo,
+            this.ColumnIdade,
+            this.ColumnGenero,
+            this.ColumnInicioLideranca,
+            this.ColumnFimLideranca,
+            this.ColumnStatus,
+            this.ColumnChakra});
             this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -84,6 +102,7 @@
             this.buttonEditar.TabIndex = 2;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonApagar
             // 
@@ -295,11 +314,70 @@
             this.checkBoxNaoBinario.Text = "Não-Binario";
             this.checkBoxNaoBinario.UseVisualStyleBackColor = true;
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(684, 554);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(122, 71);
+            this.buttonCancelar.TabIndex = 25;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnTitulo
+            // 
+            this.ColumnTitulo.HeaderText = "Titulo";
+            this.ColumnTitulo.Name = "ColumnTitulo";
+            this.ColumnTitulo.ReadOnly = true;
+            // 
+            // ColumnIdade
+            // 
+            this.ColumnIdade.HeaderText = "Idade";
+            this.ColumnIdade.Name = "ColumnIdade";
+            this.ColumnIdade.ReadOnly = true;
+            // 
+            // ColumnGenero
+            // 
+            this.ColumnGenero.HeaderText = "Genero";
+            this.ColumnGenero.Name = "ColumnGenero";
+            this.ColumnGenero.ReadOnly = true;
+            // 
+            // ColumnInicioLideranca
+            // 
+            this.ColumnInicioLideranca.HeaderText = "Início da Liderança";
+            this.ColumnInicioLideranca.Name = "ColumnInicioLideranca";
+            this.ColumnInicioLideranca.ReadOnly = true;
+            // 
+            // ColumnFimLideranca
+            // 
+            this.ColumnFimLideranca.HeaderText = "Fim da Liderança";
+            this.ColumnFimLideranca.Name = "ColumnFimLideranca";
+            this.ColumnFimLideranca.ReadOnly = true;
+            // 
+            // ColumnStatus
+            // 
+            this.ColumnStatus.HeaderText = "Status";
+            this.ColumnStatus.Name = "ColumnStatus";
+            this.ColumnStatus.ReadOnly = true;
+            // 
+            // ColumnChakra
+            // 
+            this.ColumnChakra.HeaderText = "Elemento do Chakra";
+            this.ColumnChakra.Name = "ColumnChakra";
+            this.ColumnChakra.ReadOnly = true;
+            // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 637);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.checkBoxNaoBinario);
             this.Controls.Add(this.checkBoxTransgenero);
             this.Controls.Add(this.checkBoxFeminino);
@@ -365,5 +443,14 @@
         private Button button1;
         private Label labelKekkeiGenkai;
         private RadioButton radioButton2;
+        private Button buttonCancelar;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnTitulo;
+        private DataGridViewTextBoxColumn ColumnIdade;
+        private DataGridViewTextBoxColumn ColumnGenero;
+        private DataGridViewTextBoxColumn ColumnInicioLideranca;
+        private DataGridViewTextBoxColumn ColumnFimLideranca;
+        private DataGridViewTextBoxColumn ColumnStatus;
+        private DataGridViewTextBoxColumn ColumnChakra;
     }
 }
