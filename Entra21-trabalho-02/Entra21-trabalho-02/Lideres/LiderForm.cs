@@ -25,11 +25,11 @@ namespace Entra21_trabalho_02.Lideres
             for(int i = 0; i < chakras.Count; i++)
             {
                 var chakra = chakras[i];
-                comboBoxChakra.Items.Add(chakra);
+                comboBoxChakra.Items.Add(chakra.Natureza);
             }
         }
 
-        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca)
+        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca, string? chakra)
         {
             var lider = new Lider
             {
@@ -64,6 +64,7 @@ namespace Entra21_trabalho_02.Lideres
             else 
                 return Titulo.Lider;
         }
+
         private void LimparCampos()
         {
             textBoxNome.Clear();
@@ -82,6 +83,7 @@ namespace Entra21_trabalho_02.Lideres
             string genero = ValidarGenero();
             var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
             var fimLideranca = Convert.ToDateTime(maskedTextBoxFimLideranca.Text);
+            var chakra = Convert.ToString(comboBoxChakra.SelectedItem);
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
@@ -168,6 +170,23 @@ namespace Entra21_trabalho_02.Lideres
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             LimparCampos();
+        }
+
+        private void EditarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca, string chakra)
+        {
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var lider = new Lider();
+            lider.Codigo = codigoSelecionado;
+            lider.Nome = nome;
+            lider.Titulo = ObterTituloLider(titulo);
+            lider.Genero = genero;
+            lider.Idade = idade;
+            lider.InicioLideranca = inicioLideranca;
+            lider.FimLideranca= fimLideranca;
+            lider.Chakra = chakraServico.ObterPorNatureza(chakra);
         }
     }
 }
