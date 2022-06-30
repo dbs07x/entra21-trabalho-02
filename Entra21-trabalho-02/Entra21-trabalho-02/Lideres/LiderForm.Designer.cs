@@ -255,7 +255,6 @@
             this.checkBoxMasculino.TabIndex = 20;
             this.checkBoxMasculino.Text = "Masculino";
             this.checkBoxMasculino.UseVisualStyleBackColor = true;
-            this.checkBoxMasculino.CheckedChanged += new System.EventHandler(this.checkBoxMasculino_CheckedChanged);
             // 
             // checkBoxCisgenero
             // 

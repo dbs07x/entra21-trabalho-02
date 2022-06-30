@@ -1,17 +1,32 @@
-﻿namespace Entra21_trabalho_02.Lideres
+﻿
+using Entra21_trabalho_02.Chakras;
+
+namespace Entra21_trabalho_02.Lideres
 {
     public partial class LiderForm : Form
     {
         private LiderServico liderServico;
-
+        private ChakraServico chakraServico;
         public LiderForm()
         {
             InitializeComponent();
 
             comboBoxTitulo.DataSource = Enum.GetValues(typeof(Titulo));
-            comboBoxChakra.DataSource = Enum.GetValues(typeof(Chakra));
+
+            PreencherComboBoxComOsChakras();
 
             liderServico = new LiderServico();
+        }
+
+        private void PreencherComboBoxComOsChakras()
+        {
+            var chakras = chakraServico.ListarTodos();
+
+            for(int i = 0; i < chakras.Count; i++)
+            {
+                var chakra = chakras[i];
+                comboBoxChakra.Items.Add(chakra);
+            }
         }
 
         private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca)
@@ -20,11 +35,11 @@
             {
                 //Codigo = codigo,
                 Nome = nome,
-                Titulo = titulo,
+                Titulo = ObterTituloLider(titulo),
                 Idade = idade,
                 Genero = genero,
                 InicioLideranca = inicioLideranca,
-                FimLideranca = fimLideranca
+                FimLideranca = fimLideranca,
             };
 
             liderServico.Cadastrar(lider);
@@ -32,6 +47,23 @@
             LimparCampos();
         }
 
+        private Titulo ObterTituloLider(string titulo)
+        {
+            if (titulo == "Hokage")
+            {
+                return Titulo.Hokage;
+            }
+            else if (titulo == "Kazekage")
+                return Titulo.Hokage;
+            else if (titulo == "Raikage")
+                return Titulo.Raikage;
+            else if (titulo == "Tsuchokage")
+                return Titulo.Tsuchikage;
+            else if (titulo == "Mizukage")
+                return Titulo.Mizukage;
+            else 
+                return Titulo.Lider;
+        }
         private void LimparCampos()
         {
             textBoxNome.Clear();
@@ -53,9 +85,11 @@
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca);
-
-                return;
+                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
+            }
+            else
+            {
+                EditarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
             }
         }
 
@@ -134,11 +168,6 @@
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             LimparCampos();
-        }
-
-        private void checkBoxMasculino_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

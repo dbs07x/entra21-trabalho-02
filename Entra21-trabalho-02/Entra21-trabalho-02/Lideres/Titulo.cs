@@ -7,6 +7,6 @@
         Raikage,
         Tsuchikage,
         Mizukage,
-        Líder
+        Lider
     }
 }
