@@ -30,7 +30,7 @@ namespace Entra21_trabalho_02.Aldeias
                 {
                     aldeia.Nome = aldeiaEditar.Nome;
                     aldeia.Pais = aldeiaEditar.Pais;
-                    aldeia.LiderAldeia = aldeiaEditar.LiderAldeia;
+                    aldeia.Lider = aldeiaEditar.Lider;
 
                     SalvarArquivo();
 
@@ -39,13 +39,13 @@ namespace Entra21_trabalho_02.Aldeias
             }
         }
 
-        public void Apagar(Aldeia aldeiaApagar)
+        public void Apagar(int codigo)
         {
             for(int i = 0; i < aldeias.Count; i++)
             {
                 var aldeia = aldeias[i];
 
-                if(aldeia.Codigo == aldeiaApagar.Codigo)
+                if(aldeia.Codigo == codigo)
                 {
                     aldeias.Remove(aldeia);
 

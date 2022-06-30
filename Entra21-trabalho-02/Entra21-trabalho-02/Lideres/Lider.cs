@@ -10,7 +10,7 @@ namespace Entra21_trabalho_02.Lideres
         public Titulo Titulo;
         public string Genero;
         public DateTime InicioLideranca;
-        public DateTime FimLideranca;
+        public string FimLideranca;
         public string Status;
         public Chakra Chakra;
         public bool KekkeiGenkai;

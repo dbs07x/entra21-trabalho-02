@@ -61,7 +61,7 @@
             this.checkBoxTransgenero = new System.Windows.Forms.CheckBox();
             this.checkBoxNaoBinario = new System.Windows.Forms.CheckBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxFimLideranca = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -265,13 +265,6 @@
             // comboBoxTitulo
             // 
             this.comboBoxTitulo.FormattingEnabled = true;
-            this.comboBoxTitulo.Items.AddRange(new object[] {
-            "Hokage",
-            "Kazekage",
-            "Raikage",
-            "Tsuchikage",
-            "Mizukage",
-            "Líder"});
             this.comboBoxTitulo.Location = new System.Drawing.Point(731, 147);
             this.comboBoxTitulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxTitulo.Name = "comboBoxTitulo";
@@ -303,6 +296,7 @@
             // 
             // dateTimePickerInicioLideranca
             // 
+            this.dateTimePickerInicioLideranca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(730, 416);
             this.dateTimePickerInicioLideranca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePickerInicioLideranca.Name = "dateTimePickerInicioLideranca";
@@ -399,20 +393,20 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // maskedTextBox1
+            // maskedTextBoxFimLideranca
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(731, 474);
-            this.maskedTextBox1.Mask = "99/99/9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(344, 27);
-            this.maskedTextBox1.TabIndex = 26;
+            this.maskedTextBoxFimLideranca.Location = new System.Drawing.Point(731, 474);
+            this.maskedTextBoxFimLideranca.Mask = "99/99/9999";
+            this.maskedTextBoxFimLideranca.Name = "maskedTextBoxFimLideranca";
+            this.maskedTextBoxFimLideranca.Size = new System.Drawing.Size(344, 27);
+            this.maskedTextBoxFimLideranca.TabIndex = 26;
             // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 849);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBoxFimLideranca);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.checkBoxNaoBinario);
             this.Controls.Add(this.checkBoxTransgenero);
@@ -487,6 +481,5 @@
         private DataGridViewTextBoxColumn ColumnFimLideranca;
         private DataGridViewTextBoxColumn ColumnStatus;
         private DataGridViewTextBoxColumn ColumnChakra;
-        private MaskedTextBox maskedTextBox1;
     }
 }
