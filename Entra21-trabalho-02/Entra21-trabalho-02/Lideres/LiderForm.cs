@@ -6,6 +6,7 @@ namespace Entra21_trabalho_02.Lideres
     {
         private LiderServico liderServico;
         private ChakraServico chakraServico;
+
         public LiderForm()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace Entra21_trabalho_02.Lideres
         {
             var lider = new Lider
             {
-                //Codigo = codigo,
+                Codigo = liderServico.ObterUltimoCodigo() + 1,
                 Nome = nome,
                 Titulo = ObterTituloLider(titulo),
                 Idade = idade,
@@ -49,9 +50,7 @@ namespace Entra21_trabalho_02.Lideres
         private Titulo ObterTituloLider(string titulo)
         {
             if (titulo == "Hokage")
-            {
                 return Titulo.Hokage;
-            }
             else if (titulo == "Kazekage")
                 return Titulo.Hokage;
             else if (titulo == "Raikage")
@@ -69,9 +68,11 @@ namespace Entra21_trabalho_02.Lideres
             textBoxNome.Clear();
             comboBoxTitulo.SelectedIndex = -1;
             textBoxIdade.Clear();
-            comboBoxChakra.SelectedIndex = -1;
             dateTimePickerInicioLideranca.CustomFormat = "yyyy-MM-dd";
             maskedTextBoxFimLideranca.Text = string.Empty;
+            comboBoxChakra.SelectedIndex = -1;
+
+            dataGridView1.ClearSelection();
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -85,13 +86,13 @@ namespace Entra21_trabalho_02.Lideres
             var chakra = Convert.ToString(comboBoxChakra.SelectedItem);
 
             if (dataGridView1.SelectedRows.Count == 0)
-            {
                 AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
-            }
             else
-            {
                 EditarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
-            }
+
+            PreencherDataGridViewComLider();
+
+            LimparCampos();
         }
 
         private  string ValidarGenero()
@@ -162,13 +163,14 @@ namespace Entra21_trabalho_02.Lideres
                 dataGridView1.Rows.Add(new object[]
                 {
                     lider.Codigo,
-                    lider.Idade,
                     lider.Nome,
                     lider.Titulo,
+                    lider.Idade,
                     lider.Genero,
                     lider.InicioLideranca,
                     lider.FimLideranca,
                     lider.Status,
+                    lider.Chakra,
                     lider.KekkeiGenkai
                 }) ;
             }
