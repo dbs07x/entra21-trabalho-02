@@ -4,6 +4,8 @@ namespace Entra21_trabalho_02.Ninjas
 {
     public partial class NinjaForm : Form
     {
+        private NinjaServico ninjaServico;
+
         public NinjaForm()
         {
             InitializeComponent();
@@ -19,6 +21,15 @@ namespace Entra21_trabalho_02.Ninjas
             var nivel = comboBoxNivel.Text;
             var cla = comboBoxCla.Text;
             var aldeia = comboBoxAldeia.Text;
+
+        }
+
+        private void PreencherDataGridViewComNinjas()
+        {
+            var ninjas = ninjaServico.ObterTodos();
+
+            dataGridView1.Rows.Clear();
+
 
         }
 

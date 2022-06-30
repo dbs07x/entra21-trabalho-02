@@ -33,7 +33,7 @@
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelLider = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
@@ -94,12 +94,12 @@
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 5;
+            this.textBoxNome.Location = new System.Drawing.Point(12, 27);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNome.TabIndex = 5;
             // 
             // labelLider
             // 
@@ -221,7 +221,7 @@
             this.Controls.Add(this.labelKekkeiGenkai);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.labelLider);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonApagar);
@@ -242,7 +242,7 @@
         private Button buttonApagar;
         private Button buttonCancelar;
         private Button buttonEditar;
-        private TextBox textBox1;
+        private TextBox textBoxNome;
         private Label labelLider;
         private ComboBox comboBox1;
         private Label labelKekkeiGenkai;
