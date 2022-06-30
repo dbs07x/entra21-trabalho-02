@@ -61,6 +61,35 @@ namespace Entra21_trabalho_02.Clas
             return clas;
         }
 
+        public Cla ObterPorCodigo(int codigo)
+        {
+            for (int i = 0; i < clas.Count; i++)
+            {
+                var cla = clas[i];
+
+                if (cla.Id == codigo)
+                {
+                    return cla;
+                }
+            }
+
+            return null;
+        }
+
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+
+            for (int i = 0; i < clas.Count; i++)
+            {
+                var cla = clas[i];
+
+                ultimoCodigo = cla.Id;
+            }
+
+            return ultimoCodigo;
+        }
+
         public void ListarClaPossuiKekkeiGenkai()
         {
 
@@ -104,6 +133,13 @@ namespace Entra21_trabalho_02.Clas
         public void ListarMembroClaNaoPossuiEquipe()
         {
 
+        }
+
+        public void Adicionar(Cla cla)
+        {
+            clas.Add(cla);
+
+            SalvarArquivo();
         }
 
         public void SalvarArquivo()

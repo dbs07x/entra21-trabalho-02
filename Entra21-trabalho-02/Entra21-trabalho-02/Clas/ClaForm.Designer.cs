@@ -35,17 +35,14 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelLider = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxLider = new System.Windows.Forms.ComboBox();
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDataFormacaoDoCLa = new System.Windows.Forms.DateTimePicker();
             this.labelDataFormacaoCla = new System.Windows.Forms.Label();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +63,7 @@
             this.buttonSalvar.TabIndex = 1;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonApagar
             // 
@@ -75,6 +73,7 @@
             this.buttonApagar.TabIndex = 2;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // buttonCancelar
             // 
@@ -84,6 +83,7 @@
             this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonEditar
             // 
@@ -110,13 +110,13 @@
             this.labelLider.TabIndex = 6;
             this.labelLider.Text = "Líder";
             // 
-            // comboBox1
+            // comboBoxLider
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 7;
+            this.comboBoxLider.FormattingEnabled = true;
+            this.comboBoxLider.Location = new System.Drawing.Point(12, 71);
+            this.comboBoxLider.Name = "comboBoxLider";
+            this.comboBoxLider.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxLider.TabIndex = 7;
             // 
             // labelKekkeiGenkai
             // 
@@ -132,42 +132,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnCodigo,
-            this.ColumnNome,
-            this.ColumnLider,
-            this.ColumnKekkeiGenkai});
             this.dataGridView1.Location = new System.Drawing.Point(202, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(586, 237);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnLider
-            // 
-            this.ColumnLider.HeaderText = "Líder";
-            this.ColumnLider.Name = "ColumnLider";
-            this.ColumnLider.ReadOnly = true;
-            // 
-            // ColumnKekkeiGenkai
-            // 
-            this.ColumnKekkeiGenkai.HeaderText = "Kekkei Genkai";
-            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
-            this.ColumnKekkeiGenkai.ReadOnly = true;
             // 
             // radioButtonSim
             // 
@@ -191,13 +161,13 @@
             this.radioButtonNao.Text = "Não";
             this.radioButtonNao.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dateTimePickerDataFormacaoDoCLa
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 158);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 23);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePickerDataFormacaoDoCLa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDataFormacaoDoCLa.Location = new System.Drawing.Point(12, 158);
+            this.dateTimePickerDataFormacaoDoCLa.Name = "dateTimePickerDataFormacaoDoCLa";
+            this.dateTimePickerDataFormacaoDoCLa.Size = new System.Drawing.Size(156, 23);
+            this.dateTimePickerDataFormacaoDoCLa.TabIndex = 12;
             // 
             // labelDataFormacaoCla
             // 
@@ -208,18 +178,24 @@
             this.labelDataFormacaoCla.TabIndex = 13;
             this.labelDataFormacaoCla.Text = "Data Formação do Clã";
             // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.Visible = false;
+            // 
             // ClaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 262);
             this.Controls.Add(this.labelDataFormacaoCla);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerDataFormacaoDoCLa);
             this.Controls.Add(this.radioButtonNao);
             this.Controls.Add(this.radioButtonSim);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelKekkeiGenkai);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxLider);
             this.Controls.Add(this.labelLider);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonEditar);
@@ -228,6 +204,7 @@
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelNome);
             this.Name = "ClaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClaForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -244,16 +221,13 @@
         private Button buttonEditar;
         private TextBox textBoxNome;
         private Label labelLider;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxLider;
         private Label labelKekkeiGenkai;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ColumnCodigo;
-        private DataGridViewTextBoxColumn ColumnNome;
-        private DataGridViewTextBoxColumn ColumnLider;
-        private DataGridViewTextBoxColumn ColumnKekkeiGenkai;
         private RadioButton radioButtonSim;
         private RadioButton radioButtonNao;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerDataFormacaoDoCLa;
         private Label labelDataFormacaoCla;
+        private DataGridViewTextBoxColumn ColumnCodigo;
     }
 }
