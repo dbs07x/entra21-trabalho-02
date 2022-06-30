@@ -6,6 +6,6 @@ namespace Entra21_trabalho_02.Aldeias
     {
         public int Codigo;
         public string Nome, Pais;
-        public Lider LiderAldeia;
+        public Lider Lider;
     }
 }

@@ -11,11 +11,15 @@ namespace Entra21_trabalho_02.Lideres
         {
             InitializeComponent();
 
-            comboBoxTitulo.DataSource = Enum.GetValues(typeof(Titulo));
-
-            PreencherComboBoxComOsChakras();
+            chakraServico = new ChakraServico();
 
             liderServico = new LiderServico();
+
+            comboBoxTitulo.DataSource = Enum.GetValues(typeof(Titulo));
+
+            PreencherDataGridViewComLider();
+
+            PreencherComboBoxComOsChakras();
         }
 
         private void PreencherComboBoxComOsChakras()
@@ -29,7 +33,7 @@ namespace Entra21_trabalho_02.Lideres
             }
         }
 
-        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca, string status, string? chakra)
+        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, string status, string? chakra)
         {
             var lider = new Lider
             {
@@ -41,7 +45,7 @@ namespace Entra21_trabalho_02.Lideres
                 InicioLideranca = inicioLideranca,
                 FimLideranca = fimLideranca,
                 Status = status,
-                //Chakra = chakra
+                Chakra = chakraServico.ObterPorNatureza(chakra)
             };
 
             liderServico.Cadastrar(lider);
@@ -70,7 +74,7 @@ namespace Entra21_trabalho_02.Lideres
             textBoxNome.Clear();
             comboBoxTitulo.SelectedIndex = -1;
             textBoxIdade.Clear();
-            dateTimePickerInicioLideranca.CustomFormat = "yyyy-MM-dd";
+            dateTimePickerInicioLideranca.CustomFormat = " ";
             maskedTextBoxFimLideranca.Text = string.Empty;
             comboBoxChakra.SelectedIndex = -1;
 
@@ -79,12 +83,12 @@ namespace Entra21_trabalho_02.Lideres
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            var nome = textBoxNome.Text.Trim().ToLower();
+            var nome = textBoxNome.Text;
             var titulo = Convert.ToString(comboBoxTitulo.SelectedItem);
-            var idade = Convert.ToInt32(textBoxIdade.Text.Trim().ToLower());
+            var idade = Convert.ToInt32(textBoxIdade.Text);
             string genero = ValidarGenero();
             var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
-            var fimLideranca = Convert.ToDateTime(maskedTextBoxFimLideranca.Text);
+            var fimLideranca = maskedTextBoxFimLideranca.Text;
             var status = Convert.ToString(radioButtonVivo.Checked);
             var chakra = Convert.ToString(comboBoxChakra.SelectedItem);
 
@@ -172,7 +176,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.FimLideranca,
                     lider.Status,
                     lider.Chakra,
-                    lider.KekkeiGenkai
+                    //lider.KekkeiGenkai
                 }) ;
             }
 
@@ -184,7 +188,7 @@ namespace Entra21_trabalho_02.Lideres
             LimparCampos();
         }
 
-        private void EditarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, DateTime fimLideranca, string chakra)
+        private void EditarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, string chakra)
         {
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
@@ -223,7 +227,7 @@ namespace Entra21_trabalho_02.Lideres
             textBoxIdade.Text = lider.Idade.ToString();
             string genero = ValidarGenero();
             dateTimePickerInicioLideranca.Text = lider.InicioLideranca.ToString();
-            dateTimePickerFimLideranca.Text = lider.FimLideranca.ToString();
+            maskedTextBoxFimLideranca.Text = lider.FimLideranca.ToString();
         }
 
         private string ValidarStatus()

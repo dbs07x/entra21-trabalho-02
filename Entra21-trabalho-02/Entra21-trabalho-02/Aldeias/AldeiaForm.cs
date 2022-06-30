@@ -62,13 +62,15 @@ namespace Entra21_trabalho_02.Aldeias
 
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            //var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            var aldeia = aldeiaServico.ApresentarPorCodigo(codigo);
+            var nome = linhaSelecionada.Cells[0].Value.ToString();
+            var pais = linhaSelecionada.Cells[1].Value.ToString();
+            var lider = linhaSelecionada.Cells[2].Value.ToString();
 
-            textBoxNome.Text = aldeia.Nome;
-            textBoxPais.Text = aldeia.Pais;
-            comboBoxLider.SelectedItem = aldeia.LiderAldeia.Nome;
+            textBoxNome.Text = nome;
+            textBoxPais.Text = pais;
+            comboBoxLider.SelectedItem = lider;
         }
 
         private void PreencherDataGridViewComAldeias()
@@ -85,7 +87,7 @@ namespace Entra21_trabalho_02.Aldeias
                 {
                     aldeia.Nome,
                     aldeia.Pais,
-                    aldeia.LiderAldeia.Nome
+                    aldeia.Lider
                 });
             }
 
@@ -130,29 +132,31 @@ namespace Entra21_trabalho_02.Aldeias
             aldeia.Codigo = aldeiaServico.ObterUltimoCodigo() + 1;
             aldeia.Nome = nome;
             aldeia.Pais = pais;
-            aldeia.LiderAldeia = liderServico.ObterPorNomeLider(nome);
+            aldeia.Lider = liderServico.ObterPorNomeLider(nome);
 
             aldeiaServico.Adicionar(aldeia);
         }
 
         private void EditarAldeia(string nome, string pais, string nomeLider)
         {
-            var linhaSelecionada = dataGridView1.SelectedRows[0];
+            //var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            //var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
             var aldeia = new Aldeia();
-            aldeia.Codigo = codigoSelecionado;
+            //aldeia.Codigo = codigoSelecionado;
             aldeia.Nome = nome;
             aldeia.Pais = pais;
-            aldeia.LiderAldeia = liderServico.ObterPorNomeLider(nomeLider);
+            aldeia.Lider = liderServico.ObterPorNomeLider(nomeLider);
 
             aldeiaServico.Adicionar(aldeia);
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count == 0)
+            var quantidadesLinhasSelecionadas = dataGridView1.SelectedRows.Count;
+
+            if(quantidadesLinhasSelecionadas == 0)
             {
                 MessageBox.Show("Selecione uma aldeia para remover!");
 
@@ -172,9 +176,9 @@ namespace Entra21_trabalho_02.Aldeias
 
             var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            var aldeia = aldeiaServico.ApresentarPorCodigo(codigo);
+            //var aldeia = aldeiaServico.ApresentarPorCodigo(linhaSelecionada);
 
-            aldeiaServico.Apagar(aldeia);
+            aldeiaServico.Apagar(codigo);
 
             PreencherDataGridViewComAldeias();
 
@@ -187,15 +191,13 @@ namespace Entra21_trabalho_02.Aldeias
             var pais = textBoxPais.Text;
             var nomeLider = Convert.ToString(comboBoxLider.SelectedItem);
 
-            var dadosValidos = ValidarDados(nome, pais, nomeLider);
-
-            if (dadosValidos == false)
-                return;
-
             if (dataGridView1.SelectedCells.Count == 0)
+            {
                 CadastrarAldeia(nome, pais, nomeLider);
-            else
-                EditarAldeia(nome, pais, nomeLider);
+
+                return;
+            }
+            EditarAldeia(nome, pais, nomeLider);
 
             PreencherDataGridViewComAldeias();
 
