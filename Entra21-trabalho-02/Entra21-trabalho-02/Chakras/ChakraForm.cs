@@ -40,7 +40,7 @@
                 elementoEhPrimario = false;
             }
 
-            var dadosValidos = ValidarDados(natureza, tipo);
+            var dadosValidos = ValidarDados();
 
             if (dadosValidos == false)
             {
@@ -165,7 +165,7 @@
             }
         }
 
-        private bool ValidarDados(object natureza, object tipo)
+        private bool ValidarDados()
         {
             if (comboBoxNatureza.SelectedIndex == -1)
             {

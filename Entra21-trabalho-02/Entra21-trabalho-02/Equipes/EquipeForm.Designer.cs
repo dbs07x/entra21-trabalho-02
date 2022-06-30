@@ -86,6 +86,7 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(1052, 543);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ColumnCodigo
             // 
@@ -337,6 +338,7 @@
             this.buttonCadastrar.TabIndex = 19;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonEditar
             // 
@@ -347,6 +349,7 @@
             this.buttonEditar.TabIndex = 20;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonCancelar
             // 
@@ -357,6 +360,7 @@
             this.buttonCancelar.TabIndex = 22;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // Apagar
             // 
@@ -367,6 +371,7 @@
             this.Apagar.TabIndex = 21;
             this.Apagar.Text = "Apagar";
             this.Apagar.UseVisualStyleBackColor = true;
+            this.Apagar.Click += new System.EventHandler(this.Apagar_Click);
             // 
             // EquipeForm
             // 
@@ -400,6 +405,7 @@
             this.Name = "EquipeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipe";
+            this.Load += new System.EventHandler(this.EquipeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
