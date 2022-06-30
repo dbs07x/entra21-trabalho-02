@@ -1,5 +1,4 @@
-﻿
-using Entra21_trabalho_02.Chakras;
+﻿using Entra21_trabalho_02.Chakras;
 
 namespace Entra21_trabalho_02.Lideres
 {
@@ -197,6 +196,8 @@ namespace Entra21_trabalho_02.Lideres
             lider.InicioLideranca = inicioLideranca;
             lider.FimLideranca= fimLideranca;
             lider.Chakra = chakraServico.ObterPorNatureza(chakra);
+
+            liderServico.Editar(lider);
         }
     }
 }

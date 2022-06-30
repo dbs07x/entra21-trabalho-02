@@ -1,4 +1,6 @@
-﻿namespace Entra21_trabalho_02.Lideres
+﻿using Entra21_trabalho_02.Chakras;
+
+namespace Entra21_trabalho_02.Lideres
 {
     internal class Lider
     {
