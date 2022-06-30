@@ -1,3 +1,5 @@
+using Entra21_trabalho_02.Chakras;
+
 namespace Entra21_trabalho_02
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Entra21_trabalho_02
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new EquipeForm());
+            Application.Run(new ChakraForm());
         }
     }
 }

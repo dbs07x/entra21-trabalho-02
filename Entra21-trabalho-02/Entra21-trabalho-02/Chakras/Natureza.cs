@@ -1,7 +1,7 @@
 ﻿namespace Entra21_trabalho_02.Chakras
 {
     internal enum Natureza
-    {
+    {       
         Aço,
         Água,
         Calor,
