@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelNome = new System.Windows.Forms.Label();
-            this.buttonCadastrar = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
@@ -38,12 +38,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.radioButtonSim = new System.Windows.Forms.RadioButton();
-            this.radioButtonNao = new System.Windows.Forms.RadioButton();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radioButtonSim = new System.Windows.Forms.RadioButton();
+            this.radioButtonNao = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelDataFormacaoCla = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,18 +58,18 @@
             this.labelNome.TabIndex = 0;
             this.labelNome.Text = "Nome";
             // 
-            // buttonCadastrar
+            // buttonSalvar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(12, 157);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCadastrar.TabIndex = 1;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Location = new System.Drawing.Point(12, 187);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.TabIndex = 1;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(12, 186);
+            this.buttonApagar.Location = new System.Drawing.Point(93, 216);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(75, 23);
             this.buttonApagar.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(93, 186);
+            this.buttonCancelar.Location = new System.Drawing.Point(93, 187);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 3;
@@ -85,7 +87,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(93, 157);
+            this.buttonEditar.Location = new System.Drawing.Point(12, 216);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 4;
@@ -142,28 +144,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(586, 237);
             this.dataGridView1.TabIndex = 9;
             // 
-            // radioButtonSim
-            // 
-            this.radioButtonSim.AutoSize = true;
-            this.radioButtonSim.Location = new System.Drawing.Point(12, 115);
-            this.radioButtonSim.Name = "radioButtonSim";
-            this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
-            this.radioButtonSim.TabIndex = 10;
-            this.radioButtonSim.TabStop = true;
-            this.radioButtonSim.Text = "Sim";
-            this.radioButtonSim.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNao
-            // 
-            this.radioButtonNao.AutoSize = true;
-            this.radioButtonNao.Location = new System.Drawing.Point(65, 115);
-            this.radioButtonNao.Name = "radioButtonNao";
-            this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
-            this.radioButtonNao.TabIndex = 11;
-            this.radioButtonNao.TabStop = true;
-            this.radioButtonNao.Text = "Não";
-            this.radioButtonNao.UseVisualStyleBackColor = true;
-            // 
             // ColumnCodigo
             // 
             this.ColumnCodigo.HeaderText = "Código";
@@ -189,11 +169,52 @@
             this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
             this.ColumnKekkeiGenkai.ReadOnly = true;
             // 
+            // radioButtonSim
+            // 
+            this.radioButtonSim.AutoSize = true;
+            this.radioButtonSim.Location = new System.Drawing.Point(12, 115);
+            this.radioButtonSim.Name = "radioButtonSim";
+            this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
+            this.radioButtonSim.TabIndex = 10;
+            this.radioButtonSim.TabStop = true;
+            this.radioButtonSim.Text = "Sim";
+            this.radioButtonSim.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNao
+            // 
+            this.radioButtonNao.AutoSize = true;
+            this.radioButtonNao.Location = new System.Drawing.Point(65, 115);
+            this.radioButtonNao.Name = "radioButtonNao";
+            this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
+            this.radioButtonNao.TabIndex = 11;
+            this.radioButtonNao.TabStop = true;
+            this.radioButtonNao.Text = "Não";
+            this.radioButtonNao.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 158);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(156, 23);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // labelDataFormacaoCla
+            // 
+            this.labelDataFormacaoCla.AutoSize = true;
+            this.labelDataFormacaoCla.Location = new System.Drawing.Point(12, 137);
+            this.labelDataFormacaoCla.Name = "labelDataFormacaoCla";
+            this.labelDataFormacaoCla.Size = new System.Drawing.Size(124, 15);
+            this.labelDataFormacaoCla.TabIndex = 13;
+            this.labelDataFormacaoCla.Text = "Data Formação do Clã";
+            // 
             // ClaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 262);
+            this.Controls.Add(this.labelDataFormacaoCla);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.radioButtonNao);
             this.Controls.Add(this.radioButtonSim);
             this.Controls.Add(this.dataGridView1);
@@ -204,7 +225,7 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonApagar);
-            this.Controls.Add(this.buttonCadastrar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelNome);
             this.Name = "ClaForm";
             this.Text = "ClaForm";
@@ -217,7 +238,7 @@
         #endregion
 
         private Label labelNome;
-        private Button buttonCadastrar;
+        private Button buttonSalvar;
         private Button buttonApagar;
         private Button buttonCancelar;
         private Button buttonEditar;
@@ -232,5 +253,7 @@
         private DataGridViewTextBoxColumn ColumnKekkeiGenkai;
         private RadioButton radioButtonSim;
         private RadioButton radioButtonNao;
+        private DateTimePicker dateTimePicker1;
+        private Label labelDataFormacaoCla;
     }
 }

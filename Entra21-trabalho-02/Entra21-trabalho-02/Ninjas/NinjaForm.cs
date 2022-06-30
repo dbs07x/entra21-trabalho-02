@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Entra21_trabalho_02.Clas;
 
 namespace Entra21_trabalho_02.Ninjas
 {
@@ -15,6 +7,39 @@ namespace Entra21_trabalho_02.Ninjas
         public NinjaForm()
         {
             InitializeComponent();
+
+            comboBoxNivel.DataSource = Enum.GetValues(typeof(Nivel));
         }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            var nome = textBoxNome.Text;
+            var elementoChakra = comboBoxElementoChakra.Text;
+            var dataNascimento = maskedTextBoxDataNascimento.Text;
+            var nivel = comboBoxNivel.Text;
+            var cla = comboBoxCla.Text;
+            var aldeia = comboBoxAldeia.Text;
+
+        }
+
+
+        /*
+        Cadastrar
+        Excluir
+        Editar
+        ListarTodos
+        ListarPorElementoChakra
+        ListarPorGenero
+        ListarPorStatus
+        ListarPorNivel
+        ListarPossuiKekkeiGenkai
+        ListarNaoPossuiKekkeiGenkai
+        ListarPossuiEquipe
+        ListarNaoPossuiEquipe
+        ListarPossuiCla
+        ListarNaoPossuiCla
+        ListarPossuiAldeia
+        ListarNaoPossuiAldeia
+        */
     }
 }
