@@ -62,7 +62,7 @@ namespace Entra21_trabalho_02.Ninjas
             }
         }
 
-        public List<Ninja> ListarTodos()
+        public List<Ninja> ObterTodos()
         {
             return ninjas;
         }

@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entra21_trabalho_02.Clas
 {
@@ -18,7 +13,7 @@ namespace Entra21_trabalho_02.Clas
             LerArquivo();
         }
 
-        public void Cadastrar(Cla cla)
+        public void Salvar(Cla cla)
         {
             clas.Add(cla);
 
