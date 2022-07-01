@@ -26,7 +26,7 @@ namespace Entra21_trabalho_02.Ninjas
 
         private void PreencherDataGridViewComNinjas()
         {
-            var ninjas = ninjaServico.ObterTodos();
+            var ninjas = ninjaServico.ListarTodos();
 
             dataGridView1.Rows.Clear();
 

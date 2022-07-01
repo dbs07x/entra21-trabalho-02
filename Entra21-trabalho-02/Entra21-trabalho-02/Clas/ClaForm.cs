@@ -29,20 +29,23 @@ namespace Entra21_trabalho_02.Clas
         {
             var nome = textBoxNome.Text;
             var lider = Convert.ToString(comboBoxLider.SelectedItem);
-            bool kekkeigenkai;
+            bool kekkeiGenkai;
 
             if (radioButtonSim.Checked == true)
             {
-                kekkeigenkai = true;
+                kekkeiGenkai = true;
             }
             else
             {
-                kekkeigenkai = false;
+                kekkeiGenkai = false;
             }
 
-            var dataFormacao = Convert.ToString(dateTimePickerDataFormacaoDoCLa.Text);
+            var dataFormacaoDoCla = Convert.ToString(dateTimePickerDataFormacaoDoCLa.Text);
 
-            CadastarCla(nome, lider, kekkeigenkai);
+            if (dataGridView1.SelectedRows.Count == 0)
+                CadastarCla(nome, lider, kekkeiGenkai, dataFormacaoDoCla);
+            else
+                EditarCla(nome, lider, kekkeiGenkai, dataFormacaoDoCla);
 
             PreencherDataGridViewComClas();
 
@@ -90,6 +93,7 @@ namespace Entra21_trabalho_02.Clas
 
                 dataGridView1.Rows.Add(new object[]
                 {
+                    cla.Id,
                     cla.Nome,
                     cla.Lider,
                     cla.KekkeiGenkai,
@@ -109,15 +113,32 @@ namespace Entra21_trabalho_02.Clas
             }
         }
 
-        private void CadastarCla(string nome, string lider, bool kekkeigenkai)
+        private void CadastarCla(string nome, string lider, bool kekkeiGenkai, string dataFormacaoDoCla)
         {
             var cla = new Cla();
             cla.Id = claServico.ObterUltimoCodigo() + 1;
             cla.Nome = nome;
             cla.Lider = lider;
-            cla.KekkeiGenkai = kekkeigenkai;
+            cla.KekkeiGenkai = kekkeiGenkai;
+            cla.DataFormacaoDoCla = dataFormacaoDoCla;
 
             claServico.Adicionar(cla);
+        }
+
+        private void EditarCla(string nome, string lider, bool kekkeiGenkai, string dataFormacaoDoCla)
+        {
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var cla = new Cla();
+            cla.Id = codigoSelecionado;
+            cla.Nome = nome;
+            cla.Lider = lider;
+            cla.KekkeiGenkai = kekkeiGenkai;
+            cla.DataFormacaoDoCla = dataFormacaoDoCla;
+
+            claServico.Editar(cla);
         }
 
         private void LimparCampos()
@@ -125,6 +146,40 @@ namespace Entra21_trabalho_02.Clas
             textBoxNome.Text = string.Empty;
         }
 
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            ApresentarDadosParaEdicao();
+        }
 
+        private void ApresentarDadosParaEdicao()
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um clã para editar", "Aviso", MessageBoxButtons.OK);
+
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var cla = claServico.ObterPorCodigo(codigo);
+
+            textBoxNome.Text = cla.Nome;
+            comboBoxLider.SelectedItem = cla.Lider;
+
+            bool kekkeiGenkai;
+
+            if (radioButtonSim.Checked == true)
+            {
+                kekkeiGenkai = true;
+            }
+            else
+            {
+                kekkeiGenkai = false;
+            }
+
+        }
     }
 }
