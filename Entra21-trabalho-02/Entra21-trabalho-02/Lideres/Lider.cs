@@ -12,7 +12,7 @@ namespace Entra21_trabalho_02.Lideres
         public DateTime InicioLideranca;
         public string FimLideranca;
         public bool Status;
-        public Chakra Chakra;
+        public Chakra Natureza;
         public bool KekkeiGenkai;
     }
 }

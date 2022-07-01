@@ -86,7 +86,7 @@ namespace Entra21_trabalho_02.Aldeias
                     aldeia.Codigo,
                     aldeia.Nome,
                     aldeia.Pais,
-                    aldeia.Lider
+                    aldeia.Lider.Nome
                 });
             }
 

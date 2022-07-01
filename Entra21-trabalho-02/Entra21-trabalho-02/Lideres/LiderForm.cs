@@ -158,7 +158,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.InicioLideranca,
                     lider.FimLideranca,
                     lider.Status,
-                    lider.Chakra,
+                    lider.Chakra.,
                     lider.KekkeiGenkai
                 });
             }
@@ -308,7 +308,7 @@ namespace Entra21_trabalho_02.Lideres
         {
             var chakras = chakraServico.ListarTodos();
 
-            for(int i = 0; i < chakras.Count; i++)
+            for (int i = 0; i < chakras.Count; i++)
             {
                 var chakra = chakras[i];
                 comboBoxChakra.Items.Add(chakra.Natureza);
