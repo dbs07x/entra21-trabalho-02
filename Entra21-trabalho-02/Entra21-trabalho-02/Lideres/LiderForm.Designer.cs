@@ -62,6 +62,9 @@
             this.checkBoxNaoBinario = new System.Windows.Forms.CheckBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.maskedTextBoxFimLideranca = new System.Windows.Forms.MaskedTextBox();
+            this.labelKekkeiGenkai = new System.Windows.Forms.Label();
+            this.radioButtonSim = new System.Windows.Forms.RadioButton();
+            this.radioButtonNao = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,7 +242,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(730, 524);
+            this.labelStatus.Location = new System.Drawing.Point(730, 517);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(49, 20);
             this.labelStatus.TabIndex = 10;
@@ -248,7 +251,7 @@
             // labelElementoChakra
             // 
             this.labelElementoChakra.AutoSize = true;
-            this.labelElementoChakra.Location = new System.Drawing.Point(730, 603);
+            this.labelElementoChakra.Location = new System.Drawing.Point(730, 580);
             this.labelElementoChakra.Name = "labelElementoChakra";
             this.labelElementoChakra.Size = new System.Drawing.Size(121, 20);
             this.labelElementoChakra.TabIndex = 11;
@@ -288,7 +291,7 @@
             "Relâmpago",
             "Terra",
             "Água"});
-            this.comboBoxChakra.Location = new System.Drawing.Point(730, 627);
+            this.comboBoxChakra.Location = new System.Drawing.Point(730, 604);
             this.comboBoxChakra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxChakra.Name = "comboBoxChakra";
             this.comboBoxChakra.Size = new System.Drawing.Size(345, 28);
@@ -306,7 +309,7 @@
             // radioButtonVivo
             // 
             this.radioButtonVivo.AutoSize = true;
-            this.radioButtonVivo.Location = new System.Drawing.Point(730, 560);
+            this.radioButtonVivo.Location = new System.Drawing.Point(730, 541);
             this.radioButtonVivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonVivo.Name = "radioButtonVivo";
             this.radioButtonVivo.Size = new System.Drawing.Size(59, 24);
@@ -318,7 +321,7 @@
             // radioButtonMorto
             // 
             this.radioButtonMorto.AutoSize = true;
-            this.radioButtonMorto.Location = new System.Drawing.Point(938, 560);
+            this.radioButtonMorto.Location = new System.Drawing.Point(938, 541);
             this.radioButtonMorto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonMorto.Name = "radioButtonMorto";
             this.radioButtonMorto.Size = new System.Drawing.Size(71, 24);
@@ -401,11 +404,45 @@
             this.maskedTextBoxFimLideranca.Size = new System.Drawing.Size(344, 27);
             this.maskedTextBoxFimLideranca.TabIndex = 26;
             // 
+            // labelKekkeiGenkai
+            // 
+            this.labelKekkeiGenkai.AutoSize = true;
+            this.labelKekkeiGenkai.Location = new System.Drawing.Point(730, 649);
+            this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
+            this.labelKekkeiGenkai.Size = new System.Drawing.Size(101, 20);
+            this.labelKekkeiGenkai.TabIndex = 27;
+            this.labelKekkeiGenkai.Text = "Kekkei Genkai";
+            // 
+            // radioButtonSim
+            // 
+            this.radioButtonSim.AutoSize = true;
+            this.radioButtonSim.Location = new System.Drawing.Point(730, 681);
+            this.radioButtonSim.Name = "radioButtonSim";
+            this.radioButtonSim.Size = new System.Drawing.Size(55, 24);
+            this.radioButtonSim.TabIndex = 28;
+            this.radioButtonSim.TabStop = true;
+            this.radioButtonSim.Text = "Sim";
+            this.radioButtonSim.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNao
+            // 
+            this.radioButtonNao.AutoSize = true;
+            this.radioButtonNao.Location = new System.Drawing.Point(911, 681);
+            this.radioButtonNao.Name = "radioButtonNao";
+            this.radioButtonNao.Size = new System.Drawing.Size(58, 24);
+            this.radioButtonNao.TabIndex = 29;
+            this.radioButtonNao.TabStop = true;
+            this.radioButtonNao.Text = "Não";
+            this.radioButtonNao.UseVisualStyleBackColor = true;
+            // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 849);
+            this.Controls.Add(this.radioButtonNao);
+            this.Controls.Add(this.radioButtonSim);
+            this.Controls.Add(this.labelKekkeiGenkai);
             this.Controls.Add(this.maskedTextBoxFimLideranca);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.checkBoxNaoBinario);
@@ -468,10 +505,7 @@
         private CheckBox checkBoxTransgenero;
         private CheckBox checkBoxNaoBinario;
         private MaskedTextBox maskedTextBoxFimLideranca;
-        private RadioButton radioButton1;
-        private Button button1;
-        private Label labelKekkeiGenkai;
-        private RadioButton radioButton2;
+        private RadioButton radioButtonSim;
         private Button buttonCancelar;
         private DataGridViewTextBoxColumn ColumnNome;
         private DataGridViewTextBoxColumn ColumnTitulo;
@@ -481,5 +515,7 @@
         private DataGridViewTextBoxColumn ColumnFimLideranca;
         private DataGridViewTextBoxColumn ColumnStatus;
         private DataGridViewTextBoxColumn ColumnChakra;
+        private Label labelKekkeiGenkai;
+        private RadioButton radioButtonNao;
     }
 }
