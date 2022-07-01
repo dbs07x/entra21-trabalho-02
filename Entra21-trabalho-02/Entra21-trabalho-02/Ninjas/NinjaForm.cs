@@ -47,7 +47,7 @@ namespace Entra21_trabalho_02.Ninjas
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             var nome = textBoxNome.Text;
-            var elementoChakra = comboBoxElementoChakra.Text;
+            var natureza = comboBoxElementoChakra.Text;
             var dataNascimento = maskedTextBoxDataNascimento.Text;
             string genero;
 
@@ -61,7 +61,7 @@ namespace Entra21_trabalho_02.Ninjas
                 genero = "Feminino";
             }
 
-            else if ((checkBoxMasculino.Checked == false) && (checkBoxFeminino.Checked == false) && (checkBoxNaoBinario.Checked == true) && (checkBoxCisgenero.Checked == false) && (checkBoxTransgenero.Checked == false))
+            else
             {
                 genero = "Não-Binário";
             }
@@ -92,12 +92,15 @@ namespace Entra21_trabalho_02.Ninjas
                 kekkeiGenkai = false;
             }
 
-            /*if (dataGridView1.SelectedRows.Count == 0)
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
                 CadastarNinja(nome, natureza, dataNascimento, genero, status, nivel, cla, aldeia, kekkeiGenkai);
+            }
 
             else
+            {
                 EditarNinja(nome, natureza, dataNascimento, genero, status, nivel, cla, aldeia, kekkeiGenkai);
-            */
+            }
 
             PreencherDataGridViewComNinjas();
 
@@ -111,7 +114,31 @@ namespace Entra21_trabalho_02.Ninjas
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um ninja para apagar", "Aviso", MessageBoxButtons.OK);
 
+                return;
+            }
+
+            var resposta = MessageBox.Show("Deseja apagar o ninja?", "Aviso", MessageBoxButtons.YesNo);
+
+            if (resposta != DialogResult.Yes)
+            {
+                MessageBox.Show("O ninja permanece na lista", "Aviso", MessageBoxButtons.OK);
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var ninja = ninjaServico.ObterPorCodigo(codigo);
+
+            ninjaServico.Apagar(ninja);
+
+            PreencherDataGridViewComNinjas();
+
+            dataGridView1.ClearSelection();
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
@@ -233,24 +260,24 @@ namespace Entra21_trabalho_02.Ninjas
 
         }
 
-        private void CadastarNinja(string nome, string natureza, string dataNascimento, string genero, string status, string nivel, string cla, string aldeia, bool kekkeiGenkai)
+        private void CadastarNinja(string nome, string natureza, string dataNascimento, string genero, bool status, string nivel, string cla, string aldeia, bool kekkeiGenkai)
         {
             var ninja = new Ninja();
             ninja.Id = ninjaServico.ObterUltimoCodigo() + 1;
             ninja.Nome = nome;
-            // ninja.ElementoChakra = chakraServico.ObterNaturezaChakra(natureza);
+            ninja.ElementoChakra = chakraServico.ObterPorNatureza(natureza);
             ninja.DataNascimento = dataNascimento;
-            ninja.Genero = ninjaServico.ObterGeneroNinja(genero);
-            ninja.Status = ninjaServico.ObterStatusNinja(status);
+            ninja.Genero = genero;
+            ninja.Status = status;
             ninja.Nivel = ninjaServico.ObterNivelNinja(nivel);
             ninja.Cla = claServico.ObterPorNomeCla(cla);
-            // ninja.Aldeia = aldeia;
+            ninja.Aldeia = aldeiaServico.ObterAldeiaPeloNome(aldeia);
             ninja.KekkeiGenkai = kekkeiGenkai;
 
             ninjaServico.Adicionar(ninja);
         }
 
-        private void EditarNinja(string nome, string natureza, string dataNascimento, string genero, string status, string nivel, string cla, string aldeia, bool kekkeiGenkai)
+        private void EditarNinja(string nome, string natureza, string dataNascimento, string genero, bool status, string nivel, string cla, string aldeia, bool kekkeiGenkai)
         {
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
@@ -259,18 +286,16 @@ namespace Entra21_trabalho_02.Ninjas
             var ninja = new Ninja();
             ninja.Id = ninjaServico.ObterUltimoCodigo() + 1;
             ninja.Nome = nome;
-            // ninja.ElementoChakra = chakraServico.ObterNaturezaChakra(natureza);
+            ninja.ElementoChakra = chakraServico.ObterPorNatureza(natureza);
             ninja.DataNascimento = dataNascimento;
-            ninja.Genero = ninjaServico.ObterGeneroNinja(genero);
-            ninja.Status = ninjaServico.ObterStatusNinja(status);
+            ninja.Genero = genero;
+            ninja.Status = status;
             ninja.Nivel = ninjaServico.ObterNivelNinja(nivel);
             ninja.Cla = claServico.ObterPorNomeCla(cla);
-            // ninja.Aldeia = aldeia;
+            ninja.Aldeia = aldeiaServico.ObterAldeiaPeloNome(aldeia);
             ninja.KekkeiGenkai = kekkeiGenkai;
 
             ninjaServico.Editar(ninja);
         }
-
-
     }
 }

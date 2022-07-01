@@ -10,8 +10,8 @@ namespace Entra21_trabalho_02.Ninjas
         public string Nome;
         public Chakra ElementoChakra;
         public string DataNascimento;
-        public Genero Genero;
-        public Status Status;
+        public string Genero;
+        public bool Status;
         public Nivel Nivel;
         public Cla Cla;
         public Aldeia Aldeia;

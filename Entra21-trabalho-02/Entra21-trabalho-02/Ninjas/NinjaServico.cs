@@ -5,6 +5,7 @@ namespace Entra21_trabalho_02.Ninjas
     internal class NinjaServico
     {
         private List<Ninja> ninjas;
+        private List<Genero> generos;
 
         public NinjaServico()
         {
@@ -29,13 +30,13 @@ namespace Entra21_trabalho_02.Ninjas
                 if (ninja.Id == ninjaEditar.Id)
                 {
                     ninja.Nome = ninjaEditar.Nome;
-                    // ninja.Chakra = ninjaEditar.Chakra;
+                    ninja.ElementoChakra = ninjaEditar.ElementoChakra;
                     ninja.DataNascimento = ninjaEditar.DataNascimento;
                     ninja.Genero = ninjaEditar.Genero;
                     ninja.Status = ninjaEditar.Status;
                     ninja.Nivel = ninjaEditar.Nivel;
                     ninja.Cla = ninjaEditar.Cla;
-                    // ninja.Aldeia = ninjaEditar.Aldeia;
+                    ninja.Aldeia = ninjaEditar.Aldeia;
                     ninja.KekkeiGenkai = ninjaEditar.KekkeiGenkai;
 
                     SalvarArquivo();
@@ -128,21 +129,21 @@ namespace Entra21_trabalho_02.Ninjas
             ninjas = JsonConvert.DeserializeObject<List<Ninja>>(ninjasJson);
         }
 
-        public Genero ObterGeneroNinja(string genero)
+        public Genero ObterGeneroNinja(string generoNinja)
         {
-            if (genero == "Masculino")
+            if (generoNinja == "Masculino")
             {
                 return Genero.Masculino;
             }
-            else if (genero == "Feminino")
+            else if (generoNinja == "Feminino")
             {
                 return Genero.Feminino;
             }
-            else if (genero == "Não-Binário")
+            else if (generoNinja == "Não-Binário")
             {
                 return Genero.NaoBinario;
             }
-            else if (genero == "Cisgenero")
+            else if (generoNinja == "Cisgenero")
             {
                 return Genero.Cisgenero;
             }
