@@ -190,7 +190,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.FimLideranca,
                     lider.Status,
                     lider.Chakra,
-                    //lider.KekkeiGenkai
+                    lider.KekkeiGenkai
                 }) ;
             }
 
