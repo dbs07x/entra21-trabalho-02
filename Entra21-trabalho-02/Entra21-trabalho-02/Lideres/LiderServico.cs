@@ -41,6 +41,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.FimLideranca = liderParaAlterar.FimLideranca;
                     lider.Status = liderParaAlterar.Status;
                     lider.Chakra = liderParaAlterar.Chakra;
+                    lider.KekkeiGenkai = liderParaAlterar.KekkeiGenkai;
 
                     SalvarArquivo();
 
@@ -106,8 +107,8 @@ namespace Entra21_trabalho_02.Lideres
             if (File.Exists("lideres.json") == false)
                 return;
 
-            var lideresEmJson = File.ReadAllText("lideres.json");
-            lideres = JsonConvert.DeserializeObject<List<Lider>>(lideresEmJson);
+            var lideresJson = File.ReadAllText("lideres.json");
+            lideres = JsonConvert.DeserializeObject<List<Lider>>(lideresJson);
         }
 
         public int ObterUltimoCodigo()

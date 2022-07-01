@@ -20,6 +20,8 @@ namespace Entra21_trabalho_02.Lideres
             PreencherDataGridViewComLider();
 
             PreencherComboBoxComOsChakras();
+
+            LimparCampos();
         }
 
         private void PreencherComboBoxComOsChakras()
@@ -33,25 +35,21 @@ namespace Entra21_trabalho_02.Lideres
             }
         }
 
-        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, bool statusVivo, string? chakra, bool kekkeiGenkai)
+        private void AdicionarLider(string nome, string titulo, int idade, string genero, DateTime inicioLideranca, string fimLideranca, bool statusVivo, string chakra, bool kekkeiGenkai)
         {
-            var lider = new Lider
-            {
-                Codigo = liderServico.ObterUltimoCodigo() + 1,
-                Nome = nome,
-                Titulo = ObterTituloLider(titulo),
-                Idade = idade,
-                Genero = genero,
-                InicioLideranca = inicioLideranca,
-                FimLideranca = fimLideranca,
-                Status = statusVivo,
-                Chakra = chakraServico.ObterPorNatureza(chakra),
-                KekkeiGenkai = kekkeiGenkai
-            };
-
+            var lider = new Lider();
+            lider.Codigo = liderServico.ObterUltimoCodigo() + 1;
+            lider.Nome = nome;
+            lider.Titulo = ObterTituloLider(titulo);
+            lider.Genero = genero;
+            lider.Idade = idade;
+            lider.InicioLideranca = inicioLideranca;
+            lider.FimLideranca = fimLideranca;
+            lider.Status = statusVivo;
+            lider.Chakra = chakraServico.ObterPorNatureza(chakra);
+            lider.KekkeiGenkai = kekkeiGenkai;
+           
             liderServico.Cadastrar(lider);
-
-            LimparCampos();
         }
 
         private Titulo ObterTituloLider(string titulo)
@@ -72,44 +70,49 @@ namespace Entra21_trabalho_02.Lideres
 
         private void LimparCampos()
         {
+            var hoje = DateTime.Today;
+
             textBoxNome.Clear();
             comboBoxTitulo.SelectedIndex = -1;
             textBoxIdade.Clear();
-            dateTimePickerInicioLideranca.CustomFormat = " ";
-            maskedTextBoxFimLideranca.Text = string.Empty;
+            checkBoxMasculino.Checked = false;
+            checkBoxFeminino.Checked = false;
+            checkBoxNaoBinario.Checked = false;
+            checkBoxCisgenero.Checked = false;
+            checkBoxTransgenero.Checked = false;
+            dateTimePickerInicioLideranca.Value = hoje;
+            maskedTextBoxFimLideranca.Clear();
+            radioButtonVivo.Checked = true;
             comboBoxChakra.SelectedIndex = -1;
-
-            dataGridView1.ClearSelection();
+            radioButtonSim.Checked = true;
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            bool statusVivo;
-
-            if (radioButtonVivo.Checked == true)
-               statusVivo = true;
-            else
-               statusVivo = false;
-
-            bool kekkeiGenkai;
-
-            if (radioButtonSim.Checked == true)
-                kekkeiGenkai = true;
-            else
-                kekkeiGenkai = false;
-
             var nome = textBoxNome.Text;
             var titulo = Convert.ToString(comboBoxTitulo.SelectedItem);
             var idade = Convert.ToInt32(textBoxIdade.Text);
             string genero = ValidarGenero();
             var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
             var fimLideranca = maskedTextBoxFimLideranca.Text;
+            bool statusVivo;
             var chakra = Convert.ToString(comboBoxChakra.SelectedItem);
+            bool kekkeiGenkai;
+
+            if (radioButtonVivo.Checked == true)
+                statusVivo = true;
+            else
+                statusVivo = false;
+
+            if (radioButtonSim.Checked == true)
+                kekkeiGenkai = true;
+            else
+                kekkeiGenkai = false;
 
             if (dataGridView1.SelectedRows.Count == 0)
-                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, statusVivo, chakra, kekkeiGenkai);
+                AdicionarLider(nome, titulo, idade, genero, inicioLideranca, fimLideranca, statusVivo, chakra, kekkeiGenkai);
             else
-                EditarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, statusVivo, chakra, kekkeiGenkai);
+                EditarLider(nome, titulo, idade, genero, inicioLideranca, fimLideranca, statusVivo, chakra, kekkeiGenkai);
 
             PreencherDataGridViewComLider();
 
@@ -202,7 +205,7 @@ namespace Entra21_trabalho_02.Lideres
             LimparCampos();
         }
 
-        private void EditarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, bool statusVivo, string chakra, bool kekkeiGenkai)
+        private void EditarLider(string nome, string titulo, int idade, string genero, DateTime inicioLideranca, string fimLideranca, bool statusVivo, string chakra, bool kekkeiGenkai)
         {
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
