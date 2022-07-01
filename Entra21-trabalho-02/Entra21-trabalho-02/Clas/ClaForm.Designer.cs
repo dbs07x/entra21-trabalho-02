@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 262);
+            this.ClientSize = new System.Drawing.Size(800, 296);
             this.Controls.Add(this.labelDataFormacaoCla);
             this.Controls.Add(this.dateTimePickerDataFormacaoDoCLa);
             this.Controls.Add(this.radioButtonNao);
