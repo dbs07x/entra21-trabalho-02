@@ -38,11 +38,19 @@
             this.comboBoxLider = new System.Windows.Forms.ComboBox();
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataFormacaoDoCla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
             this.dateTimePickerDataFormacaoDoCLa = new System.Windows.Forms.DateTimePicker();
             this.labelDataFormacaoCla = new System.Windows.Forms.Label();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Líder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +101,7 @@
             this.buttonEditar.TabIndex = 4;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // textBoxNome
             // 
@@ -132,12 +141,48 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnNome,
+            this.ColumnLider,
+            this.ColumnKekkeiGenkai,
+            this.ColumnDataFormacaoDoCla});
             this.dataGridView1.Location = new System.Drawing.Point(202, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(586, 237);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnLider
+            // 
+            this.ColumnLider.HeaderText = "Líder";
+            this.ColumnLider.Name = "ColumnLider";
+            this.ColumnLider.ReadOnly = true;
+            // 
+            // ColumnKekkeiGenkai
+            // 
+            this.ColumnKekkeiGenkai.HeaderText = "Kekkei Genkai";
+            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
+            this.ColumnKekkeiGenkai.ReadOnly = true;
+            // 
+            // ColumnDataFormacaoDoCla
+            // 
+            this.ColumnDataFormacaoDoCla.HeaderText = "Data Formação do Clã";
+            this.ColumnDataFormacaoDoCla.Name = "ColumnDataFormacaoDoCla";
+            this.ColumnDataFormacaoDoCla.ReadOnly = true;
             // 
             // radioButtonSim
             // 
@@ -184,6 +229,21 @@
             this.ColumnCodigo.Name = "ColumnCodigo";
             this.ColumnCodigo.Visible = false;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "ColumnId";
+            this.Id.Name = "Id";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "ColumnNome";
+            this.Nome.Name = "Nome";
+            // 
+            // Líder
+            // 
+            this.Líder.HeaderText = "ColumnLider";
+            this.Líder.Name = "Líder";
+            // 
             // ClaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -229,5 +289,13 @@
         private DateTimePicker dateTimePickerDataFormacaoDoCLa;
         private Label labelDataFormacaoCla;
         private DataGridViewTextBoxColumn ColumnCodigo;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Líder;
+        private DataGridViewTextBoxColumn ColumnId;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnLider;
+        private DataGridViewTextBoxColumn ColumnKekkeiGenkai;
+        private DataGridViewTextBoxColumn ColumnDataFormacaoDoCla;
     }
 }

@@ -62,10 +62,11 @@ namespace Entra21_trabalho_02.Ninjas
             }
         }
 
-        public List<Ninja> ObterTodos()
+        /*public List<Ninja> ObterTodos()
         {
             return ninjas;
         }
+        */
 
         public Ninja ObterPorCodigo(int codigo)
         {
