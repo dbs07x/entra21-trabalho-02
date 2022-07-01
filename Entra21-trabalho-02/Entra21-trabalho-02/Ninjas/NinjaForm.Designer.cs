@@ -38,7 +38,6 @@
             this.labelGenero = new System.Windows.Forms.Label();
             this.radioButtonVivo = new System.Windows.Forms.RadioButton();
             this.radioButtonMorto = new System.Windows.Forms.RadioButton();
-            this.labelStatus = new System.Windows.Forms.Label();
             this.comboBoxNivel = new System.Windows.Forms.ComboBox();
             this.labelNivel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,7 +58,6 @@
             this.comboBoxCla = new System.Windows.Forms.ComboBox();
             this.labelAldeia = new System.Windows.Forms.Label();
             this.comboBoxAldeia = new System.Windows.Forms.ComboBox();
-            this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
             this.checkBoxMasculino = new System.Windows.Forms.CheckBox();
@@ -69,7 +67,11 @@
             this.checkBoxTransgenero = new System.Windows.Forms.CheckBox();
             this.labelElementoChakra = new System.Windows.Forms.Label();
             this.comboBoxElementoChakra = new System.Windows.Forms.ComboBox();
+            this.groupBoxStatus = new System.Windows.Forms.GroupBox();
+            this.groupBoxKekkeiGenkai = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxStatus.SuspendLayout();
+            this.groupBoxKekkeiGenkai.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonApagar
@@ -80,6 +82,7 @@
             this.buttonApagar.TabIndex = 0;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // buttonEditar
             // 
@@ -89,6 +92,7 @@
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonSalvar
             // 
@@ -108,12 +112,13 @@
             this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // textBoxNome
             // 
             this.textBoxNome.Location = new System.Drawing.Point(12, 27);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNome.Size = new System.Drawing.Size(156, 23);
             this.textBoxNome.TabIndex = 4;
             // 
             // labelNome
@@ -146,7 +151,7 @@
             // radioButtonVivo
             // 
             this.radioButtonVivo.AutoSize = true;
-            this.radioButtonVivo.Location = new System.Drawing.Point(13, 301);
+            this.radioButtonVivo.Location = new System.Drawing.Point(6, 17);
             this.radioButtonVivo.Name = "radioButtonVivo";
             this.radioButtonVivo.Size = new System.Drawing.Size(62, 19);
             this.radioButtonVivo.TabIndex = 10;
@@ -157,7 +162,7 @@
             // radioButtonMorto
             // 
             this.radioButtonMorto.AutoSize = true;
-            this.radioButtonMorto.Location = new System.Drawing.Point(81, 301);
+            this.radioButtonMorto.Location = new System.Drawing.Point(74, 18);
             this.radioButtonMorto.Name = "radioButtonMorto";
             this.radioButtonMorto.Size = new System.Drawing.Size(72, 19);
             this.radioButtonMorto.TabIndex = 11;
@@ -165,21 +170,12 @@
             this.radioButtonMorto.Text = "Morto(a)";
             this.radioButtonMorto.UseVisualStyleBackColor = true;
             // 
-            // labelStatus
-            // 
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(13, 283);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(39, 15);
-            this.labelStatus.TabIndex = 12;
-            this.labelStatus.Text = "Status";
-            // 
             // comboBoxNivel
             // 
             this.comboBoxNivel.FormattingEnabled = true;
             this.comboBoxNivel.Location = new System.Drawing.Point(12, 341);
             this.comboBoxNivel.Name = "comboBoxNivel";
-            this.comboBoxNivel.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxNivel.Size = new System.Drawing.Size(156, 23);
             this.comboBoxNivel.TabIndex = 13;
             // 
             // labelNivel
@@ -213,8 +209,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(712, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(847, 534);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // ColumnCodigo
             // 
@@ -323,7 +320,7 @@
             this.comboBoxCla.FormattingEnabled = true;
             this.comboBoxCla.Location = new System.Drawing.Point(13, 385);
             this.comboBoxCla.Name = "comboBoxCla";
-            this.comboBoxCla.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxCla.Size = new System.Drawing.Size(155, 23);
             this.comboBoxCla.TabIndex = 18;
             // 
             // labelAldeia
@@ -340,22 +337,13 @@
             this.comboBoxAldeia.FormattingEnabled = true;
             this.comboBoxAldeia.Location = new System.Drawing.Point(12, 429);
             this.comboBoxAldeia.Name = "comboBoxAldeia";
-            this.comboBoxAldeia.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxAldeia.Size = new System.Drawing.Size(156, 23);
             this.comboBoxAldeia.TabIndex = 20;
-            // 
-            // labelKekkeiGenkai
-            // 
-            this.labelKekkeiGenkai.AutoSize = true;
-            this.labelKekkeiGenkai.Location = new System.Drawing.Point(12, 455);
-            this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
-            this.labelKekkeiGenkai.Size = new System.Drawing.Size(80, 15);
-            this.labelKekkeiGenkai.TabIndex = 21;
-            this.labelKekkeiGenkai.Text = "Kekkei Genkai";
             // 
             // radioButtonSim
             // 
             this.radioButtonSim.AutoSize = true;
-            this.radioButtonSim.Location = new System.Drawing.Point(12, 473);
+            this.radioButtonSim.Location = new System.Drawing.Point(0, 15);
             this.radioButtonSim.Name = "radioButtonSim";
             this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
             this.radioButtonSim.TabIndex = 22;
@@ -366,7 +354,7 @@
             // radioButtonNao
             // 
             this.radioButtonNao.AutoSize = true;
-            this.radioButtonNao.Location = new System.Drawing.Point(63, 473);
+            this.radioButtonNao.Location = new System.Drawing.Point(51, 15);
             this.radioButtonNao.Name = "radioButtonNao";
             this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
             this.radioButtonNao.TabIndex = 23;
@@ -438,14 +426,38 @@
             this.comboBoxElementoChakra.FormattingEnabled = true;
             this.comboBoxElementoChakra.Location = new System.Drawing.Point(12, 71);
             this.comboBoxElementoChakra.Name = "comboBoxElementoChakra";
-            this.comboBoxElementoChakra.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxElementoChakra.Size = new System.Drawing.Size(156, 23);
             this.comboBoxElementoChakra.TabIndex = 29;
+            // 
+            // groupBoxStatus
+            // 
+            this.groupBoxStatus.Controls.Add(this.radioButtonVivo);
+            this.groupBoxStatus.Controls.Add(this.radioButtonMorto);
+            this.groupBoxStatus.Location = new System.Drawing.Point(12, 278);
+            this.groupBoxStatus.Name = "groupBoxStatus";
+            this.groupBoxStatus.Size = new System.Drawing.Size(156, 42);
+            this.groupBoxStatus.TabIndex = 30;
+            this.groupBoxStatus.TabStop = false;
+            this.groupBoxStatus.Text = "Status";
+            // 
+            // groupBoxKekkeiGenkai
+            // 
+            this.groupBoxKekkeiGenkai.Controls.Add(this.radioButtonSim);
+            this.groupBoxKekkeiGenkai.Controls.Add(this.radioButtonNao);
+            this.groupBoxKekkeiGenkai.Location = new System.Drawing.Point(12, 458);
+            this.groupBoxKekkeiGenkai.Name = "groupBoxKekkeiGenkai";
+            this.groupBoxKekkeiGenkai.Size = new System.Drawing.Size(156, 34);
+            this.groupBoxKekkeiGenkai.TabIndex = 31;
+            this.groupBoxKekkeiGenkai.TabStop = false;
+            this.groupBoxKekkeiGenkai.Text = "Kekkei Genkai";
             // 
             // NinjaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 556);
+            this.ClientSize = new System.Drawing.Size(1043, 556);
+            this.Controls.Add(this.groupBoxKekkeiGenkai);
+            this.Controls.Add(this.groupBoxStatus);
             this.Controls.Add(this.comboBoxElementoChakra);
             this.Controls.Add(this.labelElementoChakra);
             this.Controls.Add(this.checkBoxTransgenero);
@@ -453,9 +465,6 @@
             this.Controls.Add(this.checkBoxNaoBinario);
             this.Controls.Add(this.checkBoxFeminino);
             this.Controls.Add(this.checkBoxMasculino);
-            this.Controls.Add(this.radioButtonNao);
-            this.Controls.Add(this.radioButtonSim);
-            this.Controls.Add(this.labelKekkeiGenkai);
             this.Controls.Add(this.comboBoxAldeia);
             this.Controls.Add(this.labelAldeia);
             this.Controls.Add(this.comboBoxCla);
@@ -464,9 +473,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelNivel);
             this.Controls.Add(this.comboBoxNivel);
-            this.Controls.Add(this.labelStatus);
-            this.Controls.Add(this.radioButtonMorto);
-            this.Controls.Add(this.radioButtonVivo);
             this.Controls.Add(this.labelGenero);
             this.Controls.Add(this.labelDataNascimento);
             this.Controls.Add(this.labelNome);
@@ -478,7 +484,12 @@
             this.Name = "NinjaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NinjaForm";
+            this.Load += new System.EventHandler(this.NinjaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxStatus.ResumeLayout(false);
+            this.groupBoxStatus.PerformLayout();
+            this.groupBoxKekkeiGenkai.ResumeLayout(false);
+            this.groupBoxKekkeiGenkai.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,7 +507,6 @@
         private Label labelGenero;
         private RadioButton radioButtonVivo;
         private RadioButton radioButtonMorto;
-        private Label labelStatus;
         private ComboBox comboBoxNivel;
         private Label labelNivel;
         private DataGridView dataGridView1;
@@ -505,7 +515,6 @@
         private ComboBox comboBoxCla;
         private Label labelAldeia;
         private ComboBox comboBoxAldeia;
-        private Label labelKekkeiGenkai;
         private RadioButton radioButtonSim;
         private RadioButton radioButtonNao;
         private DataGridViewTextBoxColumn ColumnCodigo;
@@ -527,5 +536,7 @@
         private CheckBox checkBoxTransgenero;
         private Label labelElementoChakra;
         private ComboBox comboBoxElementoChakra;
+        private GroupBox groupBoxStatus;
+        private GroupBox groupBoxKekkeiGenkai;
     }
 }

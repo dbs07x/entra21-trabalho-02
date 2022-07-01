@@ -61,6 +61,21 @@ namespace Entra21_trabalho_02.Clas
             return clas;
         }
 
+        public Cla ObterPorNomeCla(string nomeCla)
+        {
+            for (int i = 0; i < clas.Count; i++)
+            {
+                var cla = clas[i];
+
+                if (cla.Nome == nomeCla)
+                {
+                    return cla;
+                }
+            }
+
+            return null;
+        }
+
         public Cla ObterPorCodigo(int codigo)
         {
             for (int i = 0; i < clas.Count; i++)
@@ -88,51 +103,6 @@ namespace Entra21_trabalho_02.Clas
             }
 
             return ultimoCodigo;
-        }
-
-        public void ListarClaPossuiKekkeiGenkai()
-        {
-
-        }
-
-        public void ListarClaNaoPossuiKekkeiGenkai()
-        {
-
-        }
-
-        public void ListarTodosMembrosCla()
-        {
-
-        }
-
-        public void ListarMembroClaPorElementoChakra()
-        {
-
-        }
-
-        public void ListarMembroClaPorGenero()
-        {
-
-        }
-
-        public void ListarMembroClaPorStatus()
-        {
-
-        }
-
-        public void ListarMembroClaPorNivel()
-        {
-
-        }
-
-        public void ListarMembroClaPossuiEquipe()
-        {
-
-        }
-
-        public void ListarMembroClaNaoPossuiEquipe()
-        {
-
         }
 
         public void Adicionar(Cla cla)

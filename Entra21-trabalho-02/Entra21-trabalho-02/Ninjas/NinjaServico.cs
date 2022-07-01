@@ -13,7 +13,7 @@ namespace Entra21_trabalho_02.Ninjas
             LerArquivo();
         }
 
-        public void Salvar(Ninja ninja)
+        public void Adicionar(Ninja ninja)
         {
             ninjas.Add(ninja);
 
@@ -37,7 +37,7 @@ namespace Entra21_trabalho_02.Ninjas
                     ninja.Cla = ninjaEditar.Cla;
                     // ninja.Aldeia = ninjaEditar.Aldeia;
                     ninja.KekkeiGenkai = ninjaEditar.KekkeiGenkai;
-                                           
+
                     SalvarArquivo();
 
                     return;
@@ -61,12 +61,6 @@ namespace Entra21_trabalho_02.Ninjas
                 }
             }
         }
-
-        /*public List<Ninja> ObterTodos()
-        {
-            return ninjas;
-        }
-        */
 
         public Ninja ObterPorCodigo(int codigo)
         {
@@ -132,6 +126,74 @@ namespace Entra21_trabalho_02.Ninjas
 
             var ninjasJson = File.ReadAllText("ninjas.json");
             ninjas = JsonConvert.DeserializeObject<List<Ninja>>(ninjasJson);
+        }
+
+        public Genero ObterGeneroNinja(string genero)
+        {
+            if (genero == "Masculino")
+            {
+                return Genero.Masculino;
+            }
+            else if (genero == "Feminino")
+            {
+                return Genero.Feminino;
+            }
+            else if (genero == "Não-Binário")
+            {
+                return Genero.NaoBinario;
+            }
+            else if (genero == "Cisgenero")
+            {
+                return Genero.Cisgenero;
+            }
+            else
+            {
+                return Genero.Transgenero;
+            }
+        }
+
+        public Status ObterStatusNinja(string status)
+        {
+            if (status == "Vivo")
+            {
+                return Status.Vivo;
+            }
+            else
+            {
+                return Status.Morto;
+            }
+        }
+
+        public Nivel ObterNivelNinja(string nivel)
+        {
+            if (nivel == "Aluno da Academia")
+            {
+                return Nivel.AlunoDaAcademia;
+            }
+            else if (nivel == "Genin")
+            {
+                return Nivel.Genin;
+            }
+            else if (nivel == "Chuunin")
+            {
+                return Nivel.Chuunin;
+            }
+            else if (nivel == "Anbu")
+            {
+                return Nivel.Anbu;
+            }
+            else if (nivel == "Sannin")
+            {
+                return Nivel.Sannin;
+            }
+            else if (nivel == "Kage")
+            {
+                return Nivel.Kage;
+            }
+            else
+            {
+                return Nivel.Nukenin;
+            }
         }
     }
 }
