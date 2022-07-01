@@ -158,7 +158,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.InicioLideranca,
                     lider.FimLideranca,
                     lider.Status,
-                    lider.Chakra.,
+                    lider.Chakra.Natureza,
                     lider.KekkeiGenkai
                 });
             }
