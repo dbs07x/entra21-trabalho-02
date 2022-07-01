@@ -66,7 +66,11 @@
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -84,12 +88,11 @@
             this.ColumnStatus,
             this.ColumnChakra,
             this.ColumnKekkeiGenkai});
-            this.dataGridView1.Location = new System.Drawing.Point(14, 63);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(680, 771);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 578);
             this.dataGridView1.TabIndex = 0;
             // 
             // ColumnNome
@@ -166,20 +169,18 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(938, 739);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSalvar.Location = new System.Drawing.Point(821, 554);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(137, 95);
+            this.buttonSalvar.Size = new System.Drawing.Size(120, 71);
             this.buttonSalvar.TabIndex = 1;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(14, 16);
-            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonEditar.Location = new System.Drawing.Point(12, 12);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(86, 31);
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 2;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -187,10 +188,9 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(106, 16);
-            this.buttonApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonApagar.Location = new System.Drawing.Point(93, 12);
             this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(86, 31);
+            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
             this.buttonApagar.TabIndex = 3;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
@@ -198,125 +198,119 @@
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(730, 63);
+            this.labelNome.Location = new System.Drawing.Point(639, 47);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(50, 20);
+            this.labelNome.Size = new System.Drawing.Size(40, 15);
             this.labelNome.TabIndex = 4;
             this.labelNome.Text = "Nome";
             // 
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Location = new System.Drawing.Point(730, 121);
+            this.labelTitulo.Location = new System.Drawing.Point(639, 91);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(47, 20);
+            this.labelTitulo.Size = new System.Drawing.Size(37, 15);
             this.labelTitulo.TabIndex = 5;
             this.labelTitulo.Text = "Titulo";
             // 
             // labelIdade
             // 
             this.labelIdade.AutoSize = true;
-            this.labelIdade.Location = new System.Drawing.Point(730, 180);
+            this.labelIdade.Location = new System.Drawing.Point(639, 135);
             this.labelIdade.Name = "labelIdade";
-            this.labelIdade.Size = new System.Drawing.Size(47, 20);
+            this.labelIdade.Size = new System.Drawing.Size(36, 15);
             this.labelIdade.TabIndex = 6;
             this.labelIdade.Text = "Idade";
             // 
             // labelGenero
             // 
             this.labelGenero.AutoSize = true;
-            this.labelGenero.Location = new System.Drawing.Point(730, 256);
+            this.labelGenero.Location = new System.Drawing.Point(639, 192);
             this.labelGenero.Name = "labelGenero";
-            this.labelGenero.Size = new System.Drawing.Size(57, 20);
+            this.labelGenero.Size = new System.Drawing.Size(45, 15);
             this.labelGenero.TabIndex = 7;
             this.labelGenero.Text = "Genero";
             // 
             // labelInicioLideranca
             // 
             this.labelInicioLideranca.AutoSize = true;
-            this.labelInicioLideranca.Location = new System.Drawing.Point(730, 392);
+            this.labelInicioLideranca.Location = new System.Drawing.Point(639, 294);
             this.labelInicioLideranca.Name = "labelInicioLideranca";
-            this.labelInicioLideranca.Size = new System.Drawing.Size(134, 20);
+            this.labelInicioLideranca.Size = new System.Drawing.Size(106, 15);
             this.labelInicioLideranca.TabIndex = 8;
             this.labelInicioLideranca.Text = "Início da Liderança";
             // 
             // labelFimLideranca
             // 
             this.labelFimLideranca.AutoSize = true;
-            this.labelFimLideranca.Location = new System.Drawing.Point(730, 451);
+            this.labelFimLideranca.Location = new System.Drawing.Point(639, 338);
             this.labelFimLideranca.Name = "labelFimLideranca";
-            this.labelFimLideranca.Size = new System.Drawing.Size(122, 20);
+            this.labelFimLideranca.Size = new System.Drawing.Size(97, 15);
             this.labelFimLideranca.TabIndex = 9;
             this.labelFimLideranca.Text = "Fim da Liderança";
             // 
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(730, 517);
+            this.labelStatus.Location = new System.Drawing.Point(639, 381);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(49, 20);
+            this.labelStatus.Size = new System.Drawing.Size(39, 15);
             this.labelStatus.TabIndex = 10;
             this.labelStatus.Text = "Status";
             // 
             // labelElementoChakra
             // 
             this.labelElementoChakra.AutoSize = true;
-            this.labelElementoChakra.Location = new System.Drawing.Point(730, 580);
+            this.labelElementoChakra.Location = new System.Drawing.Point(639, 435);
             this.labelElementoChakra.Name = "labelElementoChakra";
-            this.labelElementoChakra.Size = new System.Drawing.Size(121, 20);
+            this.labelElementoChakra.Size = new System.Drawing.Size(97, 15);
             this.labelElementoChakra.TabIndex = 11;
             this.labelElementoChakra.Text = "Elemento Chakra";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(731, 88);
-            this.textBoxNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNome.Location = new System.Drawing.Point(640, 66);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(345, 27);
+            this.textBoxNome.Size = new System.Drawing.Size(302, 23);
             this.textBoxNome.TabIndex = 12;
             // 
             // comboBoxTitulo
             // 
             this.comboBoxTitulo.FormattingEnabled = true;
-            this.comboBoxTitulo.Location = new System.Drawing.Point(731, 147);
-            this.comboBoxTitulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxTitulo.Location = new System.Drawing.Point(640, 110);
             this.comboBoxTitulo.Name = "comboBoxTitulo";
-            this.comboBoxTitulo.Size = new System.Drawing.Size(345, 28);
+            this.comboBoxTitulo.Size = new System.Drawing.Size(302, 23);
             this.comboBoxTitulo.TabIndex = 13;
             // 
             // textBoxIdade
             // 
-            this.textBoxIdade.Location = new System.Drawing.Point(731, 205);
-            this.textBoxIdade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxIdade.Location = new System.Drawing.Point(640, 154);
             this.textBoxIdade.Name = "textBoxIdade";
-            this.textBoxIdade.Size = new System.Drawing.Size(343, 27);
+            this.textBoxIdade.Size = new System.Drawing.Size(301, 23);
             this.textBoxIdade.TabIndex = 14;
             // 
             // comboBoxChakra
             // 
             this.comboBoxChakra.FormattingEnabled = true;
-            this.comboBoxChakra.Location = new System.Drawing.Point(730, 604);
-            this.comboBoxChakra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxChakra.Location = new System.Drawing.Point(639, 453);
             this.comboBoxChakra.Name = "comboBoxChakra";
-            this.comboBoxChakra.Size = new System.Drawing.Size(345, 28);
+            this.comboBoxChakra.Size = new System.Drawing.Size(302, 23);
             this.comboBoxChakra.TabIndex = 15;
             // 
             // dateTimePickerInicioLideranca
             // 
             this.dateTimePickerInicioLideranca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(730, 416);
-            this.dateTimePickerInicioLideranca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(639, 312);
             this.dateTimePickerInicioLideranca.Name = "dateTimePickerInicioLideranca";
-            this.dateTimePickerInicioLideranca.Size = new System.Drawing.Size(345, 27);
+            this.dateTimePickerInicioLideranca.Size = new System.Drawing.Size(302, 23);
             this.dateTimePickerInicioLideranca.TabIndex = 16;
             // 
             // radioButtonVivo
             // 
             this.radioButtonVivo.AutoSize = true;
-            this.radioButtonVivo.Location = new System.Drawing.Point(730, 541);
-            this.radioButtonVivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonVivo.Location = new System.Drawing.Point(6, 14);
             this.radioButtonVivo.Name = "radioButtonVivo";
-            this.radioButtonVivo.Size = new System.Drawing.Size(59, 24);
+            this.radioButtonVivo.Size = new System.Drawing.Size(48, 19);
             this.radioButtonVivo.TabIndex = 18;
             this.radioButtonVivo.TabStop = true;
             this.radioButtonVivo.Text = "Vivo";
@@ -325,10 +319,9 @@
             // radioButtonMorto
             // 
             this.radioButtonMorto.AutoSize = true;
-            this.radioButtonMorto.Location = new System.Drawing.Point(938, 541);
-            this.radioButtonMorto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonMorto.Location = new System.Drawing.Point(214, 14);
             this.radioButtonMorto.Name = "radioButtonMorto";
-            this.radioButtonMorto.Size = new System.Drawing.Size(71, 24);
+            this.radioButtonMorto.Size = new System.Drawing.Size(58, 19);
             this.radioButtonMorto.TabIndex = 19;
             this.radioButtonMorto.TabStop = true;
             this.radioButtonMorto.Text = "Morto";
@@ -337,10 +330,9 @@
             // checkBoxMasculino
             // 
             this.checkBoxMasculino.AutoSize = true;
-            this.checkBoxMasculino.Location = new System.Drawing.Point(730, 292);
-            this.checkBoxMasculino.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxMasculino.Location = new System.Drawing.Point(639, 219);
             this.checkBoxMasculino.Name = "checkBoxMasculino";
-            this.checkBoxMasculino.Size = new System.Drawing.Size(98, 24);
+            this.checkBoxMasculino.Size = new System.Drawing.Size(81, 19);
             this.checkBoxMasculino.TabIndex = 20;
             this.checkBoxMasculino.Text = "Masculino";
             this.checkBoxMasculino.UseVisualStyleBackColor = true;
@@ -348,10 +340,9 @@
             // checkBoxCisgenero
             // 
             this.checkBoxCisgenero.AutoSize = true;
-            this.checkBoxCisgenero.Location = new System.Drawing.Point(731, 337);
-            this.checkBoxCisgenero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxCisgenero.Location = new System.Drawing.Point(640, 253);
             this.checkBoxCisgenero.Name = "checkBoxCisgenero";
-            this.checkBoxCisgenero.Size = new System.Drawing.Size(97, 24);
+            this.checkBoxCisgenero.Size = new System.Drawing.Size(79, 19);
             this.checkBoxCisgenero.TabIndex = 21;
             this.checkBoxCisgenero.Text = "Cisgênero";
             this.checkBoxCisgenero.UseVisualStyleBackColor = true;
@@ -359,10 +350,9 @@
             // checkBoxFeminino
             // 
             this.checkBoxFeminino.AutoSize = true;
-            this.checkBoxFeminino.Location = new System.Drawing.Point(861, 292);
-            this.checkBoxFeminino.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxFeminino.Location = new System.Drawing.Point(753, 219);
             this.checkBoxFeminino.Name = "checkBoxFeminino";
-            this.checkBoxFeminino.Size = new System.Drawing.Size(92, 24);
+            this.checkBoxFeminino.Size = new System.Drawing.Size(76, 19);
             this.checkBoxFeminino.TabIndex = 22;
             this.checkBoxFeminino.Text = "Feminino";
             this.checkBoxFeminino.UseVisualStyleBackColor = true;
@@ -370,10 +360,9 @@
             // checkBoxTransgenero
             // 
             this.checkBoxTransgenero.AutoSize = true;
-            this.checkBoxTransgenero.Location = new System.Drawing.Point(861, 337);
-            this.checkBoxTransgenero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxTransgenero.Location = new System.Drawing.Point(753, 253);
             this.checkBoxTransgenero.Name = "checkBoxTransgenero";
-            this.checkBoxTransgenero.Size = new System.Drawing.Size(112, 24);
+            this.checkBoxTransgenero.Size = new System.Drawing.Size(90, 19);
             this.checkBoxTransgenero.TabIndex = 23;
             this.checkBoxTransgenero.Text = "Transgênero";
             this.checkBoxTransgenero.UseVisualStyleBackColor = true;
@@ -381,20 +370,18 @@
             // checkBoxNaoBinario
             // 
             this.checkBoxNaoBinario.AutoSize = true;
-            this.checkBoxNaoBinario.Location = new System.Drawing.Point(982, 292);
-            this.checkBoxNaoBinario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxNaoBinario.Location = new System.Drawing.Point(859, 219);
             this.checkBoxNaoBinario.Name = "checkBoxNaoBinario";
-            this.checkBoxNaoBinario.Size = new System.Drawing.Size(112, 24);
+            this.checkBoxNaoBinario.Size = new System.Drawing.Size(90, 19);
             this.checkBoxNaoBinario.TabIndex = 24;
             this.checkBoxNaoBinario.Text = "Não-Binario";
             this.checkBoxNaoBinario.UseVisualStyleBackColor = true;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(782, 739);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCancelar.Location = new System.Drawing.Point(684, 554);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(139, 95);
+            this.buttonCancelar.Size = new System.Drawing.Size(122, 71);
             this.buttonCancelar.TabIndex = 25;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -402,27 +389,29 @@
             // 
             // maskedTextBoxFimLideranca
             // 
-            this.maskedTextBoxFimLideranca.Location = new System.Drawing.Point(731, 474);
+            this.maskedTextBoxFimLideranca.Location = new System.Drawing.Point(640, 356);
+            this.maskedTextBoxFimLideranca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBoxFimLideranca.Mask = "99/99/9999";
             this.maskedTextBoxFimLideranca.Name = "maskedTextBoxFimLideranca";
-            this.maskedTextBoxFimLideranca.Size = new System.Drawing.Size(344, 27);
+            this.maskedTextBoxFimLideranca.Size = new System.Drawing.Size(302, 23);
             this.maskedTextBoxFimLideranca.TabIndex = 26;
             // 
             // labelKekkeiGenkai
             // 
             this.labelKekkeiGenkai.AutoSize = true;
-            this.labelKekkeiGenkai.Location = new System.Drawing.Point(730, 649);
+            this.labelKekkeiGenkai.Location = new System.Drawing.Point(639, 487);
             this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
-            this.labelKekkeiGenkai.Size = new System.Drawing.Size(101, 20);
+            this.labelKekkeiGenkai.Size = new System.Drawing.Size(80, 15);
             this.labelKekkeiGenkai.TabIndex = 27;
             this.labelKekkeiGenkai.Text = "Kekkei Genkai";
             // 
             // radioButtonSim
             // 
             this.radioButtonSim.AutoSize = true;
-            this.radioButtonSim.Location = new System.Drawing.Point(730, 681);
+            this.radioButtonSim.Location = new System.Drawing.Point(6, 11);
+            this.radioButtonSim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSim.Name = "radioButtonSim";
-            this.radioButtonSim.Size = new System.Drawing.Size(55, 24);
+            this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
             this.radioButtonSim.TabIndex = 28;
             this.radioButtonSim.TabStop = true;
             this.radioButtonSim.Text = "Sim";
@@ -431,21 +420,43 @@
             // radioButtonNao
             // 
             this.radioButtonNao.AutoSize = true;
-            this.radioButtonNao.Location = new System.Drawing.Point(911, 681);
+            this.radioButtonNao.Location = new System.Drawing.Point(220, 11);
+            this.radioButtonNao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonNao.Name = "radioButtonNao";
-            this.radioButtonNao.Size = new System.Drawing.Size(58, 24);
+            this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
             this.radioButtonNao.TabIndex = 29;
             this.radioButtonNao.TabStop = true;
             this.radioButtonNao.Text = "Não";
             this.radioButtonNao.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonVivo);
+            this.groupBox1.Controls.Add(this.radioButtonMorto);
+            this.groupBox1.Location = new System.Drawing.Point(639, 384);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(278, 48);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButtonNao);
+            this.groupBox2.Controls.Add(this.radioButtonSim);
+            this.groupBox2.Location = new System.Drawing.Point(639, 505);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(283, 35);
+            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabStop = false;
+            // 
             // LiderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 849);
-            this.Controls.Add(this.radioButtonNao);
-            this.Controls.Add(this.radioButtonSim);
+            this.ClientSize = new System.Drawing.Size(953, 637);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelKekkeiGenkai);
             this.Controls.Add(this.maskedTextBoxFimLideranca);
             this.Controls.Add(this.buttonCancelar);
@@ -454,15 +465,12 @@
             this.Controls.Add(this.checkBoxFeminino);
             this.Controls.Add(this.checkBoxCisgenero);
             this.Controls.Add(this.checkBoxMasculino);
-            this.Controls.Add(this.radioButtonMorto);
-            this.Controls.Add(this.radioButtonVivo);
             this.Controls.Add(this.dateTimePickerInicioLideranca);
             this.Controls.Add(this.comboBoxChakra);
             this.Controls.Add(this.textBoxIdade);
             this.Controls.Add(this.comboBoxTitulo);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelElementoChakra);
-            this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.labelFimLideranca);
             this.Controls.Add(this.labelInicioLideranca);
             this.Controls.Add(this.labelGenero);
@@ -473,10 +481,13 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LiderForm";
             this.Text = "Cadastro do Lider";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +533,7 @@
         private Label labelKekkeiGenkai;
         private RadioButton radioButtonNao;
         private DataGridViewTextBoxColumn ColumnKekkeiGenkai;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
     }
 }
