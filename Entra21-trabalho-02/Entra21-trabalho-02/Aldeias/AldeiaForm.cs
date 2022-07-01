@@ -21,6 +21,8 @@ namespace Entra21_trabalho_02.Aldeias
             PreencherDataGridViewComAldeias();
 
             PreencherComboBoxComNomeDosLideres();
+
+            LimparCampos();
         }
 
         private void PreencherComboBoxComNomeDosLideres()
