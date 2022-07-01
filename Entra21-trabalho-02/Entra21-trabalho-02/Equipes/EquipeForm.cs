@@ -112,6 +112,18 @@ namespace Entra21_trabalho_02.Equipes
 
                 return;
             }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var equipe = equipeServico.ObterPorId(codigo);
+
+            equipeServico.Apagar(equipe);
+
+            PreencherDataGridViewComEquipes();
+
+            dataGridView1.ClearSelection();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -169,15 +181,14 @@ namespace Entra21_trabalho_02.Equipes
 
         private void LimparCampos()
         {
-            DateTimePicker dataDefault = new DateTimePicker();
-            dataDefault.Value = DateTime.Today;
+            var hoje= DateTime.Today;
 
             textBoxNomeEquipe.Clear();
             comboBoxLider.SelectedIndex = -1;
             comboBoxMembro1.SelectedIndex = -1;
             comboBoxMembro2.SelectedIndex = -1;
             comboBoxMembro3.SelectedIndex = -1;
-            dateTimePickerDataFormacao = dataDefault;
+            dateTimePickerDataFormacao.Value = hoje;
             maskedTextBoxDataProximaMissao.Clear();
             checkBoxEmMissao.Checked = false;
             checkBoxNaAldeia.Checked = false;
@@ -254,8 +265,7 @@ namespace Entra21_trabalho_02.Equipes
 
         private bool ValidarDados()
         {
-            DateTimePicker dataDefault = new DateTimePicker();
-            dataDefault.Value = DateTime.Today;
+           var hoje = DateTime.Today;
 
             if (textBoxNomeEquipe.Text == string.Empty)
             {
@@ -302,11 +312,12 @@ namespace Entra21_trabalho_02.Equipes
                 return false;
             }
 
-            if (dateTimePickerDataFormacao.Text == string.Empty)
+            if (dateTimePickerDataFormacao.Value > DateTime.Today)
             {
                 MessageBox.Show("Informe a data de formação da equipe", "Aviso", MessageBoxButtons.OK);
 
-                dateTimePickerDataFormacao = dataDefault;
+                dateTimePickerDataFormacao.Select();
+                SendKeys.Send("%{DOWN}");
 
                 return false;
             }

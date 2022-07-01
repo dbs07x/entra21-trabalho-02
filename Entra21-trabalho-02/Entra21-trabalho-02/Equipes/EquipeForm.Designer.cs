@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomeEquipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMembro1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMembro2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMembro3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataFormacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataProximaMissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSituacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelNomeEquipe = new System.Windows.Forms.Label();
             this.textBoxNomeEquipe = new System.Windows.Forms.TextBox();
             this.labelLider = new System.Windows.Forms.Label();
@@ -60,6 +51,15 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.Apagar = new System.Windows.Forms.Button();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeEquipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMembro1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMembro2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMembro3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataFormacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataProximaMissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSituacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,82 +84,9 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1052, 543);
+            this.dataGridView1.Size = new System.Drawing.Size(1372, 543);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.MinimumWidth = 6;
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            this.ColumnCodigo.Width = 125;
-            // 
-            // ColumnNomeEquipe
-            // 
-            this.ColumnNomeEquipe.HeaderText = "Nome";
-            this.ColumnNomeEquipe.MinimumWidth = 6;
-            this.ColumnNomeEquipe.Name = "ColumnNomeEquipe";
-            this.ColumnNomeEquipe.ReadOnly = true;
-            this.ColumnNomeEquipe.Width = 125;
-            // 
-            // ColumnLider
-            // 
-            this.ColumnLider.HeaderText = "Líder";
-            this.ColumnLider.MinimumWidth = 6;
-            this.ColumnLider.Name = "ColumnLider";
-            this.ColumnLider.ReadOnly = true;
-            this.ColumnLider.Width = 125;
-            // 
-            // ColumnMembro1
-            // 
-            this.ColumnMembro1.HeaderText = "Membro 1";
-            this.ColumnMembro1.MinimumWidth = 6;
-            this.ColumnMembro1.Name = "ColumnMembro1";
-            this.ColumnMembro1.ReadOnly = true;
-            this.ColumnMembro1.Width = 125;
-            // 
-            // ColumnMembro2
-            // 
-            this.ColumnMembro2.HeaderText = "Membro2";
-            this.ColumnMembro2.MinimumWidth = 6;
-            this.ColumnMembro2.Name = "ColumnMembro2";
-            this.ColumnMembro2.ReadOnly = true;
-            this.ColumnMembro2.Width = 125;
-            // 
-            // ColumnMembro3
-            // 
-            this.ColumnMembro3.HeaderText = "Membro 3";
-            this.ColumnMembro3.MinimumWidth = 6;
-            this.ColumnMembro3.Name = "ColumnMembro3";
-            this.ColumnMembro3.ReadOnly = true;
-            this.ColumnMembro3.Width = 125;
-            // 
-            // ColumnDataFormacao
-            // 
-            this.ColumnDataFormacao.HeaderText = "Data formação";
-            this.ColumnDataFormacao.MinimumWidth = 6;
-            this.ColumnDataFormacao.Name = "ColumnDataFormacao";
-            this.ColumnDataFormacao.ReadOnly = true;
-            this.ColumnDataFormacao.Width = 125;
-            // 
-            // ColumnDataProximaMissao
-            // 
-            this.ColumnDataProximaMissao.HeaderText = "Data próxima missão";
-            this.ColumnDataProximaMissao.MinimumWidth = 6;
-            this.ColumnDataProximaMissao.Name = "ColumnDataProximaMissao";
-            this.ColumnDataProximaMissao.ReadOnly = true;
-            this.ColumnDataProximaMissao.Width = 125;
-            // 
-            // ColumnSituacao
-            // 
-            this.ColumnSituacao.HeaderText = "Situação";
-            this.ColumnSituacao.MinimumWidth = 6;
-            this.ColumnSituacao.Name = "ColumnSituacao";
-            this.ColumnSituacao.ReadOnly = true;
-            this.ColumnSituacao.Width = 125;
             // 
             // labelNomeEquipe
             // 
@@ -190,11 +117,6 @@
             // comboBoxLider
             // 
             this.comboBoxLider.FormattingEnabled = true;
-            this.comboBoxLider.Items.AddRange(new object[] {
-            "Claudio",
-            "Douglas",
-            "Francisco",
-            "Gregory"});
             this.comboBoxLider.Location = new System.Drawing.Point(14, 120);
             this.comboBoxLider.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxLider.Name = "comboBoxLider";
@@ -204,11 +126,6 @@
             // comboBoxMembro1
             // 
             this.comboBoxMembro1.FormattingEnabled = true;
-            this.comboBoxMembro1.Items.AddRange(new object[] {
-            "Claudio",
-            "Douglas",
-            "Francisco",
-            "Gregory"});
             this.comboBoxMembro1.Location = new System.Drawing.Point(203, 120);
             this.comboBoxMembro1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMembro1.Name = "comboBoxMembro1";
@@ -227,11 +144,6 @@
             // comboBoxMembro3
             // 
             this.comboBoxMembro3.FormattingEnabled = true;
-            this.comboBoxMembro3.Items.AddRange(new object[] {
-            "Claudio",
-            "Douglas",
-            "Francisco",
-            "Gregory"});
             this.comboBoxMembro3.Location = new System.Drawing.Point(203, 191);
             this.comboBoxMembro3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMembro3.Name = "comboBoxMembro3";
@@ -250,11 +162,6 @@
             // comboBoxMembro2
             // 
             this.comboBoxMembro2.FormattingEnabled = true;
-            this.comboBoxMembro2.Items.AddRange(new object[] {
-            "Claudio",
-            "Douglas",
-            "Francisco",
-            "Gregory"});
             this.comboBoxMembro2.Location = new System.Drawing.Point(14, 191);
             this.comboBoxMembro2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxMembro2.Name = "comboBoxMembro2";
@@ -393,11 +300,84 @@
             this.Apagar.UseVisualStyleBackColor = true;
             this.Apagar.Click += new System.EventHandler(this.Apagar_Click);
             // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            this.ColumnCodigo.Width = 125;
+            // 
+            // ColumnNomeEquipe
+            // 
+            this.ColumnNomeEquipe.HeaderText = "Nome";
+            this.ColumnNomeEquipe.MinimumWidth = 6;
+            this.ColumnNomeEquipe.Name = "ColumnNomeEquipe";
+            this.ColumnNomeEquipe.ReadOnly = true;
+            this.ColumnNomeEquipe.Width = 125;
+            // 
+            // ColumnLider
+            // 
+            this.ColumnLider.HeaderText = "Líder";
+            this.ColumnLider.MinimumWidth = 6;
+            this.ColumnLider.Name = "ColumnLider";
+            this.ColumnLider.ReadOnly = true;
+            this.ColumnLider.Width = 125;
+            // 
+            // ColumnMembro1
+            // 
+            this.ColumnMembro1.HeaderText = "Membro 1";
+            this.ColumnMembro1.MinimumWidth = 6;
+            this.ColumnMembro1.Name = "ColumnMembro1";
+            this.ColumnMembro1.ReadOnly = true;
+            this.ColumnMembro1.Width = 125;
+            // 
+            // ColumnMembro2
+            // 
+            this.ColumnMembro2.HeaderText = "Membro2";
+            this.ColumnMembro2.MinimumWidth = 6;
+            this.ColumnMembro2.Name = "ColumnMembro2";
+            this.ColumnMembro2.ReadOnly = true;
+            this.ColumnMembro2.Width = 125;
+            // 
+            // ColumnMembro3
+            // 
+            this.ColumnMembro3.HeaderText = "Membro 3";
+            this.ColumnMembro3.MinimumWidth = 6;
+            this.ColumnMembro3.Name = "ColumnMembro3";
+            this.ColumnMembro3.ReadOnly = true;
+            this.ColumnMembro3.Width = 125;
+            // 
+            // ColumnDataFormacao
+            // 
+            this.ColumnDataFormacao.HeaderText = "Data formação";
+            this.ColumnDataFormacao.MinimumWidth = 6;
+            this.ColumnDataFormacao.Name = "ColumnDataFormacao";
+            this.ColumnDataFormacao.ReadOnly = true;
+            this.ColumnDataFormacao.Width = 125;
+            // 
+            // ColumnDataProximaMissao
+            // 
+            this.ColumnDataProximaMissao.HeaderText = "Data próxima missão";
+            this.ColumnDataProximaMissao.MinimumWidth = 6;
+            this.ColumnDataProximaMissao.Name = "ColumnDataProximaMissao";
+            this.ColumnDataProximaMissao.ReadOnly = true;
+            this.ColumnDataProximaMissao.Width = 125;
+            // 
+            // ColumnSituacao
+            // 
+            this.ColumnSituacao.HeaderText = "Situação";
+            this.ColumnSituacao.MinimumWidth = 6;
+            this.ColumnSituacao.Name = "ColumnSituacao";
+            this.ColumnSituacao.ReadOnly = true;
+            this.ColumnSituacao.Width = 450;
+            // 
             // EquipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 567);
+            this.ClientSize = new System.Drawing.Size(1788, 567);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.Apagar);
             this.Controls.Add(this.buttonEditar);
@@ -453,6 +433,10 @@
         private CheckBox checkBoxEmMissao;
         private CheckBox checkBoxNaAldeia;
         private CheckBox checkBoxTemporariamenteInativa;
+        private Button buttonCadastrar;
+        private Button buttonEditar;
+        private Button buttonCancelar;
+        private Button Apagar;
         private DataGridViewTextBoxColumn ColumnCodigo;
         private DataGridViewTextBoxColumn ColumnNomeEquipe;
         private DataGridViewTextBoxColumn ColumnLider;
@@ -462,9 +446,5 @@
         private DataGridViewTextBoxColumn ColumnDataFormacao;
         private DataGridViewTextBoxColumn ColumnDataProximaMissao;
         private DataGridViewTextBoxColumn ColumnSituacao;
-        private Button buttonCadastrar;
-        private Button buttonEditar;
-        private Button buttonCancelar;
-        private Button Apagar;
     }
 }
