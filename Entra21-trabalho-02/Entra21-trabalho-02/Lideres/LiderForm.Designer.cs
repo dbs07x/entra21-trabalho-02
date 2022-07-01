@@ -65,6 +65,7 @@
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
+            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             this.ColumnInicioLideranca,
             this.ColumnFimLideranca,
             this.ColumnStatus,
-            this.ColumnChakra});
+            this.ColumnChakra,
+            this.ColumnKekkeiGenkai});
             this.dataGridView1.Location = new System.Drawing.Point(14, 63);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
@@ -435,6 +437,14 @@
             this.radioButtonNao.Text = "Não";
             this.radioButtonNao.UseVisualStyleBackColor = true;
             // 
+            // ColumnKekkeiGenkai
+            // 
+            this.ColumnKekkeiGenkai.HeaderText = "Kekkei Genkai";
+            this.ColumnKekkeiGenkai.MinimumWidth = 6;
+            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
+            this.ColumnKekkeiGenkai.ReadOnly = true;
+            this.ColumnKekkeiGenkai.Width = 125;
+            // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -517,5 +527,6 @@
         private DataGridViewTextBoxColumn ColumnChakra;
         private Label labelKekkeiGenkai;
         private RadioButton radioButtonNao;
+        private DataGridViewTextBoxColumn ColumnKekkeiGenkai;
     }
 }
