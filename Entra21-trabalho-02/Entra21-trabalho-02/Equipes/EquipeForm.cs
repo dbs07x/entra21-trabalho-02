@@ -99,12 +99,12 @@ namespace Entra21_trabalho_02.Equipes
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um endereço para remover", "Aviso", MessageBoxButtons.OK);
+                MessageBox.Show("Selecione uma equipe para remover", "Aviso", MessageBoxButtons.OK);
 
                 return;
             }
 
-            var resposta = MessageBox.Show("Deseja realmente apagar o endereço?", "Aviso", MessageBoxButtons.YesNo);
+            var resposta = MessageBox.Show("Deseja realmente apagar a equipe?", "Aviso", MessageBoxButtons.YesNo);
 
             if (resposta != DialogResult.Yes)
             {
