@@ -88,7 +88,7 @@
             this.ColumnStatus,
             this.ColumnChakra,
             this.ColumnKekkeiGenkai});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
+            this.dataGridView1.Location = new System.Drawing.Point(328, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -169,7 +169,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(821, 554);
+            this.buttonSalvar.Location = new System.Drawing.Point(194, 546);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(120, 71);
             this.buttonSalvar.TabIndex = 1;
@@ -179,7 +179,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(12, 12);
+            this.buttonEditar.Location = new System.Drawing.Point(342, 29);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 2;
@@ -189,7 +189,7 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(93, 12);
+            this.buttonApagar.Location = new System.Drawing.Point(423, 29);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(75, 23);
             this.buttonApagar.TabIndex = 3;
@@ -199,7 +199,7 @@
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(639, 47);
+            this.labelNome.Location = new System.Drawing.Point(12, 39);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(40, 15);
             this.labelNome.TabIndex = 4;
@@ -208,7 +208,7 @@
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Location = new System.Drawing.Point(639, 91);
+            this.labelTitulo.Location = new System.Drawing.Point(12, 83);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(37, 15);
             this.labelTitulo.TabIndex = 5;
@@ -217,7 +217,7 @@
             // labelIdade
             // 
             this.labelIdade.AutoSize = true;
-            this.labelIdade.Location = new System.Drawing.Point(639, 135);
+            this.labelIdade.Location = new System.Drawing.Point(12, 127);
             this.labelIdade.Name = "labelIdade";
             this.labelIdade.Size = new System.Drawing.Size(36, 15);
             this.labelIdade.TabIndex = 6;
@@ -226,7 +226,7 @@
             // labelGenero
             // 
             this.labelGenero.AutoSize = true;
-            this.labelGenero.Location = new System.Drawing.Point(639, 192);
+            this.labelGenero.Location = new System.Drawing.Point(12, 184);
             this.labelGenero.Name = "labelGenero";
             this.labelGenero.Size = new System.Drawing.Size(45, 15);
             this.labelGenero.TabIndex = 7;
@@ -235,7 +235,7 @@
             // labelInicioLideranca
             // 
             this.labelInicioLideranca.AutoSize = true;
-            this.labelInicioLideranca.Location = new System.Drawing.Point(639, 294);
+            this.labelInicioLideranca.Location = new System.Drawing.Point(12, 286);
             this.labelInicioLideranca.Name = "labelInicioLideranca";
             this.labelInicioLideranca.Size = new System.Drawing.Size(106, 15);
             this.labelInicioLideranca.TabIndex = 8;
@@ -244,7 +244,7 @@
             // labelFimLideranca
             // 
             this.labelFimLideranca.AutoSize = true;
-            this.labelFimLideranca.Location = new System.Drawing.Point(639, 338);
+            this.labelFimLideranca.Location = new System.Drawing.Point(12, 330);
             this.labelFimLideranca.Name = "labelFimLideranca";
             this.labelFimLideranca.Size = new System.Drawing.Size(97, 15);
             this.labelFimLideranca.TabIndex = 9;
@@ -253,7 +253,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(639, 381);
+            this.labelStatus.Location = new System.Drawing.Point(12, 373);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(39, 15);
             this.labelStatus.TabIndex = 10;
@@ -262,7 +262,7 @@
             // labelElementoChakra
             // 
             this.labelElementoChakra.AutoSize = true;
-            this.labelElementoChakra.Location = new System.Drawing.Point(639, 435);
+            this.labelElementoChakra.Location = new System.Drawing.Point(12, 427);
             this.labelElementoChakra.Name = "labelElementoChakra";
             this.labelElementoChakra.Size = new System.Drawing.Size(97, 15);
             this.labelElementoChakra.TabIndex = 11;
@@ -270,7 +270,7 @@
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(640, 66);
+            this.textBoxNome.Location = new System.Drawing.Point(13, 58);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(302, 23);
             this.textBoxNome.TabIndex = 12;
@@ -278,14 +278,14 @@
             // comboBoxTitulo
             // 
             this.comboBoxTitulo.FormattingEnabled = true;
-            this.comboBoxTitulo.Location = new System.Drawing.Point(640, 110);
+            this.comboBoxTitulo.Location = new System.Drawing.Point(13, 102);
             this.comboBoxTitulo.Name = "comboBoxTitulo";
             this.comboBoxTitulo.Size = new System.Drawing.Size(302, 23);
             this.comboBoxTitulo.TabIndex = 13;
             // 
             // textBoxIdade
             // 
-            this.textBoxIdade.Location = new System.Drawing.Point(640, 154);
+            this.textBoxIdade.Location = new System.Drawing.Point(13, 146);
             this.textBoxIdade.Name = "textBoxIdade";
             this.textBoxIdade.Size = new System.Drawing.Size(301, 23);
             this.textBoxIdade.TabIndex = 14;
@@ -293,7 +293,7 @@
             // comboBoxChakra
             // 
             this.comboBoxChakra.FormattingEnabled = true;
-            this.comboBoxChakra.Location = new System.Drawing.Point(639, 453);
+            this.comboBoxChakra.Location = new System.Drawing.Point(12, 445);
             this.comboBoxChakra.Name = "comboBoxChakra";
             this.comboBoxChakra.Size = new System.Drawing.Size(302, 23);
             this.comboBoxChakra.TabIndex = 15;
@@ -301,7 +301,7 @@
             // dateTimePickerInicioLideranca
             // 
             this.dateTimePickerInicioLideranca.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(639, 312);
+            this.dateTimePickerInicioLideranca.Location = new System.Drawing.Point(12, 304);
             this.dateTimePickerInicioLideranca.Name = "dateTimePickerInicioLideranca";
             this.dateTimePickerInicioLideranca.Size = new System.Drawing.Size(302, 23);
             this.dateTimePickerInicioLideranca.TabIndex = 16;
@@ -331,7 +331,7 @@
             // checkBoxMasculino
             // 
             this.checkBoxMasculino.AutoSize = true;
-            this.checkBoxMasculino.Location = new System.Drawing.Point(639, 219);
+            this.checkBoxMasculino.Location = new System.Drawing.Point(12, 211);
             this.checkBoxMasculino.Name = "checkBoxMasculino";
             this.checkBoxMasculino.Size = new System.Drawing.Size(81, 19);
             this.checkBoxMasculino.TabIndex = 20;
@@ -341,7 +341,7 @@
             // checkBoxCisgenero
             // 
             this.checkBoxCisgenero.AutoSize = true;
-            this.checkBoxCisgenero.Location = new System.Drawing.Point(640, 253);
+            this.checkBoxCisgenero.Location = new System.Drawing.Point(13, 245);
             this.checkBoxCisgenero.Name = "checkBoxCisgenero";
             this.checkBoxCisgenero.Size = new System.Drawing.Size(79, 19);
             this.checkBoxCisgenero.TabIndex = 21;
@@ -351,7 +351,7 @@
             // checkBoxFeminino
             // 
             this.checkBoxFeminino.AutoSize = true;
-            this.checkBoxFeminino.Location = new System.Drawing.Point(753, 219);
+            this.checkBoxFeminino.Location = new System.Drawing.Point(126, 211);
             this.checkBoxFeminino.Name = "checkBoxFeminino";
             this.checkBoxFeminino.Size = new System.Drawing.Size(76, 19);
             this.checkBoxFeminino.TabIndex = 22;
@@ -361,7 +361,7 @@
             // checkBoxTransgenero
             // 
             this.checkBoxTransgenero.AutoSize = true;
-            this.checkBoxTransgenero.Location = new System.Drawing.Point(753, 253);
+            this.checkBoxTransgenero.Location = new System.Drawing.Point(126, 245);
             this.checkBoxTransgenero.Name = "checkBoxTransgenero";
             this.checkBoxTransgenero.Size = new System.Drawing.Size(90, 19);
             this.checkBoxTransgenero.TabIndex = 23;
@@ -371,7 +371,7 @@
             // checkBoxNaoBinario
             // 
             this.checkBoxNaoBinario.AutoSize = true;
-            this.checkBoxNaoBinario.Location = new System.Drawing.Point(859, 219);
+            this.checkBoxNaoBinario.Location = new System.Drawing.Point(232, 211);
             this.checkBoxNaoBinario.Name = "checkBoxNaoBinario";
             this.checkBoxNaoBinario.Size = new System.Drawing.Size(90, 19);
             this.checkBoxNaoBinario.TabIndex = 24;
@@ -380,7 +380,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(684, 554);
+            this.buttonCancelar.Location = new System.Drawing.Point(57, 546);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(122, 71);
             this.buttonCancelar.TabIndex = 25;
@@ -390,7 +390,7 @@
             // 
             // maskedTextBoxFimLideranca
             // 
-            this.maskedTextBoxFimLideranca.Location = new System.Drawing.Point(640, 356);
+            this.maskedTextBoxFimLideranca.Location = new System.Drawing.Point(13, 348);
             this.maskedTextBoxFimLideranca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBoxFimLideranca.Mask = "99/99/9999";
             this.maskedTextBoxFimLideranca.Name = "maskedTextBoxFimLideranca";
@@ -400,7 +400,7 @@
             // labelKekkeiGenkai
             // 
             this.labelKekkeiGenkai.AutoSize = true;
-            this.labelKekkeiGenkai.Location = new System.Drawing.Point(639, 487);
+            this.labelKekkeiGenkai.Location = new System.Drawing.Point(12, 479);
             this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
             this.labelKekkeiGenkai.Size = new System.Drawing.Size(80, 15);
             this.labelKekkeiGenkai.TabIndex = 27;
@@ -434,7 +434,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButtonVivo);
             this.groupBox1.Controls.Add(this.radioButtonMorto);
-            this.groupBox1.Location = new System.Drawing.Point(639, 384);
+            this.groupBox1.Location = new System.Drawing.Point(12, 376);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(278, 48);
             this.groupBox1.TabIndex = 30;
@@ -444,7 +444,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioButtonNao);
             this.groupBox2.Controls.Add(this.radioButtonSim);
-            this.groupBox2.Location = new System.Drawing.Point(639, 505);
+            this.groupBox2.Location = new System.Drawing.Point(12, 497);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(283, 35);
             this.groupBox2.TabIndex = 31;
@@ -454,7 +454,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 637);
+            this.ClientSize = new System.Drawing.Size(931, 637);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
