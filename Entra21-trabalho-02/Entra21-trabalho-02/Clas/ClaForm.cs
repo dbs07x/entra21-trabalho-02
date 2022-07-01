@@ -5,6 +5,7 @@ namespace Entra21_trabalho_02.Clas
     public partial class ClaForm : Form
     {
         private ClaServico claServico;
+
         private LiderServico liderServico;
 
         public ClaForm()
@@ -18,12 +19,11 @@ namespace Entra21_trabalho_02.Clas
             PreencherDataGridViewComClas();
 
             PreencherComboBoxComOsNomesDosLideres();
-        }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
             LimparCampos();
         }
+
+
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace Entra21_trabalho_02.Clas
                 kekkeiGenkai = false;
             }
 
-            var dataFormacaoDoCla = Convert.ToString(dateTimePickerDataFormacaoDoCLa.Text);
+            var dataFormacaoDoCla = Convert.ToDateTime(dateTimePickerDataFormacaoDoCLa.Value);
 
             if (dataGridView1.SelectedRows.Count == 0)
                 CadastarCla(nome, lider, kekkeiGenkai, dataFormacaoDoCla);
@@ -50,6 +50,11 @@ namespace Entra21_trabalho_02.Clas
             PreencherDataGridViewComClas();
 
             LimparCampos();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            ApresentarDadosParaEdicao();
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
@@ -79,6 +84,16 @@ namespace Entra21_trabalho_02.Clas
             PreencherDataGridViewComClas();
 
             dataGridView1.ClearSelection();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            ApresentarDadosParaEdicao();
         }
 
         private void PreencherDataGridViewComClas()
@@ -113,42 +128,9 @@ namespace Entra21_trabalho_02.Clas
             }
         }
 
-        private void CadastarCla(string nome, string lider, bool kekkeiGenkai, string dataFormacaoDoCla)
-        {
-            var cla = new Cla();
-            cla.Id = claServico.ObterUltimoCodigo() + 1;
-            cla.Nome = nome;
-            cla.Lider = lider;
-            cla.KekkeiGenkai = kekkeiGenkai;
-            cla.DataFormacaoDoCla = dataFormacaoDoCla;
-
-            claServico.Adicionar(cla);
-        }
-
-        private void EditarCla(string nome, string lider, bool kekkeiGenkai, string dataFormacaoDoCla)
-        {
-            var linhaSelecionada = dataGridView1.SelectedRows[0];
-
-            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
-
-            var cla = new Cla();
-            cla.Id = codigoSelecionado;
-            cla.Nome = nome;
-            cla.Lider = lider;
-            cla.KekkeiGenkai = kekkeiGenkai;
-            cla.DataFormacaoDoCla = dataFormacaoDoCla;
-
-            claServico.Editar(cla);
-        }
-
         private void LimparCampos()
         {
             textBoxNome.Text = string.Empty;
-        }
-
-        private void buttonEditar_Click(object sender, EventArgs e)
-        {
-            ApresentarDadosParaEdicao();
         }
 
         private void ApresentarDadosParaEdicao()
@@ -180,6 +162,34 @@ namespace Entra21_trabalho_02.Clas
                 kekkeiGenkai = false;
             }
 
+        }
+
+        private void CadastarCla(string nome, string lider, bool kekkeiGenkai, DateTime dataFormacaoDoCla)
+        {
+            var cla = new Cla();
+            cla.Id = claServico.ObterUltimoCodigo() + 1;
+            cla.Nome = nome;
+            cla.Lider = lider;
+            cla.KekkeiGenkai = kekkeiGenkai;
+            cla.DataFormacaoDoCla = dataFormacaoDoCla;
+
+            claServico.Adicionar(cla);
+        }
+
+        private void EditarCla(string nome, string lider, bool kekkeiGenkai, DateTime dataFormacaoDoCla)
+        {
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var cla = new Cla();
+            cla.Id = codigoSelecionado;
+            cla.Nome = nome;
+            cla.Lider = lider;
+            cla.KekkeiGenkai = kekkeiGenkai;
+            cla.DataFormacaoDoCla = dataFormacaoDoCla;
+
+            claServico.Editar(cla);
         }
     }
 }

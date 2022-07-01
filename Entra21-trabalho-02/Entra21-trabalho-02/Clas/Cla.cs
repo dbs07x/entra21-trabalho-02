@@ -6,6 +6,6 @@
         public string Nome;
         public string Lider;
         public bool KekkeiGenkai;
-        public string DataFormacaoDoCla;
+        public DateTime DataFormacaoDoCla;
     }
 }
