@@ -37,6 +37,7 @@
             this.ColumnFimLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.labelKekkeiGenkai = new System.Windows.Forms.Label();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
-            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,6 +155,14 @@
             this.ColumnChakra.Name = "ColumnChakra";
             this.ColumnChakra.ReadOnly = true;
             this.ColumnChakra.Width = 125;
+            // 
+            // ColumnKekkeiGenkai
+            // 
+            this.ColumnKekkeiGenkai.HeaderText = "Kekkei Genkai";
+            this.ColumnKekkeiGenkai.MinimumWidth = 6;
+            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
+            this.ColumnKekkeiGenkai.ReadOnly = true;
+            this.ColumnKekkeiGenkai.Width = 125;
             // 
             // buttonSalvar
             // 
@@ -287,12 +295,6 @@
             // comboBoxChakra
             // 
             this.comboBoxChakra.FormattingEnabled = true;
-            this.comboBoxChakra.Items.AddRange(new object[] {
-            "Fogo",
-            "Vento",
-            "Relâmpago",
-            "Terra",
-            "Água"});
             this.comboBoxChakra.Location = new System.Drawing.Point(730, 604);
             this.comboBoxChakra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxChakra.Name = "comboBoxChakra";
@@ -436,14 +438,6 @@
             this.radioButtonNao.TabStop = true;
             this.radioButtonNao.Text = "Não";
             this.radioButtonNao.UseVisualStyleBackColor = true;
-            // 
-            // ColumnKekkeiGenkai
-            // 
-            this.ColumnKekkeiGenkai.HeaderText = "Kekkei Genkai";
-            this.ColumnKekkeiGenkai.MinimumWidth = 6;
-            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
-            this.ColumnKekkeiGenkai.ReadOnly = true;
-            this.ColumnKekkeiGenkai.Width = 125;
             // 
             // LiderForm
             // 
