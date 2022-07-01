@@ -92,11 +92,12 @@ namespace Entra21_trabalho_02.Ninjas
                 kekkeiGenkai = false;
             }
 
-            if (dataGridView1.SelectedRows.Count == 0)
+            /*if (dataGridView1.SelectedRows.Count == 0)
                 CadastarNinja(nome, natureza, dataNascimento, genero, status, nivel, cla, aldeia, kekkeiGenkai);
 
             else
                 EditarNinja(nome, natureza, dataNascimento, genero, status, nivel, cla, aldeia, kekkeiGenkai);
+            */
 
             PreencherDataGridViewComNinjas();
 
@@ -237,7 +238,7 @@ namespace Entra21_trabalho_02.Ninjas
             var ninja = new Ninja();
             ninja.Id = ninjaServico.ObterUltimoCodigo() + 1;
             ninja.Nome = nome;
-            ninja.ElementoChakra = chakraServico.ObterNaturezaChakra(natureza);
+            // ninja.ElementoChakra = chakraServico.ObterNaturezaChakra(natureza);
             ninja.DataNascimento = dataNascimento;
             ninja.Genero = ninjaServico.ObterGeneroNinja(genero);
             ninja.Status = ninjaServico.ObterStatusNinja(status);
@@ -258,7 +259,7 @@ namespace Entra21_trabalho_02.Ninjas
             var ninja = new Ninja();
             ninja.Id = ninjaServico.ObterUltimoCodigo() + 1;
             ninja.Nome = nome;
-            ninja.ElementoChakra = chakraServico.ObterNaturezaChakra(natureza);
+            // ninja.ElementoChakra = chakraServico.ObterNaturezaChakra(natureza);
             ninja.DataNascimento = dataNascimento;
             ninja.Genero = ninjaServico.ObterGeneroNinja(genero);
             ninja.Status = ninjaServico.ObterStatusNinja(status);
