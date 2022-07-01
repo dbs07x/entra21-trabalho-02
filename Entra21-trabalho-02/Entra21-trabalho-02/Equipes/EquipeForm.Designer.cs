@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeEquipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMembro1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMembro2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMembro3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataFormacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataProximaMissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSituacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelNomeEquipe = new System.Windows.Forms.Label();
             this.textBoxNomeEquipe = new System.Windows.Forms.TextBox();
             this.labelLider = new System.Windows.Forms.Label();
@@ -51,15 +60,6 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.Apagar = new System.Windows.Forms.Button();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomeEquipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMembro1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMembro2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMembro3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataFormacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataProximaMissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSituacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,227 +78,14 @@
             this.ColumnDataFormacao,
             this.ColumnDataProximaMissao,
             this.ColumnSituacao});
-            this.dataGridView1.Location = new System.Drawing.Point(404, 16);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(354, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1372, 543);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 407);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // labelNomeEquipe
-            // 
-            this.labelNomeEquipe.AutoSize = true;
-            this.labelNomeEquipe.Location = new System.Drawing.Point(14, 16);
-            this.labelNomeEquipe.Name = "labelNomeEquipe";
-            this.labelNomeEquipe.Size = new System.Drawing.Size(121, 20);
-            this.labelNomeEquipe.TabIndex = 1;
-            this.labelNomeEquipe.Text = "Nome da equipe";
-            // 
-            // textBoxNomeEquipe
-            // 
-            this.textBoxNomeEquipe.Location = new System.Drawing.Point(14, 40);
-            this.textBoxNomeEquipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNomeEquipe.Name = "textBoxNomeEquipe";
-            this.textBoxNomeEquipe.Size = new System.Drawing.Size(346, 27);
-            this.textBoxNomeEquipe.TabIndex = 2;
-            // 
-            // labelLider
-            // 
-            this.labelLider.AutoSize = true;
-            this.labelLider.Location = new System.Drawing.Point(14, 96);
-            this.labelLider.Name = "labelLider";
-            this.labelLider.Size = new System.Drawing.Size(42, 20);
-            this.labelLider.TabIndex = 3;
-            this.labelLider.Text = "Lider";
-            // 
-            // comboBoxLider
-            // 
-            this.comboBoxLider.FormattingEnabled = true;
-            this.comboBoxLider.Location = new System.Drawing.Point(14, 120);
-            this.comboBoxLider.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxLider.Name = "comboBoxLider";
-            this.comboBoxLider.Size = new System.Drawing.Size(156, 28);
-            this.comboBoxLider.TabIndex = 4;
-            // 
-            // comboBoxMembro1
-            // 
-            this.comboBoxMembro1.FormattingEnabled = true;
-            this.comboBoxMembro1.Location = new System.Drawing.Point(203, 120);
-            this.comboBoxMembro1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxMembro1.Name = "comboBoxMembro1";
-            this.comboBoxMembro1.Size = new System.Drawing.Size(156, 28);
-            this.comboBoxMembro1.TabIndex = 6;
-            // 
-            // labelMembro1
-            // 
-            this.labelMembro1.AutoSize = true;
-            this.labelMembro1.Location = new System.Drawing.Point(203, 96);
-            this.labelMembro1.Name = "labelMembro1";
-            this.labelMembro1.Size = new System.Drawing.Size(78, 20);
-            this.labelMembro1.TabIndex = 5;
-            this.labelMembro1.Text = "Membro 1";
-            // 
-            // comboBoxMembro3
-            // 
-            this.comboBoxMembro3.FormattingEnabled = true;
-            this.comboBoxMembro3.Location = new System.Drawing.Point(203, 191);
-            this.comboBoxMembro3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxMembro3.Name = "comboBoxMembro3";
-            this.comboBoxMembro3.Size = new System.Drawing.Size(156, 28);
-            this.comboBoxMembro3.TabIndex = 10;
-            // 
-            // labelMembro3
-            // 
-            this.labelMembro3.AutoSize = true;
-            this.labelMembro3.Location = new System.Drawing.Point(203, 167);
-            this.labelMembro3.Name = "labelMembro3";
-            this.labelMembro3.Size = new System.Drawing.Size(78, 20);
-            this.labelMembro3.TabIndex = 9;
-            this.labelMembro3.Text = "Membro 3";
-            // 
-            // comboBoxMembro2
-            // 
-            this.comboBoxMembro2.FormattingEnabled = true;
-            this.comboBoxMembro2.Location = new System.Drawing.Point(14, 191);
-            this.comboBoxMembro2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxMembro2.Name = "comboBoxMembro2";
-            this.comboBoxMembro2.Size = new System.Drawing.Size(156, 28);
-            this.comboBoxMembro2.TabIndex = 8;
-            // 
-            // labelMembro2
-            // 
-            this.labelMembro2.AutoSize = true;
-            this.labelMembro2.Location = new System.Drawing.Point(14, 167);
-            this.labelMembro2.Name = "labelMembro2";
-            this.labelMembro2.Size = new System.Drawing.Size(78, 20);
-            this.labelMembro2.TabIndex = 7;
-            this.labelMembro2.Text = "Membro 2";
-            // 
-            // labelDataFormacao
-            // 
-            this.labelDataFormacao.AutoSize = true;
-            this.labelDataFormacao.Location = new System.Drawing.Point(14, 257);
-            this.labelDataFormacao.Name = "labelDataFormacao";
-            this.labelDataFormacao.Size = new System.Drawing.Size(130, 20);
-            this.labelDataFormacao.TabIndex = 11;
-            this.labelDataFormacao.Text = "Data de formação";
-            // 
-            // labelDataProximaMissao
-            // 
-            this.labelDataProximaMissao.AutoSize = true;
-            this.labelDataProximaMissao.Location = new System.Drawing.Point(203, 257);
-            this.labelDataProximaMissao.Name = "labelDataProximaMissao";
-            this.labelDataProximaMissao.Size = new System.Drawing.Size(150, 20);
-            this.labelDataProximaMissao.TabIndex = 12;
-            this.labelDataProximaMissao.Text = "Data próxima missão";
-            // 
-            // dateTimePickerDataFormacao
-            // 
-            this.dateTimePickerDataFormacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDataFormacao.Location = new System.Drawing.Point(14, 281);
-            this.dateTimePickerDataFormacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePickerDataFormacao.Name = "dateTimePickerDataFormacao";
-            this.dateTimePickerDataFormacao.Size = new System.Drawing.Size(156, 27);
-            this.dateTimePickerDataFormacao.TabIndex = 13;
-            // 
-            // maskedTextBoxDataProximaMissao
-            // 
-            this.maskedTextBoxDataProximaMissao.Location = new System.Drawing.Point(203, 281);
-            this.maskedTextBoxDataProximaMissao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.maskedTextBoxDataProximaMissao.Mask = "00/00/0000";
-            this.maskedTextBoxDataProximaMissao.Name = "maskedTextBoxDataProximaMissao";
-            this.maskedTextBoxDataProximaMissao.Size = new System.Drawing.Size(92, 27);
-            this.maskedTextBoxDataProximaMissao.TabIndex = 14;
-            this.maskedTextBoxDataProximaMissao.ValidatingType = typeof(System.DateTime);
-            // 
-            // labelSituacao
-            // 
-            this.labelSituacao.AutoSize = true;
-            this.labelSituacao.Location = new System.Drawing.Point(14, 344);
-            this.labelSituacao.Name = "labelSituacao";
-            this.labelSituacao.Size = new System.Drawing.Size(66, 20);
-            this.labelSituacao.TabIndex = 15;
-            this.labelSituacao.Text = "Situação";
-            // 
-            // checkBoxEmMissao
-            // 
-            this.checkBoxEmMissao.AutoSize = true;
-            this.checkBoxEmMissao.Location = new System.Drawing.Point(14, 380);
-            this.checkBoxEmMissao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxEmMissao.Name = "checkBoxEmMissao";
-            this.checkBoxEmMissao.Size = new System.Drawing.Size(102, 24);
-            this.checkBoxEmMissao.TabIndex = 16;
-            this.checkBoxEmMissao.Text = "Em missão";
-            this.checkBoxEmMissao.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNaAldeia
-            // 
-            this.checkBoxNaAldeia.AutoSize = true;
-            this.checkBoxNaAldeia.Location = new System.Drawing.Point(111, 380);
-            this.checkBoxNaAldeia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxNaAldeia.Name = "checkBoxNaAldeia";
-            this.checkBoxNaAldeia.Size = new System.Drawing.Size(97, 24);
-            this.checkBoxNaAldeia.TabIndex = 17;
-            this.checkBoxNaAldeia.Text = "Na Aldeia";
-            this.checkBoxNaAldeia.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTemporariamenteInativa
-            // 
-            this.checkBoxTemporariamenteInativa.AutoSize = true;
-            this.checkBoxTemporariamenteInativa.Location = new System.Drawing.Point(201, 380);
-            this.checkBoxTemporariamenteInativa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxTemporariamenteInativa.Name = "checkBoxTemporariamenteInativa";
-            this.checkBoxTemporariamenteInativa.Size = new System.Drawing.Size(197, 24);
-            this.checkBoxTemporariamenteInativa.TabIndex = 18;
-            this.checkBoxTemporariamenteInativa.Text = "Temporariamente Inativa";
-            this.checkBoxTemporariamenteInativa.UseVisualStyleBackColor = true;
-            // 
-            // buttonCadastrar
-            // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(14, 444);
-            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(115, 53);
-            this.buttonCadastrar.TabIndex = 19;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
-            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(159, 444);
-            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(115, 53);
-            this.buttonEditar.TabIndex = 20;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(159, 505);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(115, 53);
-            this.buttonCancelar.TabIndex = 22;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // Apagar
-            // 
-            this.Apagar.Location = new System.Drawing.Point(14, 505);
-            this.Apagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Apagar.Name = "Apagar";
-            this.Apagar.Size = new System.Drawing.Size(115, 53);
-            this.Apagar.TabIndex = 21;
-            this.Apagar.Text = "Apagar";
-            this.Apagar.UseVisualStyleBackColor = true;
-            this.Apagar.Click += new System.EventHandler(this.Apagar_Click);
             // 
             // ColumnCodigo
             // 
@@ -373,11 +160,209 @@
             this.ColumnSituacao.ReadOnly = true;
             this.ColumnSituacao.Width = 450;
             // 
+            // labelNomeEquipe
+            // 
+            this.labelNomeEquipe.AutoSize = true;
+            this.labelNomeEquipe.Location = new System.Drawing.Point(12, 12);
+            this.labelNomeEquipe.Name = "labelNomeEquipe";
+            this.labelNomeEquipe.Size = new System.Drawing.Size(95, 15);
+            this.labelNomeEquipe.TabIndex = 1;
+            this.labelNomeEquipe.Text = "Nome da equipe";
+            // 
+            // textBoxNomeEquipe
+            // 
+            this.textBoxNomeEquipe.Location = new System.Drawing.Point(12, 30);
+            this.textBoxNomeEquipe.Name = "textBoxNomeEquipe";
+            this.textBoxNomeEquipe.Size = new System.Drawing.Size(303, 23);
+            this.textBoxNomeEquipe.TabIndex = 2;
+            // 
+            // labelLider
+            // 
+            this.labelLider.AutoSize = true;
+            this.labelLider.Location = new System.Drawing.Point(12, 72);
+            this.labelLider.Name = "labelLider";
+            this.labelLider.Size = new System.Drawing.Size(33, 15);
+            this.labelLider.TabIndex = 3;
+            this.labelLider.Text = "Lider";
+            // 
+            // comboBoxLider
+            // 
+            this.comboBoxLider.FormattingEnabled = true;
+            this.comboBoxLider.Location = new System.Drawing.Point(12, 90);
+            this.comboBoxLider.Name = "comboBoxLider";
+            this.comboBoxLider.Size = new System.Drawing.Size(137, 23);
+            this.comboBoxLider.TabIndex = 4;
+            // 
+            // comboBoxMembro1
+            // 
+            this.comboBoxMembro1.FormattingEnabled = true;
+            this.comboBoxMembro1.Location = new System.Drawing.Point(178, 90);
+            this.comboBoxMembro1.Name = "comboBoxMembro1";
+            this.comboBoxMembro1.Size = new System.Drawing.Size(137, 23);
+            this.comboBoxMembro1.TabIndex = 6;
+            // 
+            // labelMembro1
+            // 
+            this.labelMembro1.AutoSize = true;
+            this.labelMembro1.Location = new System.Drawing.Point(178, 72);
+            this.labelMembro1.Name = "labelMembro1";
+            this.labelMembro1.Size = new System.Drawing.Size(62, 15);
+            this.labelMembro1.TabIndex = 5;
+            this.labelMembro1.Text = "Membro 1";
+            // 
+            // comboBoxMembro3
+            // 
+            this.comboBoxMembro3.FormattingEnabled = true;
+            this.comboBoxMembro3.Location = new System.Drawing.Point(178, 143);
+            this.comboBoxMembro3.Name = "comboBoxMembro3";
+            this.comboBoxMembro3.Size = new System.Drawing.Size(137, 23);
+            this.comboBoxMembro3.TabIndex = 10;
+            // 
+            // labelMembro3
+            // 
+            this.labelMembro3.AutoSize = true;
+            this.labelMembro3.Location = new System.Drawing.Point(178, 125);
+            this.labelMembro3.Name = "labelMembro3";
+            this.labelMembro3.Size = new System.Drawing.Size(62, 15);
+            this.labelMembro3.TabIndex = 9;
+            this.labelMembro3.Text = "Membro 3";
+            // 
+            // comboBoxMembro2
+            // 
+            this.comboBoxMembro2.FormattingEnabled = true;
+            this.comboBoxMembro2.Location = new System.Drawing.Point(12, 143);
+            this.comboBoxMembro2.Name = "comboBoxMembro2";
+            this.comboBoxMembro2.Size = new System.Drawing.Size(137, 23);
+            this.comboBoxMembro2.TabIndex = 8;
+            // 
+            // labelMembro2
+            // 
+            this.labelMembro2.AutoSize = true;
+            this.labelMembro2.Location = new System.Drawing.Point(12, 125);
+            this.labelMembro2.Name = "labelMembro2";
+            this.labelMembro2.Size = new System.Drawing.Size(62, 15);
+            this.labelMembro2.TabIndex = 7;
+            this.labelMembro2.Text = "Membro 2";
+            // 
+            // labelDataFormacao
+            // 
+            this.labelDataFormacao.AutoSize = true;
+            this.labelDataFormacao.Location = new System.Drawing.Point(12, 193);
+            this.labelDataFormacao.Name = "labelDataFormacao";
+            this.labelDataFormacao.Size = new System.Drawing.Size(101, 15);
+            this.labelDataFormacao.TabIndex = 11;
+            this.labelDataFormacao.Text = "Data de formação";
+            // 
+            // labelDataProximaMissao
+            // 
+            this.labelDataProximaMissao.AutoSize = true;
+            this.labelDataProximaMissao.Location = new System.Drawing.Point(178, 193);
+            this.labelDataProximaMissao.Name = "labelDataProximaMissao";
+            this.labelDataProximaMissao.Size = new System.Drawing.Size(118, 15);
+            this.labelDataProximaMissao.TabIndex = 12;
+            this.labelDataProximaMissao.Text = "Data próxima missão";
+            // 
+            // dateTimePickerDataFormacao
+            // 
+            this.dateTimePickerDataFormacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDataFormacao.Location = new System.Drawing.Point(12, 211);
+            this.dateTimePickerDataFormacao.Name = "dateTimePickerDataFormacao";
+            this.dateTimePickerDataFormacao.Size = new System.Drawing.Size(137, 23);
+            this.dateTimePickerDataFormacao.TabIndex = 13;
+            // 
+            // maskedTextBoxDataProximaMissao
+            // 
+            this.maskedTextBoxDataProximaMissao.Location = new System.Drawing.Point(178, 211);
+            this.maskedTextBoxDataProximaMissao.Mask = "00/00/0000";
+            this.maskedTextBoxDataProximaMissao.Name = "maskedTextBoxDataProximaMissao";
+            this.maskedTextBoxDataProximaMissao.Size = new System.Drawing.Size(81, 23);
+            this.maskedTextBoxDataProximaMissao.TabIndex = 14;
+            this.maskedTextBoxDataProximaMissao.ValidatingType = typeof(System.DateTime);
+            // 
+            // labelSituacao
+            // 
+            this.labelSituacao.AutoSize = true;
+            this.labelSituacao.Location = new System.Drawing.Point(12, 258);
+            this.labelSituacao.Name = "labelSituacao";
+            this.labelSituacao.Size = new System.Drawing.Size(52, 15);
+            this.labelSituacao.TabIndex = 15;
+            this.labelSituacao.Text = "Situação";
+            // 
+            // checkBoxEmMissao
+            // 
+            this.checkBoxEmMissao.AutoSize = true;
+            this.checkBoxEmMissao.Location = new System.Drawing.Point(12, 285);
+            this.checkBoxEmMissao.Name = "checkBoxEmMissao";
+            this.checkBoxEmMissao.Size = new System.Drawing.Size(83, 19);
+            this.checkBoxEmMissao.TabIndex = 16;
+            this.checkBoxEmMissao.Text = "Em missão";
+            this.checkBoxEmMissao.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNaAldeia
+            // 
+            this.checkBoxNaAldeia.AutoSize = true;
+            this.checkBoxNaAldeia.Location = new System.Drawing.Point(97, 285);
+            this.checkBoxNaAldeia.Name = "checkBoxNaAldeia";
+            this.checkBoxNaAldeia.Size = new System.Drawing.Size(77, 19);
+            this.checkBoxNaAldeia.TabIndex = 17;
+            this.checkBoxNaAldeia.Text = "Na Aldeia";
+            this.checkBoxNaAldeia.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTemporariamenteInativa
+            // 
+            this.checkBoxTemporariamenteInativa.AutoSize = true;
+            this.checkBoxTemporariamenteInativa.Location = new System.Drawing.Point(176, 285);
+            this.checkBoxTemporariamenteInativa.Name = "checkBoxTemporariamenteInativa";
+            this.checkBoxTemporariamenteInativa.Size = new System.Drawing.Size(157, 19);
+            this.checkBoxTemporariamenteInativa.TabIndex = 18;
+            this.checkBoxTemporariamenteInativa.Text = "Temporariamente Inativa";
+            this.checkBoxTemporariamenteInativa.UseVisualStyleBackColor = true;
+            // 
+            // buttonCadastrar
+            // 
+            this.buttonCadastrar.Location = new System.Drawing.Point(12, 333);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(101, 40);
+            this.buttonCadastrar.TabIndex = 19;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(139, 333);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(101, 40);
+            this.buttonEditar.TabIndex = 20;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(139, 379);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(101, 40);
+            this.buttonCancelar.TabIndex = 22;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // Apagar
+            // 
+            this.Apagar.Location = new System.Drawing.Point(12, 379);
+            this.Apagar.Name = "Apagar";
+            this.Apagar.Size = new System.Drawing.Size(101, 40);
+            this.Apagar.TabIndex = 21;
+            this.Apagar.Text = "Apagar";
+            this.Apagar.UseVisualStyleBackColor = true;
+            this.Apagar.Click += new System.EventHandler(this.Apagar_Click);
+            // 
             // EquipeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1788, 567);
+            this.ClientSize = new System.Drawing.Size(1199, 425);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.Apagar);
             this.Controls.Add(this.buttonEditar);
@@ -401,7 +386,6 @@
             this.Controls.Add(this.textBoxNomeEquipe);
             this.Controls.Add(this.labelNomeEquipe);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EquipeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipe";

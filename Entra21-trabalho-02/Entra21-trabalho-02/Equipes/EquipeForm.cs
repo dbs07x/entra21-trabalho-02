@@ -68,13 +68,6 @@ namespace Entra21_trabalho_02.Equipes
                 situacao = "A equipe está: Em missão / Na aldeia / Temporariamente Inativa";
             }
 
-            var dadosValidos = ValidarDados();
-
-            if (dadosValidos == false)
-            {
-                return;
-            }
-
             if (dataGridView1.SelectedRows.Count == 0)
             {
                 CadastrarEquipe(nomeEquipe, lider, membro1, membro2, membro3, dataFormacao, dataProximaMissao, situacao);
@@ -263,87 +256,15 @@ namespace Entra21_trabalho_02.Equipes
             }
         }
 
-        private bool ValidarDados()
-        {
-           var hoje = DateTime.Today;
-
-            if (textBoxNomeEquipe.Text == string.Empty)
-            {
-                MessageBox.Show("Digite um nome para a equipe", "Aviso", MessageBoxButtons.OK);
-
-                textBoxNomeEquipe.Focus();
-
-                return false;
-            }
-
-            if (comboBoxLider.SelectedIndex == -1)
-            {
-                MessageBox.Show("Escolha um líder", "Aviso", MessageBoxButtons.OK);
-
-                comboBoxLider.DroppedDown = true;
-
-                return false;
-            }
-
-            if (comboBoxMembro1.SelectedIndex == -1)
-            {
-                MessageBox.Show("Escolha um líder", "Aviso", MessageBoxButtons.OK);
-
-                comboBoxMembro1.DroppedDown = true;
-
-                return false;
-            }
-
-            if (comboBoxMembro2.SelectedIndex == -1)
-            {
-                MessageBox.Show("Escolha um líder", "Aviso", MessageBoxButtons.OK);
-
-                comboBoxMembro2.DroppedDown = true;
-
-                return false;
-            }
-
-            if (comboBoxMembro3.SelectedIndex == -1)
-            {
-                MessageBox.Show("Escolha um líder", "Aviso", MessageBoxButtons.OK);
-
-                comboBoxMembro3.DroppedDown = true;
-
-                return false;
-            }
-
-            if (dateTimePickerDataFormacao.Value > DateTime.Today)
-            {
-                MessageBox.Show("Informe a data de formação da equipe", "Aviso", MessageBoxButtons.OK);
-
-                dateTimePickerDataFormacao.Select();
-                SendKeys.Send("%{DOWN}");
-
-                return false;
-            }
-
-            if (maskedTextBoxDataProximaMissao.Text == string.Empty)
-            {
-                MessageBox.Show("Informe a data da próxima missão da equipe", "Aviso", MessageBoxButtons.OK);
-
-                maskedTextBoxDataProximaMissao.Focus();
-
-                return false;
-            }
-
-
-            return true;
-        }
-
         private void CadastrarEquipe(string nomeEquipe, string lider, string membro1, string membro2, string membro3, DateTime dataFormacao, DateTime dataProximaMissao, string situacao)
         {
             var equipe = new Equipe();
             equipe.Id = equipeServico.ObterUltimoId() + 1;
             equipe.Nome = nomeEquipe;
-            equipe.Lider = ninjaServico.ObterPorNomeNinja(lider);
-            equipe.Membro1 = ninjaServico.ObterPorNomeNinja(membro1);
-            equipe.Membro2 = ninjaServico.ObterPorNomeNinja(membro2);
-            equipe.Membro3 = ninjaServico.ObterPorNomeNinja(membro3);
+            equipe.Lider = lider;
+            equipe.Membro1 = membro1;
+            equipe.Membro2 = membro2;
+            equipe.Membro3 = membro3;
             equipe.Formacao = dataFormacao;
             equipe.InicioProximaMissao = dataProximaMissao;
             equipe.Situacao = situacao;
@@ -360,10 +281,10 @@ namespace Entra21_trabalho_02.Equipes
             var equipe = new Equipe();
             equipe.Id = codigoSelecionado;
             equipe.Nome = nomeEquipe;
-            equipe.Lider = ninjaServico.ObterPorNomeNinja(lider);
-            equipe.Membro1 = ninjaServico.ObterPorNomeNinja(membro1);
-            equipe.Membro2 = ninjaServico.ObterPorNomeNinja(membro2);
-            equipe.Membro3 = ninjaServico.ObterPorNomeNinja(membro3);
+            equipe.Lider = lider;
+            equipe.Membro1 = membro1;
+            equipe.Membro2 = membro2;
+            equipe.Membro3 = membro3;
             equipe.Formacao = dataFormacao;
             equipe.InicioProximaMissao = dataProximaMissao;
             equipe.Situacao = situacao;

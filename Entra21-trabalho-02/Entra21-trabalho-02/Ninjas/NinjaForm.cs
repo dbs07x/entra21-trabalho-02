@@ -49,22 +49,7 @@ namespace Entra21_trabalho_02.Ninjas
             var nome = textBoxNome.Text;
             var natureza = comboBoxElementoChakra.Text;
             var dataNascimento = maskedTextBoxDataNascimento.Text;
-            string genero;
-
-            if ((checkBoxMasculino.Checked == true) && (checkBoxFeminino.Checked == false) && (checkBoxNaoBinario.Checked == false) && (checkBoxCisgenero.Checked == false) && (checkBoxTransgenero.Checked == false))
-            {
-                genero = "Masculino";
-            }
-
-            else if ((checkBoxMasculino.Checked == false) && (checkBoxFeminino.Checked == true) && (checkBoxNaoBinario.Checked == false) && (checkBoxCisgenero.Checked == false) && (checkBoxTransgenero.Checked == false))
-            {
-                genero = "Feminino";
-            }
-
-            else
-            {
-                genero = "Não-Binário";
-            }
+            string genero = ValidarGenero();
 
             bool status;
 
@@ -107,6 +92,29 @@ namespace Entra21_trabalho_02.Ninjas
             LimparCampos();
 
         }
+
+        private string ValidarGenero()
+        {
+            var genero = string.Empty;
+            var identidadeGenero = string.Empty;
+
+            if (checkBoxMasculino.Checked == true)
+                genero = "Masculino";
+            else if (checkBoxFeminino.Checked == true)
+                genero = "Feminino";
+            else
+                genero = "Não-Binario";
+
+            if (checkBoxCisgenero.Checked == true)
+                identidadeGenero = "Cisgênero";
+            else
+                identidadeGenero = "Transgênero";
+
+            var generoCompleto = genero + " / " + identidadeGenero;
+
+            return generoCompleto;
+        }
+
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             ApresentarDadosParaEdicao();
@@ -265,13 +273,13 @@ namespace Entra21_trabalho_02.Ninjas
             var ninja = new Ninja();
             ninja.Id = ninjaServico.ObterUltimoCodigo() + 1;
             ninja.Nome = nome;
-            ninja.ElementoChakra = chakraServico.ObterPorNatureza(natureza);
+            ninja.ElementoChakra = natureza;
             ninja.DataNascimento = dataNascimento;
             ninja.Genero = genero;
             ninja.Status = status;
             ninja.Nivel = ninjaServico.ObterNivelNinja(nivel);
-            ninja.Cla = claServico.ObterPorNomeCla(cla);
-            ninja.Aldeia = aldeiaServico.ObterAldeiaPeloNome(aldeia);
+            ninja.Cla = cla;
+            ninja.Aldeia = aldeia;
             ninja.KekkeiGenkai = kekkeiGenkai;
 
             ninjaServico.Adicionar(ninja);
@@ -286,13 +294,13 @@ namespace Entra21_trabalho_02.Ninjas
             var ninja = new Ninja();
             ninja.Id = ninjaServico.ObterUltimoCodigo() + 1;
             ninja.Nome = nome;
-            ninja.ElementoChakra = chakraServico.ObterPorNatureza(natureza);
+            ninja.ElementoChakra = natureza;
             ninja.DataNascimento = dataNascimento;
             ninja.Genero = genero;
             ninja.Status = status;
             ninja.Nivel = ninjaServico.ObterNivelNinja(nivel);
-            ninja.Cla = claServico.ObterPorNomeCla(cla);
-            ninja.Aldeia = aldeiaServico.ObterAldeiaPeloNome(aldeia);
+            ninja.Cla = cla;
+            ninja.Aldeia = aldeia;
             ninja.KekkeiGenkai = kekkeiGenkai;
 
             ninjaServico.Editar(ninja);

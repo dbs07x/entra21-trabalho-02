@@ -6,10 +6,10 @@ namespace Entra21_trabalho_02.Equipes
     {
         public int Id;
         public string Nome;
-        public Ninja Lider;
-        public Ninja Membro1;
-        public Ninja Membro2;
-        public Ninja Membro3;
+        public string Lider;
+        public string Membro1;
+        public string Membro2;
+        public string Membro3;
         public DateTime Formacao;
         public DateTime InicioProximaMissao;
         public string Situacao;

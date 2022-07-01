@@ -8,28 +8,13 @@ namespace Entra21_trabalho_02.Ninjas
     {
         public int Id;
         public string Nome;
-        public Chakra ElementoChakra;
+        public string ElementoChakra;
         public string DataNascimento;
         public string Genero;
         public bool Status;
         public Nivel Nivel;
-        public Cla Cla;
-        public Aldeia Aldeia;
+        public string Cla;
+        public string Aldeia;
         public bool KekkeiGenkai;
-
-        /*
-        public bool PossuiEquipe()
-        {
-        return true;
-        }
-        */
-
-        /*public int CalcularIdade()
-        {
-            var idade = DateTime.Now.Year - DataNascimento.Year;
-
-            return idade;
-        }
-        */
     }
 }

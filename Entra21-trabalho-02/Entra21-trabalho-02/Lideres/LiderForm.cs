@@ -246,7 +246,7 @@ namespace Entra21_trabalho_02.Lideres
             return true;
         }
 
-        private  string ValidarGenero()
+        private string ValidarGenero()
         {
             var genero = string.Empty;
             var identidadeGenero = string.Empty;
@@ -279,7 +279,7 @@ namespace Entra21_trabalho_02.Lideres
             lider.InicioLideranca = inicioLideranca;
             lider.FimLideranca = fimLideranca;
             lider.Status = statusVivo;
-            lider.Chakra = chakraServico.ObterPorNatureza(chakra);
+            lider.Chakra = chakra;
             lider.KekkeiGenkai = kekkeiGenkai;
            
             liderServico.Cadastrar(lider);
@@ -299,7 +299,7 @@ namespace Entra21_trabalho_02.Lideres
             lider.Idade = idade;
             lider.InicioLideranca = inicioLideranca;
             lider.FimLideranca= fimLideranca;
-            lider.Chakra = chakraServico.ObterPorNatureza(chakra);
+            lider.Chakra = chakra;
             lider.Status = statusVivo;
             lider.KekkeiGenkai = kekkeiGenkai;
 

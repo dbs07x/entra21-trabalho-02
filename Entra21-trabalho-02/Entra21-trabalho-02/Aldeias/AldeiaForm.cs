@@ -90,7 +90,7 @@ namespace Entra21_trabalho_02.Aldeias
                     aldeia.Codigo,
                     aldeia.Nome,
                     aldeia.Pais,
-                    aldeia.Lider.Nome
+                    aldeia.Lider
                 });
             }
 
@@ -135,7 +135,7 @@ namespace Entra21_trabalho_02.Aldeias
             aldeia.Codigo = aldeiaServico.ObterUltimoCodigo() + 1;
             aldeia.Nome = nome;
             aldeia.Pais = pais;
-            aldeia.Lider = liderServico.ObterPorNomeLider(nome);
+            aldeia.Lider = nomeLider;
 
             aldeiaServico.Adicionar(aldeia);
         }
@@ -150,7 +150,7 @@ namespace Entra21_trabalho_02.Aldeias
             aldeia.Codigo = codigoSelecionado;
             aldeia.Nome = nome;
             aldeia.Pais = pais;
-            aldeia.Lider = liderServico.ObterPorNomeLider(nomeLider);
+            aldeia.Lider = nomeLider;
 
             aldeiaServico.Editar(aldeia);
         }
