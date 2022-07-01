@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIdade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInicioLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFimLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
@@ -68,6 +59,16 @@
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIdade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInicioLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFimLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,85 +88,14 @@
             this.ColumnFimLideranca,
             this.ColumnStatus,
             this.ColumnChakra,
-            this.ColumnKekkeiGenkai});
+            this.ColumnKekkeiGenkai,
+            this.dataGridViewTextBoxColumn1});
             this.dataGridView1.Location = new System.Drawing.Point(328, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(595, 578);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.MinimumWidth = 6;
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 125;
-            // 
-            // ColumnTitulo
-            // 
-            this.ColumnTitulo.HeaderText = "Titulo";
-            this.ColumnTitulo.MinimumWidth = 6;
-            this.ColumnTitulo.Name = "ColumnTitulo";
-            this.ColumnTitulo.ReadOnly = true;
-            this.ColumnTitulo.Width = 125;
-            // 
-            // ColumnIdade
-            // 
-            this.ColumnIdade.HeaderText = "Idade";
-            this.ColumnIdade.MinimumWidth = 6;
-            this.ColumnIdade.Name = "ColumnIdade";
-            this.ColumnIdade.ReadOnly = true;
-            this.ColumnIdade.Width = 125;
-            // 
-            // ColumnGenero
-            // 
-            this.ColumnGenero.HeaderText = "Genero";
-            this.ColumnGenero.MinimumWidth = 6;
-            this.ColumnGenero.Name = "ColumnGenero";
-            this.ColumnGenero.ReadOnly = true;
-            this.ColumnGenero.Width = 125;
-            // 
-            // ColumnInicioLideranca
-            // 
-            this.ColumnInicioLideranca.HeaderText = "Início da Liderança";
-            this.ColumnInicioLideranca.MinimumWidth = 6;
-            this.ColumnInicioLideranca.Name = "ColumnInicioLideranca";
-            this.ColumnInicioLideranca.ReadOnly = true;
-            this.ColumnInicioLideranca.Width = 125;
-            // 
-            // ColumnFimLideranca
-            // 
-            this.ColumnFimLideranca.HeaderText = "Fim da Liderança";
-            this.ColumnFimLideranca.MinimumWidth = 6;
-            this.ColumnFimLideranca.Name = "ColumnFimLideranca";
-            this.ColumnFimLideranca.ReadOnly = true;
-            this.ColumnFimLideranca.Width = 125;
-            // 
-            // ColumnStatus
-            // 
-            this.ColumnStatus.HeaderText = "Status";
-            this.ColumnStatus.MinimumWidth = 6;
-            this.ColumnStatus.Name = "ColumnStatus";
-            this.ColumnStatus.ReadOnly = true;
-            this.ColumnStatus.Width = 125;
-            // 
-            // ColumnChakra
-            // 
-            this.ColumnChakra.HeaderText = "Elemento do Chakra";
-            this.ColumnChakra.MinimumWidth = 6;
-            this.ColumnChakra.Name = "ColumnChakra";
-            this.ColumnChakra.ReadOnly = true;
-            this.ColumnChakra.Width = 125;
-            // 
-            // ColumnKekkeiGenkai
-            // 
-            this.ColumnKekkeiGenkai.HeaderText = "Kekkei Genkai";
-            this.ColumnKekkeiGenkai.MinimumWidth = 6;
-            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
-            this.ColumnKekkeiGenkai.ReadOnly = true;
-            this.ColumnKekkeiGenkai.Width = 125;
             // 
             // buttonSalvar
             // 
@@ -450,6 +380,84 @@
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Codigo";
+            this.ColumnNome.MinimumWidth = 6;
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 125;
+            // 
+            // ColumnTitulo
+            // 
+            this.ColumnTitulo.HeaderText = "Nome";
+            this.ColumnTitulo.MinimumWidth = 6;
+            this.ColumnTitulo.Name = "ColumnTitulo";
+            this.ColumnTitulo.ReadOnly = true;
+            this.ColumnTitulo.Width = 125;
+            // 
+            // ColumnIdade
+            // 
+            this.ColumnIdade.HeaderText = "Titulo";
+            this.ColumnIdade.MinimumWidth = 6;
+            this.ColumnIdade.Name = "ColumnIdade";
+            this.ColumnIdade.ReadOnly = true;
+            this.ColumnIdade.Width = 125;
+            // 
+            // ColumnGenero
+            // 
+            this.ColumnGenero.HeaderText = "Idade";
+            this.ColumnGenero.MinimumWidth = 6;
+            this.ColumnGenero.Name = "ColumnGenero";
+            this.ColumnGenero.ReadOnly = true;
+            this.ColumnGenero.Width = 125;
+            // 
+            // ColumnInicioLideranca
+            // 
+            this.ColumnInicioLideranca.HeaderText = "Genero";
+            this.ColumnInicioLideranca.MinimumWidth = 6;
+            this.ColumnInicioLideranca.Name = "ColumnInicioLideranca";
+            this.ColumnInicioLideranca.ReadOnly = true;
+            this.ColumnInicioLideranca.Width = 125;
+            // 
+            // ColumnFimLideranca
+            // 
+            this.ColumnFimLideranca.HeaderText = "Inicio da Liderança";
+            this.ColumnFimLideranca.MinimumWidth = 6;
+            this.ColumnFimLideranca.Name = "ColumnFimLideranca";
+            this.ColumnFimLideranca.ReadOnly = true;
+            this.ColumnFimLideranca.Width = 125;
+            // 
+            // ColumnStatus
+            // 
+            this.ColumnStatus.HeaderText = "Fim da Liderança";
+            this.ColumnStatus.MinimumWidth = 6;
+            this.ColumnStatus.Name = "ColumnStatus";
+            this.ColumnStatus.ReadOnly = true;
+            this.ColumnStatus.Width = 125;
+            // 
+            // ColumnChakra
+            // 
+            this.ColumnChakra.HeaderText = "Status";
+            this.ColumnChakra.MinimumWidth = 6;
+            this.ColumnChakra.Name = "ColumnChakra";
+            this.ColumnChakra.ReadOnly = true;
+            this.ColumnChakra.Width = 125;
+            // 
+            // ColumnKekkeiGenkai
+            // 
+            this.ColumnKekkeiGenkai.HeaderText = "Elemento Chakra";
+            this.ColumnKekkeiGenkai.MinimumWidth = 6;
+            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
+            this.ColumnKekkeiGenkai.ReadOnly = true;
+            this.ColumnKekkeiGenkai.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Kekkei Genkai";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -525,6 +533,10 @@
         private MaskedTextBox maskedTextBoxFimLideranca;
         private RadioButton radioButtonSim;
         private Button buttonCancelar;
+        private Label labelKekkeiGenkai;
+        private RadioButton radioButtonNao;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
         private DataGridViewTextBoxColumn ColumnNome;
         private DataGridViewTextBoxColumn ColumnTitulo;
         private DataGridViewTextBoxColumn ColumnIdade;
@@ -533,10 +545,7 @@
         private DataGridViewTextBoxColumn ColumnFimLideranca;
         private DataGridViewTextBoxColumn ColumnStatus;
         private DataGridViewTextBoxColumn ColumnChakra;
-        private Label labelKekkeiGenkai;
-        private RadioButton radioButtonNao;
         private DataGridViewTextBoxColumn ColumnKekkeiGenkai;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
