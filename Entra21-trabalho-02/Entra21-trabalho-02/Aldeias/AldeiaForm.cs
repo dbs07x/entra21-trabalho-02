@@ -7,7 +7,7 @@ namespace Entra21_trabalho_02.Aldeias
         private AldeiaServico aldeiaServico;
         private LiderServico liderServico;
 
-        
+
         public AldeiaForm()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace Entra21_trabalho_02.Aldeias
         {
             var lideres = liderServico.ListarTodos();
 
-            for(int i = 0; i < lideres.Count; i++)
+            for (int i = 0; i < lideres.Count; i++)
             {
                 var lider = lideres[i];
                 comboBoxLider.Items.Add(lider.Nome);
@@ -62,15 +62,13 @@ namespace Entra21_trabalho_02.Aldeias
 
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            //var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            var nome = linhaSelecionada.Cells[0].Value.ToString();
-            var pais = linhaSelecionada.Cells[1].Value.ToString();
-            var lider = linhaSelecionada.Cells[2].Value.ToString();
+            var aldeia = aldeiaServico.ObterPorCodigo(codigo);
 
-            textBoxNome.Text = nome;
-            textBoxPais.Text = pais;
-            comboBoxLider.SelectedItem = lider;
+            textBoxNome.Text = aldeia.Nome;
+            textBoxPais.Text = aldeia.Pais;
+            comboBoxLider.SelectedItem = aldeia.Lider;
         }
 
         private void PreencherDataGridViewComAldeias()
@@ -79,12 +77,13 @@ namespace Entra21_trabalho_02.Aldeias
 
             dataGridView1.Rows.Clear();
 
-            for(int i = 0; i < aldeias.Count; i++)
+            for (int i = 0; i < aldeias.Count; i++)
             {
                 var aldeia = aldeias[i];
 
                 dataGridView1.Rows.Add(new object[]
                 {
+                    aldeia.Codigo,
                     aldeia.Nome,
                     aldeia.Pais,
                     aldeia.Lider
@@ -93,10 +92,10 @@ namespace Entra21_trabalho_02.Aldeias
 
             dataGridView1.ClearSelection();
         }
-        
+
         private bool ValidarDados(string nome, string pais, string nomeLider)
         {
-            if(nome.Trim().Length < 3)
+            if (nome.Trim().Length < 3)
             {
                 MessageBox.Show("Nome deve conter no minímo 3 caracteres!");
 
@@ -105,7 +104,7 @@ namespace Entra21_trabalho_02.Aldeias
                 return false;
             }
 
-            if(pais.Trim().Length < 3)
+            if (pais.Trim().Length < 3)
             {
                 MessageBox.Show("País deve conter no minímo 3 caracteres!");
 
@@ -114,7 +113,7 @@ namespace Entra21_trabalho_02.Aldeias
                 return false;
             }
 
-            if(comboBoxLider.SelectedIndex == -1)
+            if (comboBoxLider.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um lider!");
 
@@ -139,24 +138,24 @@ namespace Entra21_trabalho_02.Aldeias
 
         private void EditarAldeia(string nome, string pais, string nomeLider)
         {
-            //var linhaSelecionada = dataGridView1.SelectedRows[0];
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            //var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
             var aldeia = new Aldeia();
-            //aldeia.Codigo = codigoSelecionado;
+            aldeia.Codigo = codigoSelecionado;
             aldeia.Nome = nome;
             aldeia.Pais = pais;
             aldeia.Lider = liderServico.ObterPorNomeLider(nomeLider);
 
-            aldeiaServico.Adicionar(aldeia);
+            aldeiaServico.Editar(aldeia);
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
             var quantidadesLinhasSelecionadas = dataGridView1.SelectedRows.Count;
 
-            if(quantidadesLinhasSelecionadas == 0)
+            if (quantidadesLinhasSelecionadas == 0)
             {
                 MessageBox.Show("Selecione uma aldeia para remover!");
 
@@ -164,8 +163,8 @@ namespace Entra21_trabalho_02.Aldeias
             }
 
             var questionar = MessageBox.Show("Deseja realmente apagar essa aldeia?", "Aviso", MessageBoxButtons.YesNo);
-           
-            if(questionar != DialogResult.Yes)
+
+            if (questionar != DialogResult.Yes)
             {
                 MessageBox.Show("Aldeia não foi removida!");
 
@@ -197,7 +196,8 @@ namespace Entra21_trabalho_02.Aldeias
 
                 return;
             }
-            EditarAldeia(nome, pais, nomeLider);
+            else
+                EditarAldeia(nome, pais, nomeLider);
 
             PreencherDataGridViewComAldeias();
 

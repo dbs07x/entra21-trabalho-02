@@ -104,5 +104,18 @@ namespace Entra21_trabalho_02.Aldeias
 
             return ultimoCodigo;
         }
+
+        public Aldeia ObterPorCodigo(int codigo)
+        {
+            for(int i = 0; i < aldeias.Count; i++)
+            {
+                var aldeia = aldeias[i];
+
+                if (aldeia.Codigo == codigo)
+                    return aldeia;
+            }
+
+            return null;
+        }
     }
 }

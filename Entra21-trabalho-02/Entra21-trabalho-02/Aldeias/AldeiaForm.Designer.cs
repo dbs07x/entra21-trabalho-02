@@ -38,10 +38,11 @@
             this.textBoxPais = new System.Windows.Forms.TextBox();
             this.comboBoxLider = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +139,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCodigo,
             this.ColumnNome,
             this.ColumnPais,
             this.ColumnLider});
@@ -149,6 +151,25 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(801, 771);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(883, 747);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(155, 85);
+            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Codigo";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Width = 125;
             // 
             // ColumnNome
             // 
@@ -173,17 +194,6 @@
             this.ColumnLider.Name = "ColumnLider";
             this.ColumnLider.ReadOnly = true;
             this.ColumnLider.Width = 125;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(883, 747);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(155, 85);
-            this.buttonCancelar.TabIndex = 10;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // AldeiaForm
             // 
@@ -222,9 +232,10 @@
         private TextBox textBoxPais;
         private ComboBox comboBoxLider;
         private DataGridView dataGridView1;
+        private Button buttonCancelar;
+        private DataGridViewTextBoxColumn ColumnCodigo;
         private DataGridViewTextBoxColumn ColumnNome;
         private DataGridViewTextBoxColumn ColumnPais;
         private DataGridViewTextBoxColumn ColumnLider;
-        private Button buttonCancelar;
     }
 }
