@@ -38,20 +38,19 @@
             this.textBoxPais = new System.Windows.Forms.TextBox();
             this.comboBoxLider = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(1046, 747);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSalvar.Location = new System.Drawing.Point(193, 556);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(154, 85);
+            this.buttonSalvar.Size = new System.Drawing.Size(135, 64);
             this.buttonSalvar.TabIndex = 0;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -59,10 +58,9 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(14, 16);
-            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonEditar.Location = new System.Drawing.Point(344, 13);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(86, 31);
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -70,10 +68,9 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(106, 16);
-            this.buttonApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonApagar.Location = new System.Drawing.Point(425, 12);
             this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(86, 31);
+            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
             this.buttonApagar.TabIndex = 2;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
@@ -82,55 +79,50 @@
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(839, 61);
+            this.labelNome.Location = new System.Drawing.Point(12, 42);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(50, 20);
+            this.labelNome.Size = new System.Drawing.Size(40, 15);
             this.labelNome.TabIndex = 3;
             this.labelNome.Text = "Nome";
             // 
             // labelPais
             // 
             this.labelPais.AutoSize = true;
-            this.labelPais.Location = new System.Drawing.Point(839, 120);
+            this.labelPais.Location = new System.Drawing.Point(12, 86);
             this.labelPais.Name = "labelPais";
-            this.labelPais.Size = new System.Drawing.Size(34, 20);
+            this.labelPais.Size = new System.Drawing.Size(28, 15);
             this.labelPais.TabIndex = 4;
             this.labelPais.Text = "País";
             // 
             // labelLider
             // 
             this.labelLider.AutoSize = true;
-            this.labelLider.Location = new System.Drawing.Point(839, 179);
+            this.labelLider.Location = new System.Drawing.Point(12, 130);
             this.labelLider.Name = "labelLider";
-            this.labelLider.Size = new System.Drawing.Size(42, 20);
+            this.labelLider.Size = new System.Drawing.Size(33, 15);
             this.labelLider.TabIndex = 5;
             this.labelLider.Text = "Lider";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(839, 85);
-            this.textBoxNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNome.Location = new System.Drawing.Point(12, 60);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(361, 27);
+            this.textBoxNome.Size = new System.Drawing.Size(316, 23);
             this.textBoxNome.TabIndex = 6;
             // 
             // textBoxPais
             // 
-            this.textBoxPais.Location = new System.Drawing.Point(839, 144);
-            this.textBoxPais.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPais.Location = new System.Drawing.Point(12, 104);
             this.textBoxPais.Name = "textBoxPais";
-            this.textBoxPais.Size = new System.Drawing.Size(361, 27);
+            this.textBoxPais.Size = new System.Drawing.Size(316, 23);
             this.textBoxPais.TabIndex = 7;
             // 
             // comboBoxLider
             // 
             this.comboBoxLider.FormattingEnabled = true;
-            this.comboBoxLider.Items.AddRange(new object[] {
-            "jnknknk"});
-            this.comboBoxLider.Location = new System.Drawing.Point(839, 203);
-            this.comboBoxLider.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxLider.Location = new System.Drawing.Point(12, 148);
             this.comboBoxLider.Name = "comboBoxLider";
-            this.comboBoxLider.Size = new System.Drawing.Size(361, 28);
+            this.comboBoxLider.Size = new System.Drawing.Size(316, 23);
             this.comboBoxLider.TabIndex = 8;
             // 
             // dataGridView1
@@ -143,25 +135,13 @@
             this.ColumnNome,
             this.ColumnPais,
             this.ColumnLider});
-            this.dataGridView1.Location = new System.Drawing.Point(14, 61);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(344, 42);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 771);
+            this.dataGridView1.Size = new System.Drawing.Size(549, 578);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(883, 747);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(155, 85);
-            this.buttonCancelar.TabIndex = 10;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // ColumnCodigo
             // 
@@ -195,11 +175,21 @@
             this.ColumnLider.ReadOnly = true;
             this.ColumnLider.Width = 125;
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(51, 556);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(136, 64);
+            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // AldeiaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 848);
+            this.ClientSize = new System.Drawing.Size(899, 636);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxLider);
@@ -211,8 +201,8 @@
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonSalvar);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AldeiaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Aldeia";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

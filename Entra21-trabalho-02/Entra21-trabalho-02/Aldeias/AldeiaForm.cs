@@ -5,8 +5,8 @@ namespace Entra21_trabalho_02.Aldeias
     public partial class AldeiaForm : Form
     {
         private AldeiaServico aldeiaServico;
-        private LiderServico liderServico;
 
+        private LiderServico liderServico;
 
         public AldeiaForm()
         {
