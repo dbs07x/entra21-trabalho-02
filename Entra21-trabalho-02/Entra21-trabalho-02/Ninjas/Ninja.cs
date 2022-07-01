@@ -9,7 +9,7 @@ namespace Entra21_trabalho_02.Ninjas
         public int Id;
         public string Nome;
         public Chakra ElementoChakra;
-        public DateTime DataNascimento;
+        public string DataNascimento;
         public Genero Genero;
         public Status Status;
         public Nivel Nivel;
@@ -24,11 +24,12 @@ namespace Entra21_trabalho_02.Ninjas
         }
         */
 
-        public int CalcularIdade()
+        /*public int CalcularIdade()
         {
             var idade = DateTime.Now.Year - DataNascimento.Year;
 
             return idade;
         }
+        */
     }
 }
