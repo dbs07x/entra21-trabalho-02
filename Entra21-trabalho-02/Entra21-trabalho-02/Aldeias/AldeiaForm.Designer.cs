@@ -37,13 +37,13 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxPais = new System.Windows.Forms.TextBox();
             this.comboBoxLider = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAldeia = new System.Windows.Forms.DataGridView();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLider = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAldeia)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSalvar
@@ -125,23 +125,23 @@
             this.comboBoxLider.Size = new System.Drawing.Size(316, 23);
             this.comboBoxLider.TabIndex = 8;
             // 
-            // dataGridView1
+            // dataGridViewAldeia
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewAldeia.AllowUserToAddRows = false;
+            this.dataGridViewAldeia.AllowUserToDeleteRows = false;
+            this.dataGridViewAldeia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAldeia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
             this.ColumnNome,
             this.ColumnPais,
             this.ColumnLider});
-            this.dataGridView1.Location = new System.Drawing.Point(344, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(549, 578);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridViewAldeia.Location = new System.Drawing.Point(344, 42);
+            this.dataGridViewAldeia.Name = "dataGridViewAldeia";
+            this.dataGridViewAldeia.ReadOnly = true;
+            this.dataGridViewAldeia.RowHeadersWidth = 51;
+            this.dataGridViewAldeia.RowTemplate.Height = 25;
+            this.dataGridViewAldeia.Size = new System.Drawing.Size(549, 578);
+            this.dataGridViewAldeia.TabIndex = 9;
             // 
             // ColumnCodigo
             // 
@@ -191,7 +191,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 636);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewAldeia);
             this.Controls.Add(this.comboBoxLider);
             this.Controls.Add(this.textBoxPais);
             this.Controls.Add(this.textBoxNome);
@@ -204,7 +204,7 @@
             this.Name = "AldeiaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Aldeia";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAldeia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +221,7 @@
         private TextBox textBoxNome;
         private TextBox textBoxPais;
         private ComboBox comboBoxLider;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewAldeia;
         private Button buttonCancelar;
         private DataGridViewTextBoxColumn ColumnCodigo;
         private DataGridViewTextBoxColumn ColumnNome;
