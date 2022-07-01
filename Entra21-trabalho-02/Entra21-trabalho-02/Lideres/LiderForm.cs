@@ -33,7 +33,7 @@ namespace Entra21_trabalho_02.Lideres
             }
         }
 
-        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, string status, string? chakra)
+        private void AdicionarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, bool statusVivo, string? chakra, bool kekkeiGenkai)
         {
             var lider = new Lider
             {
@@ -44,8 +44,9 @@ namespace Entra21_trabalho_02.Lideres
                 Genero = genero,
                 InicioLideranca = inicioLideranca,
                 FimLideranca = fimLideranca,
-                Status = status,
-                Chakra = chakraServico.ObterPorNatureza(chakra)
+                Status = statusVivo,
+                Chakra = chakraServico.ObterPorNatureza(chakra),
+                KekkeiGenkai = kekkeiGenkai
             };
 
             liderServico.Cadastrar(lider);
@@ -83,19 +84,32 @@ namespace Entra21_trabalho_02.Lideres
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            bool statusVivo;
+
+            if (radioButtonVivo.Checked == true)
+               statusVivo = true;
+            else
+               statusVivo = false;
+
+            bool kekkeiGenkai;
+
+            if (radioButtonSim.Checked == true)
+                kekkeiGenkai = true;
+            else
+                kekkeiGenkai = false;
+
             var nome = textBoxNome.Text;
             var titulo = Convert.ToString(comboBoxTitulo.SelectedItem);
             var idade = Convert.ToInt32(textBoxIdade.Text);
             string genero = ValidarGenero();
             var inicioLideranca = Convert.ToDateTime(dateTimePickerInicioLideranca.Text);
             var fimLideranca = maskedTextBoxFimLideranca.Text;
-            var status = Convert.ToString(radioButtonVivo.Checked);
             var chakra = Convert.ToString(comboBoxChakra.SelectedItem);
 
             if (dataGridView1.SelectedRows.Count == 0)
-                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, status, chakra);
+                AdicionarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, statusVivo, chakra, kekkeiGenkai);
             else
-                EditarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, chakra);
+                EditarLider(nome, titulo, genero, idade, inicioLideranca, fimLideranca, statusVivo, chakra, kekkeiGenkai);
 
             PreencherDataGridViewComLider();
 
@@ -188,7 +202,7 @@ namespace Entra21_trabalho_02.Lideres
             LimparCampos();
         }
 
-        private void EditarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, string chakra)
+        private void EditarLider(string nome, string titulo, string genero, int idade, DateTime inicioLideranca, string fimLideranca, bool statusVivo, string chakra, bool kekkeiGenkai)
         {
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
@@ -203,6 +217,8 @@ namespace Entra21_trabalho_02.Lideres
             lider.InicioLideranca = inicioLideranca;
             lider.FimLideranca= fimLideranca;
             lider.Chakra = chakraServico.ObterPorNatureza(chakra);
+            lider.Status = statusVivo;
+            lider.KekkeiGenkai = kekkeiGenkai;
 
             liderServico.Editar(lider);
         }
@@ -228,18 +244,18 @@ namespace Entra21_trabalho_02.Lideres
             string genero = ValidarGenero();
             dateTimePickerInicioLideranca.Text = lider.InicioLideranca.ToString();
             maskedTextBoxFimLideranca.Text = lider.FimLideranca.ToString();
-        }
+            comboBoxChakra.SelectedItem = lider.Chakra.ToString();
 
-        private string ValidarStatus()
-        {
-            var statusLider = string.Empty;
-
-            if (radioButtonVivo.Checked == true)
-                statusLider = "Vivo";
+            if (lider.Status == true)
+                radioButtonVivo.Checked = true;
             else
-                statusLider = "Morto";
+                radioButtonMorto.Checked = true;
 
-            return statusLider;
+            if (lider.KekkeiGenkai == true)
+                radioButtonSim.Checked = true;
+            else
+                radioButtonNao.Checked = true;
+
         }
     }
 }
