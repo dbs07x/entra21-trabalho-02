@@ -16,6 +16,8 @@ namespace Entra21_trabalho_02.Aldeias
 
             liderServico = new LiderServico();
 
+            dataGridView1.ClearSelection();
+
             PreencherDataGridViewComAldeias();
 
             PreencherComboBoxComNomeDosLideres();

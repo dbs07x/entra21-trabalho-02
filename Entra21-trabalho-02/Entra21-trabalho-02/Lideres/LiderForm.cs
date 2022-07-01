@@ -18,6 +18,8 @@ namespace Entra21_trabalho_02.Lideres
 
             comboBoxTitulo.DataSource = Enum.GetValues(typeof(Titulo));
 
+            dataGridView1.ClearSelection();
+
             PreencherDataGridViewComLider();
 
             PreencherComboBoxComOsChakras();
@@ -158,7 +160,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.InicioLideranca,
                     lider.FimLideranca,
                     lider.Status,
-                    lider.Chakra.Natureza,
+                    lider.Chakra,
                     lider.KekkeiGenkai
                 });
             }
