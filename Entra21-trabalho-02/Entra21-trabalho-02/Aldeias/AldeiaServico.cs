@@ -117,5 +117,20 @@ namespace Entra21_trabalho_02.Aldeias
 
             return null;
         }
+
+        public Aldeia ObterAldeiaPeloNome(string nomeAldeia)
+        {
+            for(int i = 0; i < aldeias.Count; i++)
+            {
+                var aldeia = aldeias[i];
+
+                if(aldeia.Nome == nomeAldeia)
+                {
+                    return aldeia;
+                }
+            }
+
+            return null;
+        }
     }
 }
