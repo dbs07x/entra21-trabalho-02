@@ -194,7 +194,7 @@ namespace Entra21_trabalho_02.Lideres
                     lider.Status,
                     lider.Chakra,
                     lider.KekkeiGenkai
-                }) ;
+                });
             }
 
             dataGridView1.ClearSelection();
