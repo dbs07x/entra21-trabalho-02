@@ -49,6 +49,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSalvar.Location = new System.Drawing.Point(193, 556);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(135, 64);
@@ -188,6 +189,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonCancelar.Location = new System.Drawing.Point(51, 556);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(136, 64);

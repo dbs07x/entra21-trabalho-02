@@ -41,6 +41,31 @@ namespace Entra21_trabalho_02.Aldeias
             }
         }
 
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            var nome = textBoxNome.Text;
+            var pais = textBoxPais.Text;
+            var nomeLider = Convert.ToString(comboBoxLider.SelectedItem);
+
+            var validarDados = ValidarDados(nome, pais, nomeLider);
+
+            if (validarDados == false)
+                return;
+
+            if (dataGridView1.SelectedCells.Count == 0)
+            {
+                CadastrarAldeia(nome, pais, nomeLider);
+
+                return;
+            }
+            else
+                EditarAldeia(nome, pais, nomeLider);
+
+            PreencherDataGridViewComAldeias();
+
+            LimparCampos();
+        }
+
         private void LimparCampos()
         {
             textBoxNome.Text = string.Empty;
@@ -191,31 +216,6 @@ namespace Entra21_trabalho_02.Aldeias
             PreencherDataGridViewComAldeias();
 
             dataGridView1.ClearSelection();
-        }
-
-        private void buttonSalvar_Click(object sender, EventArgs e)
-        {
-            var nome = textBoxNome.Text;
-            var pais = textBoxPais.Text;
-            var nomeLider = Convert.ToString(comboBoxLider.SelectedItem);
-
-            var validarDados = ValidarDados(nome, pais, nomeLider);
-
-            if (validarDados == false)
-                return;
-
-            if (dataGridView1.SelectedCells.Count == 0)
-            {
-                CadastrarAldeia(nome, pais, nomeLider);
-
-                return;
-            }
-            else
-                EditarAldeia(nome, pais, nomeLider);
-
-            PreencherDataGridViewComAldeias();
-
-            LimparCampos();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
