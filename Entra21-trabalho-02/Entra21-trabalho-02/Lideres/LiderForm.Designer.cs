@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIdade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInicioLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFimLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
@@ -69,6 +59,16 @@
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIdade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInicioLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFimLideranca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnKekkeiGenkai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,90 +90,12 @@
             this.ColumnChakra,
             this.ColumnKekkeiGenkai,
             this.dataGridViewTextBoxColumn1});
-            this.dataGridView1.Location = new System.Drawing.Point(328, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(342, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(595, 578);
+            this.dataGridView1.Size = new System.Drawing.Size(1058, 452);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Codigo";
-            this.ColumnNome.MinimumWidth = 6;
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 125;
-            // 
-            // ColumnTitulo
-            // 
-            this.ColumnTitulo.HeaderText = "Nome";
-            this.ColumnTitulo.MinimumWidth = 6;
-            this.ColumnTitulo.Name = "ColumnTitulo";
-            this.ColumnTitulo.ReadOnly = true;
-            this.ColumnTitulo.Width = 125;
-            // 
-            // ColumnIdade
-            // 
-            this.ColumnIdade.HeaderText = "Titulo";
-            this.ColumnIdade.MinimumWidth = 6;
-            this.ColumnIdade.Name = "ColumnIdade";
-            this.ColumnIdade.ReadOnly = true;
-            this.ColumnIdade.Width = 125;
-            // 
-            // ColumnGenero
-            // 
-            this.ColumnGenero.HeaderText = "Idade";
-            this.ColumnGenero.MinimumWidth = 6;
-            this.ColumnGenero.Name = "ColumnGenero";
-            this.ColumnGenero.ReadOnly = true;
-            this.ColumnGenero.Width = 125;
-            // 
-            // ColumnInicioLideranca
-            // 
-            this.ColumnInicioLideranca.HeaderText = "Genero";
-            this.ColumnInicioLideranca.MinimumWidth = 6;
-            this.ColumnInicioLideranca.Name = "ColumnInicioLideranca";
-            this.ColumnInicioLideranca.ReadOnly = true;
-            this.ColumnInicioLideranca.Width = 125;
-            // 
-            // ColumnFimLideranca
-            // 
-            this.ColumnFimLideranca.HeaderText = "Inicio da Liderança";
-            this.ColumnFimLideranca.MinimumWidth = 6;
-            this.ColumnFimLideranca.Name = "ColumnFimLideranca";
-            this.ColumnFimLideranca.ReadOnly = true;
-            this.ColumnFimLideranca.Width = 125;
-            // 
-            // ColumnStatus
-            // 
-            this.ColumnStatus.HeaderText = "Fim da Liderança";
-            this.ColumnStatus.MinimumWidth = 6;
-            this.ColumnStatus.Name = "ColumnStatus";
-            this.ColumnStatus.ReadOnly = true;
-            this.ColumnStatus.Width = 125;
-            // 
-            // ColumnChakra
-            // 
-            this.ColumnChakra.HeaderText = "Status";
-            this.ColumnChakra.MinimumWidth = 6;
-            this.ColumnChakra.Name = "ColumnChakra";
-            this.ColumnChakra.ReadOnly = true;
-            this.ColumnChakra.Width = 125;
-            // 
-            // ColumnKekkeiGenkai
-            // 
-            this.ColumnKekkeiGenkai.HeaderText = "Elemento Chakra";
-            this.ColumnKekkeiGenkai.MinimumWidth = 6;
-            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
-            this.ColumnKekkeiGenkai.ReadOnly = true;
-            this.ColumnKekkeiGenkai.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Kekkei Genkai";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // buttonSalvar
             // 
@@ -187,7 +109,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(342, 29);
+            this.buttonEditar.Location = new System.Drawing.Point(342, 75);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 2;
@@ -197,7 +119,7 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(423, 29);
+            this.buttonApagar.Location = new System.Drawing.Point(423, 75);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(75, 23);
             this.buttonApagar.TabIndex = 3;
@@ -208,6 +130,7 @@
             // labelNome
             // 
             this.labelNome.AutoSize = true;
+            this.labelNome.BackColor = System.Drawing.Color.Transparent;
             this.labelNome.Location = new System.Drawing.Point(12, 39);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(40, 15);
@@ -217,6 +140,7 @@
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
+            this.labelTitulo.BackColor = System.Drawing.Color.Transparent;
             this.labelTitulo.Location = new System.Drawing.Point(12, 83);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(37, 15);
@@ -226,6 +150,7 @@
             // labelIdade
             // 
             this.labelIdade.AutoSize = true;
+            this.labelIdade.BackColor = System.Drawing.Color.Transparent;
             this.labelIdade.Location = new System.Drawing.Point(12, 127);
             this.labelIdade.Name = "labelIdade";
             this.labelIdade.Size = new System.Drawing.Size(36, 15);
@@ -235,6 +160,7 @@
             // labelGenero
             // 
             this.labelGenero.AutoSize = true;
+            this.labelGenero.BackColor = System.Drawing.Color.Transparent;
             this.labelGenero.Location = new System.Drawing.Point(12, 184);
             this.labelGenero.Name = "labelGenero";
             this.labelGenero.Size = new System.Drawing.Size(45, 15);
@@ -244,6 +170,7 @@
             // labelInicioLideranca
             // 
             this.labelInicioLideranca.AutoSize = true;
+            this.labelInicioLideranca.BackColor = System.Drawing.Color.Transparent;
             this.labelInicioLideranca.Location = new System.Drawing.Point(12, 286);
             this.labelInicioLideranca.Name = "labelInicioLideranca";
             this.labelInicioLideranca.Size = new System.Drawing.Size(106, 15);
@@ -253,6 +180,7 @@
             // labelFimLideranca
             // 
             this.labelFimLideranca.AutoSize = true;
+            this.labelFimLideranca.BackColor = System.Drawing.Color.Transparent;
             this.labelFimLideranca.Location = new System.Drawing.Point(12, 330);
             this.labelFimLideranca.Name = "labelFimLideranca";
             this.labelFimLideranca.Size = new System.Drawing.Size(97, 15);
@@ -262,6 +190,7 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
+            this.labelStatus.BackColor = System.Drawing.Color.Transparent;
             this.labelStatus.Location = new System.Drawing.Point(12, 373);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(39, 15);
@@ -271,6 +200,7 @@
             // labelElementoChakra
             // 
             this.labelElementoChakra.AutoSize = true;
+            this.labelElementoChakra.BackColor = System.Drawing.Color.Transparent;
             this.labelElementoChakra.Location = new System.Drawing.Point(12, 427);
             this.labelElementoChakra.Name = "labelElementoChakra";
             this.labelElementoChakra.Size = new System.Drawing.Size(97, 15);
@@ -340,52 +270,57 @@
             // checkBoxMasculino
             // 
             this.checkBoxMasculino.AutoSize = true;
+            this.checkBoxMasculino.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxMasculino.Location = new System.Drawing.Point(12, 211);
             this.checkBoxMasculino.Name = "checkBoxMasculino";
             this.checkBoxMasculino.Size = new System.Drawing.Size(81, 19);
             this.checkBoxMasculino.TabIndex = 20;
             this.checkBoxMasculino.Text = "Masculino";
-            this.checkBoxMasculino.UseVisualStyleBackColor = true;
+            this.checkBoxMasculino.UseVisualStyleBackColor = false;
             // 
             // checkBoxCisgenero
             // 
             this.checkBoxCisgenero.AutoSize = true;
+            this.checkBoxCisgenero.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxCisgenero.Location = new System.Drawing.Point(13, 245);
             this.checkBoxCisgenero.Name = "checkBoxCisgenero";
             this.checkBoxCisgenero.Size = new System.Drawing.Size(79, 19);
             this.checkBoxCisgenero.TabIndex = 21;
             this.checkBoxCisgenero.Text = "Cisgênero";
-            this.checkBoxCisgenero.UseVisualStyleBackColor = true;
+            this.checkBoxCisgenero.UseVisualStyleBackColor = false;
             // 
             // checkBoxFeminino
             // 
             this.checkBoxFeminino.AutoSize = true;
+            this.checkBoxFeminino.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxFeminino.Location = new System.Drawing.Point(126, 211);
             this.checkBoxFeminino.Name = "checkBoxFeminino";
             this.checkBoxFeminino.Size = new System.Drawing.Size(76, 19);
             this.checkBoxFeminino.TabIndex = 22;
             this.checkBoxFeminino.Text = "Feminino";
-            this.checkBoxFeminino.UseVisualStyleBackColor = true;
+            this.checkBoxFeminino.UseVisualStyleBackColor = false;
             // 
             // checkBoxTransgenero
             // 
             this.checkBoxTransgenero.AutoSize = true;
+            this.checkBoxTransgenero.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxTransgenero.Location = new System.Drawing.Point(126, 245);
             this.checkBoxTransgenero.Name = "checkBoxTransgenero";
             this.checkBoxTransgenero.Size = new System.Drawing.Size(90, 19);
             this.checkBoxTransgenero.TabIndex = 23;
             this.checkBoxTransgenero.Text = "Transgênero";
-            this.checkBoxTransgenero.UseVisualStyleBackColor = true;
+            this.checkBoxTransgenero.UseVisualStyleBackColor = false;
             // 
             // checkBoxNaoBinario
             // 
             this.checkBoxNaoBinario.AutoSize = true;
+            this.checkBoxNaoBinario.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxNaoBinario.Location = new System.Drawing.Point(232, 211);
             this.checkBoxNaoBinario.Name = "checkBoxNaoBinario";
             this.checkBoxNaoBinario.Size = new System.Drawing.Size(90, 19);
             this.checkBoxNaoBinario.TabIndex = 24;
             this.checkBoxNaoBinario.Text = "Não-Binario";
-            this.checkBoxNaoBinario.UseVisualStyleBackColor = true;
+            this.checkBoxNaoBinario.UseVisualStyleBackColor = false;
             // 
             // buttonCancelar
             // 
@@ -409,6 +344,7 @@
             // labelKekkeiGenkai
             // 
             this.labelKekkeiGenkai.AutoSize = true;
+            this.labelKekkeiGenkai.BackColor = System.Drawing.Color.Transparent;
             this.labelKekkeiGenkai.Location = new System.Drawing.Point(12, 479);
             this.labelKekkeiGenkai.Name = "labelKekkeiGenkai";
             this.labelKekkeiGenkai.Size = new System.Drawing.Size(80, 15);
@@ -441,6 +377,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.radioButtonVivo);
             this.groupBox1.Controls.Add(this.radioButtonMorto);
             this.groupBox1.Location = new System.Drawing.Point(12, 376);
@@ -451,6 +388,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.radioButtonNao);
             this.groupBox2.Controls.Add(this.radioButtonSim);
             this.groupBox2.Location = new System.Drawing.Point(12, 497);
@@ -459,11 +397,89 @@
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Codigo";
+            this.ColumnNome.MinimumWidth = 6;
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 65;
+            // 
+            // ColumnTitulo
+            // 
+            this.ColumnTitulo.HeaderText = "Nome";
+            this.ColumnTitulo.MinimumWidth = 6;
+            this.ColumnTitulo.Name = "ColumnTitulo";
+            this.ColumnTitulo.ReadOnly = true;
+            // 
+            // ColumnIdade
+            // 
+            this.ColumnIdade.HeaderText = "Titulo";
+            this.ColumnIdade.MinimumWidth = 6;
+            this.ColumnIdade.Name = "ColumnIdade";
+            this.ColumnIdade.ReadOnly = true;
+            // 
+            // ColumnGenero
+            // 
+            this.ColumnGenero.HeaderText = "Idade";
+            this.ColumnGenero.MinimumWidth = 6;
+            this.ColumnGenero.Name = "ColumnGenero";
+            this.ColumnGenero.ReadOnly = true;
+            this.ColumnGenero.Width = 60;
+            // 
+            // ColumnInicioLideranca
+            // 
+            this.ColumnInicioLideranca.HeaderText = "Genero";
+            this.ColumnInicioLideranca.MinimumWidth = 6;
+            this.ColumnInicioLideranca.Name = "ColumnInicioLideranca";
+            this.ColumnInicioLideranca.ReadOnly = true;
+            this.ColumnInicioLideranca.Width = 125;
+            // 
+            // ColumnFimLideranca
+            // 
+            this.ColumnFimLideranca.HeaderText = "Inicio da Liderança";
+            this.ColumnFimLideranca.MinimumWidth = 6;
+            this.ColumnFimLideranca.Name = "ColumnFimLideranca";
+            this.ColumnFimLideranca.ReadOnly = true;
+            this.ColumnFimLideranca.Width = 125;
+            // 
+            // ColumnStatus
+            // 
+            this.ColumnStatus.HeaderText = "Fim da Liderança";
+            this.ColumnStatus.MinimumWidth = 6;
+            this.ColumnStatus.Name = "ColumnStatus";
+            this.ColumnStatus.ReadOnly = true;
+            this.ColumnStatus.Width = 125;
+            // 
+            // ColumnChakra
+            // 
+            this.ColumnChakra.HeaderText = "Status";
+            this.ColumnChakra.MinimumWidth = 6;
+            this.ColumnChakra.Name = "ColumnChakra";
+            this.ColumnChakra.ReadOnly = true;
+            this.ColumnChakra.Width = 80;
+            // 
+            // ColumnKekkeiGenkai
+            // 
+            this.ColumnKekkeiGenkai.HeaderText = "Elemento Chakra";
+            this.ColumnKekkeiGenkai.MinimumWidth = 6;
+            this.ColumnKekkeiGenkai.Name = "ColumnKekkeiGenkai";
+            this.ColumnKekkeiGenkai.ReadOnly = true;
+            this.ColumnKekkeiGenkai.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Kekkei Genkai";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // LiderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 637);
+            this.BackgroundImage = global::Entra21_trabalho_02.Properties.Resources.kakashi_naruto_reprod_shonen_jump_widelg;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1425, 637);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
